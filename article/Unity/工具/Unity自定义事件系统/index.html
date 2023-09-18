@@ -36,17 +36,17 @@
   <!-- 页面元数据 -->
   <title>Unity自定义事件系统 - Busyo's Blog</title>
   <meta name="keywords" content="工具类,系统架构,Unity,C#,null">
-  <meta desc name="description" content="Busyo的博客，分享记录与思考 - Busyo - Busyo's Blog">
+  <meta desc name="description" content="自定义事件系统原理与具体实现 - Busyo - Busyo's Blog">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="Unity自定义事件系统">
 <meta property="og:url" content="https://busyogg.github.io/article/Unity/%E5%B7%A5%E5%85%B7/Unity%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F/index.html">
 <meta property="og:site_name" content="Busyo&#39;s Blog">
-<meta property="og:description" content="基本原理在事件传递的过程中设置一个中间对象，负责管理监听者和发送者，以达到解耦合的目的。   首先我们定义一个方法来注册监听对象，该对象包含节点（即作用域）、事件名和事件函数，然后我们在事件触发的时候调用触发函数，来触发所有监听该事件的对象。触发函数包含事件名和参数。 此处我们以字典 _eventDictionary 来存储监听对象，以事件名作为字典的key，在字典里我们以作用域为key定义另一个">
+<meta property="og:description" content="自定义事件系统原理与具体实现">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-08-24T09:03:15.000Z">
-<meta property="article:modified_time" content="2023-09-17T16:54:29.825Z">
+<meta property="article:modified_time" content="2023-09-18T12:51:39.408Z">
 <meta property="article:author" content="Busyo">
 <meta property="article:tag" content="工具类">
 <meta property="article:tag" content="系统架构">
@@ -1845,7 +1845,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1695041040184),
+    lastupdate: new Date(1695041688541),
     sidebar: {
       for_page: ["blogger","music","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2690,7 +2690,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-09-18T00:54:29+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-09-18T20:51:39+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2023年9月18日</p>
@@ -3446,7 +3446,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://img.busyo.buzz/imgUpload/20230912-225941-99.png","https://img.busyo.buzz/imgUpload/20230913-233343-954.png","https://img.busyo.buzz/imgUpload/20230912-225915-540.png"];
+  let imgs = ["https://img.busyo.buzz/imgUpload/20230912-225915-540.png","https://img.busyo.buzz/imgUpload/20230912-225941-99.png","https://img.busyo.buzz/imgUpload/20230913-233343-954.png"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3673,7 +3673,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Unity/","name":"Unity"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Unity/工具/","name":"工具"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/Unity/工具/Unity自定义事件系统/","name":"Unity自定义事件系统"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Unity自定义事件系统","description":"Busyo的博客，分享记录与思考","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/Unity/%E5%B7%A5%E5%85%B7/Unity%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/Unity/%E5%B7%A5%E5%85%B7/Unity%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F/","wordCount":0,"datePublished":"2023-08-24T09:03:15.000Z","dateModified":"2023-09-17T16:54:29.825Z","articleSection":"Unity","keywords":"工具类,系统架构,Unity,C#","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Unity/","name":"Unity"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Unity/工具/","name":"工具"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/Unity/工具/Unity自定义事件系统/","name":"Unity自定义事件系统"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Unity自定义事件系统","description":"自定义事件系统原理与具体实现","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/Unity/%E5%B7%A5%E5%85%B7/Unity%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/Unity/%E5%B7%A5%E5%85%B7/Unity%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F/","wordCount":0,"datePublished":"2023-08-24T09:03:15.000Z","dateModified":"2023-09-18T12:51:39.408Z","articleSection":"Unity","keywords":"工具类,系统架构,Unity,C#","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

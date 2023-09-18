@@ -1839,7 +1839,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1695041040184),
+    lastupdate: new Date(1695041688541),
     sidebar: {
       for_page: ["blogger","music","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2566,13 +2566,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        原理
-
-根据传入的进度[0,1]剔除对应颜色值RGB之一的像素，上图为进度条所需的从颜色值0到颜色值1的贴图（透明底图，进度条的圈为从白到黑的不透明圆环）。
-此代码负责剔除一定颜色值的像素，利用step函数的原理（step(a,b)，当b&gt;&#x3D;a时返回1，否则返回0），其中1.0-col.r决定进度条动画的方向，代表从白向黑，也可以直接使用col.r从黑向白。
-1float c...
-      
+      <p>Laya进度条shader的实现方式</p>
     
   </div>
   
@@ -3491,7 +3485,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://img.busyo.buzz/imgUpload/20230912-225941-99.png","https://img.busyo.buzz/imgUpload/20230913-233343-954.png","https://img.busyo.buzz/imgUpload/20230912-225915-540.png"];
+  let imgs = ["https://img.busyo.buzz/imgUpload/20230912-225915-540.png","https://img.busyo.buzz/imgUpload/20230912-225941-99.png","https://img.busyo.buzz/imgUpload/20230913-233343-954.png"];
   let index = 0;
   let IntervalParallax = null;
 

@@ -1839,7 +1839,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1695041040184),
+    lastupdate: new Date(1695041688541),
     sidebar: {
       for_page: ["blogger","music","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2558,11 +2558,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        基本原理在事件传递的过程中设置一个中间对象，负责管理监听者和发送者，以达到解耦合的目的。  
-首先我们定义一个方法来注册监听对象，该对象包含节点（即作用域）、事件名和事件函数，然后我们在事件触发的时候调用触发函数，来触发所有监听该事件的对象。触发函数包含事件名和参数。
-此处我们以字典 _eventDic 来存储监听对象，以事件名作为字典的key，在字典里我们以作用域为key定义另一个字典，防...
-      
+      <p>自定义事件系统原理与具体实现</p>
     
   </div>
   
@@ -2635,10 +2631,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        Laya对接微信开放域可以新建开放域项目来创建一个范例，开放域项目打包的时候不会打包资源文件，因此要在主域提前加载对应的资源文件并传递给开放域，能传递的有两种类型，一是ui图集，二是json，亮着调用不同接口例：
-12345Laya.loader.load(&quot;res/atlas/rank.atlas&quot;,Laya.Handler.create(this,(res)=&gt;...
-      
+      <p>对接微信开放域过程中遇到的问题和解决方案</p>
     
   </div>
   
@@ -2711,13 +2704,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        在项目中安装tslib即可，可以在vscode终端中输入npm install tslib
-或者在tsconfig.js中配置添加lib，promise（未测试）
-
-
-
-      
+      <p>在Laya中使用异步等待await的方法</p>
     
   </div>
   
@@ -2790,10 +2777,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        小游戏平台对于资源的大小限制很严格， 在OV平台上，由于快游戏本身自带压缩机制，所以包体大小的问题相对不是那么严重。在微信平台上，包体是没有压缩的。一般来说有两种解决方案， 一个是把资源放在云端，还有一个就是压缩本地资源。
-在资源很多但又不是那么多的情况下，我们可以采用压缩包的方式存储资源。有的平台有文件读写的接口，有的没有。为了通用性，我们采取解压到内存中的方式。通过jszip，我们可以很...
-      
+      <p>资源压缩的实现</p>
     
   </div>
   
@@ -2866,13 +2850,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        原理
-
-根据传入的进度[0,1]剔除对应颜色值RGB之一的像素，上图为进度条所需的从颜色值0到颜色值1的贴图（透明底图，进度条的圈为从白到黑的不透明圆环）。
-此代码负责剔除一定颜色值的像素，利用step函数的原理（step(a,b)，当b&gt;&#x3D;a时返回1，否则返回0），其中1.0-col.r决定进度条动画的方向，代表从白向黑，也可以直接使用col.r从黑向白。
-1float c...
-      
+      <p>Laya进度条shader的实现方式</p>
     
   </div>
   
@@ -2945,11 +2923,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        该版本的粒子有两类，支持GPUInstance的ShurikenParticleInstance和ShurikenParticle，前者在不停创建销毁的过程中在统计面板上会累计内存增长，看上去和内存泄漏一样。其原因为销毁对象的时候没有对_instanceParticleVertexBuffer对象进行内存统计。
-解决方案
-在 destroy()方法中针对_instanceParticleVe...
-      
+      <p>Laya引擎数据面板的一个小bug</p>
     
   </div>
   
@@ -3882,7 +3856,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://img.busyo.buzz/imgUpload/20230912-225941-99.png","https://img.busyo.buzz/imgUpload/20230913-233343-954.png","https://img.busyo.buzz/imgUpload/20230912-225915-540.png"];
+  let imgs = ["https://img.busyo.buzz/imgUpload/20230912-225915-540.png","https://img.busyo.buzz/imgUpload/20230912-225941-99.png","https://img.busyo.buzz/imgUpload/20230913-233343-954.png"];
   let index = 0;
   let IntervalParallax = null;
 

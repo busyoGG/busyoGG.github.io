@@ -36,17 +36,17 @@
   <!-- 页面元数据 -->
   <title>关于Laya 2.13版本 粒子特效内存泄漏问题 - Busyo's Blog</title>
   <meta name="keywords" content="Laya,Bug,null">
-  <meta desc name="description" content="Busyo的博客，分享记录与思考 - Busyo - Busyo's Blog">
+  <meta desc name="description" content="Laya引擎数据面板的一个小bug - Busyo - Busyo's Blog">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于Laya 2.13版本 粒子特效内存泄漏问题">
 <meta property="og:url" content="https://busyogg.github.io/article/Laya/Bug/%E5%85%B3%E4%BA%8ELaya-2-13%E7%89%88%E6%9C%AC-%E7%B2%92%E5%AD%90%E7%89%B9%E6%95%88%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="Busyo&#39;s Blog">
-<meta property="og:description" content="该版本的粒子有两类，支持GPUInstance的ShurikenParticleInstance和ShurikenParticle，前者在不停创建销毁的过程中在统计面板上会累计内存增长，看上去和内存泄漏一样。其原因为销毁对象的时候没有对_instanceParticleVertexBuffer对象进行内存统计。 解决方案 在 destroy()方法中针对_instanceParticleVerte">
+<meta property="og:description" content="Laya引擎数据面板的一个小bug">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-08-23T13:17:56.000Z">
-<meta property="article:modified_time" content="2023-09-02T20:12:43.514Z">
+<meta property="article:modified_time" content="2023-09-18T12:54:37.048Z">
 <meta property="article:author" content="Busyo">
 <meta property="article:tag" content="Laya">
 <meta property="article:tag" content="Bug">
@@ -1843,7 +1843,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1695041040184),
+    lastupdate: new Date(1695041688541),
     sidebar: {
       for_page: ["blogger","music","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2669,10 +2669,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-09-03T04:12:43+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-09-18T20:54:37+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年9月3日</p>
+    <p>更新于：2023年9月18日</p>
   </a>
 </div>
 
@@ -3411,7 +3411,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://img.busyo.buzz/imgUpload/20230912-225941-99.png","https://img.busyo.buzz/imgUpload/20230913-233343-954.png","https://img.busyo.buzz/imgUpload/20230912-225915-540.png"];
+  let imgs = ["https://img.busyo.buzz/imgUpload/20230912-225915-540.png","https://img.busyo.buzz/imgUpload/20230912-225941-99.png","https://img.busyo.buzz/imgUpload/20230913-233343-954.png"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3638,7 +3638,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Laya/","name":"Laya"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Laya/Bug/","name":"Bug"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/Laya/Bug/关于Laya-2-13版本-粒子特效内存泄漏问题/","name":"关于Laya 2.13版本 粒子特效内存泄漏问题"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"关于Laya 2.13版本 粒子特效内存泄漏问题","description":"Busyo的博客，分享记录与思考","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/Laya/Bug/%E5%85%B3%E4%BA%8ELaya-2-13%E7%89%88%E6%9C%AC-%E7%B2%92%E5%AD%90%E7%89%B9%E6%95%88%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E9%97%AE%E9%A2%98/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/Laya/Bug/%E5%85%B3%E4%BA%8ELaya-2-13%E7%89%88%E6%9C%AC-%E7%B2%92%E5%AD%90%E7%89%B9%E6%95%88%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E9%97%AE%E9%A2%98/","wordCount":0,"datePublished":"2023-08-23T13:17:56.000Z","dateModified":"2023-09-02T20:12:43.514Z","articleSection":"Laya","keywords":"Laya,Bug","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Laya/","name":"Laya"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Laya/Bug/","name":"Bug"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/Laya/Bug/关于Laya-2-13版本-粒子特效内存泄漏问题/","name":"关于Laya 2.13版本 粒子特效内存泄漏问题"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"关于Laya 2.13版本 粒子特效内存泄漏问题","description":"Laya引擎数据面板的一个小bug","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/Laya/Bug/%E5%85%B3%E4%BA%8ELaya-2-13%E7%89%88%E6%9C%AC-%E7%B2%92%E5%AD%90%E7%89%B9%E6%95%88%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E9%97%AE%E9%A2%98/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/Laya/Bug/%E5%85%B3%E4%BA%8ELaya-2-13%E7%89%88%E6%9C%AC-%E7%B2%92%E5%AD%90%E7%89%B9%E6%95%88%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E9%97%AE%E9%A2%98/","wordCount":0,"datePublished":"2023-08-23T13:17:56.000Z","dateModified":"2023-09-18T12:54:37.048Z","articleSection":"Laya","keywords":"Laya,Bug","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

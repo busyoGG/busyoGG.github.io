@@ -36,17 +36,17 @@
   <!-- 页面元数据 -->
   <title>Js/Ts缓动系统 - Busyo's Blog</title>
   <meta name="keywords" content="Laya,工具类,系统架构,Typescript,null">
-  <meta desc name="description" content="Busyo的博客，分享记录与思考 - Busyo - Busyo's Blog">
+  <meta desc name="description" content="不依赖引擎代码的缓动系统，可依附引擎运行 - Busyo - Busyo's Blog">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="Js&#x2F;Ts缓动系统">
 <meta property="og:url" content="https://busyogg.github.io/article/Laya/%E5%B7%A5%E5%85%B7/Js-Ts%E7%BC%93%E5%8A%A8%E7%B3%BB%E7%BB%9F/index.html">
 <meta property="og:site_name" content="Busyo&#39;s Blog">
-<meta property="og:description" content="基本原理概述缓动的基本原理很简单，就是设置一个初值和终值，在每帧更新的时候根据特定的缓动函数算出对应的中间值并插值。 本工具类分为4个部分：缓动工具类、缓动辅助类、缓动核心类、缓动时间类。同时，本工具提供链式调用，方便进行多个缓动动作的连续执行。  缓动工具类负责管理缓动的调用，以及一个作用域所有的缓动。  缓动辅助类负责管理单个缓动的初始化，同时也是链式调用的核心类。  缓动核心类负责管理具体的">
+<meta property="og:description" content="不依赖引擎代码的缓动系统，可依附引擎运行">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-08-24T13:45:16.000Z">
-<meta property="article:modified_time" content="2023-09-17T16:54:29.826Z">
+<meta property="article:modified_time" content="2023-09-18T12:52:33.730Z">
 <meta property="article:author" content="Busyo">
 <meta property="article:tag" content="Laya">
 <meta property="article:tag" content="工具类">
@@ -1845,7 +1845,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1695041040184),
+    lastupdate: new Date(1695041688541),
     sidebar: {
       for_page: ["blogger","music","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2755,7 +2755,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-09-18T00:54:29+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-09-18T20:52:33+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2023年9月18日</p>
@@ -3511,7 +3511,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://img.busyo.buzz/imgUpload/20230912-225941-99.png","https://img.busyo.buzz/imgUpload/20230913-233343-954.png","https://img.busyo.buzz/imgUpload/20230912-225915-540.png"];
+  let imgs = ["https://img.busyo.buzz/imgUpload/20230912-225915-540.png","https://img.busyo.buzz/imgUpload/20230912-225941-99.png","https://img.busyo.buzz/imgUpload/20230913-233343-954.png"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3738,7 +3738,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Laya/","name":"Laya"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Laya/工具/","name":"工具"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/Laya/工具/Js-Ts缓动系统/","name":"Js/Ts缓动系统"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Js/Ts缓动系统","description":"Busyo的博客，分享记录与思考","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/Laya/%E5%B7%A5%E5%85%B7/Js-Ts%E7%BC%93%E5%8A%A8%E7%B3%BB%E7%BB%9F/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/Laya/%E5%B7%A5%E5%85%B7/Js-Ts%E7%BC%93%E5%8A%A8%E7%B3%BB%E7%BB%9F/","wordCount":0,"datePublished":"2023-08-24T13:45:16.000Z","dateModified":"2023-09-17T16:54:29.826Z","articleSection":"Laya","keywords":"Laya,工具类,系统架构,Typescript","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Laya/","name":"Laya"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Laya/工具/","name":"工具"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/Laya/工具/Js-Ts缓动系统/","name":"Js/Ts缓动系统"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Js/Ts缓动系统","description":"不依赖引擎代码的缓动系统，可依附引擎运行","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/Laya/%E5%B7%A5%E5%85%B7/Js-Ts%E7%BC%93%E5%8A%A8%E7%B3%BB%E7%BB%9F/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/Laya/%E5%B7%A5%E5%85%B7/Js-Ts%E7%BC%93%E5%8A%A8%E7%B3%BB%E7%BB%9F/","wordCount":0,"datePublished":"2023-08-24T13:45:16.000Z","dateModified":"2023-09-18T12:52:33.730Z","articleSection":"Laya","keywords":"Laya,工具类,系统架构,Typescript","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
