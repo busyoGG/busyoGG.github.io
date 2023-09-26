@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.8.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="https://busyogg.github.io/tags/碰撞检测/"/>
+  
+  <link rel="canonical" href="https://busyogg.github.io/article/2bef1c973f07/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,18 +34,24 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>标签：碰撞检测 - Busyo's Blog</title>
-  <meta name="keywords" content="null">
+  <title>碰撞检测之圆与圆 - Busyo's Blog</title>
+  <meta name="keywords" content="C#,碰撞检测,算法,圆,null">
   <meta desc name="description" content="Busyo的博客，分享记录与思考 - Busyo - Busyo's Blog">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="Busyo&#39;s Blog">
-<meta property="og:url" content="https://busyogg.github.io/tags/%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="碰撞检测之圆与圆">
+<meta property="og:url" content="https://busyogg.github.io/article/2bef1c973f07/index.html">
 <meta property="og:site_name" content="Busyo&#39;s Blog">
-<meta property="og:description" content="Busyo的博客，分享记录与思考">
+<meta property="og:description" content="简介用圆或球来包裹物体，检测两个物体是否有碰撞。 原理  判断两个圆是否相交，只需要判断两个圆心的距离小于等于（也可以只是小于，看需求）两个圆的半径之和，若小于，则相交。 二维空间和三维空间的原理相同，也是判断两个球心的距离小于等于两个球的半径之和。 物体的包围球可能会存在较大的空隙，因此包围球检测的精度较低。 我们在求距离的时候，可以使用平方来计算，因为平方的开销比开放小，这样可以优化性能。 1">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2023-09-26T15:46:22.000Z">
+<meta property="article:modified_time" content="2023-09-26T16:05:40.940Z">
 <meta property="article:author" content="Busyo">
+<meta property="article:tag" content="C#">
+<meta property="article:tag" content="碰撞检测">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="圆">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2493,7 +2499,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper  featured' style="display: none;">
+      <div id="none" class='cover-wrapper post featured' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -2523,28 +2529,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <article itemscope itemtype="http://schema.org/Article" class=" article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="https://busyogg.github.io/article/2bef1c973f07/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Busyo's Blog">
@@ -2554,445 +2540,264 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="Busyo的博客，分享记录与思考">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/article/2bef1c973f07/"  itemprop="url">
+    
+    
+      <h1 class="title" itemprop="name headline">
         碰撞检测之圆与圆
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        简介用圆或球来包裹物体，检测两个物体是否有碰撞。
-原理
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="/images/img_icon.png" class="lazyload" data-srcset="/images/img_icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">busyo</p>
+  </a>
+</div>
 
-判断两个圆是否相交，只需要判断两个圆心的距离小于等于（也可以只是小于，看需求）两个圆的半径之和，若小于，则相交。
-二维空间和三维空间的原理相同，也是判断两个球心的距离小于等于两个球的半径之和。
-物体的包围球可能会存在较大的空隙，因此包围球检测的精度较低。
-我们在求距离的时候，可以使用平方来计算，因为平方的开销比开放小，这样可以优化性能...
-      
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a><span class="sep"></span><a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/">碰撞检测</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url"><span itemprop="name">算法</span></a>
+      </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E7%AE%97%E6%B3%95/%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/" itemprop="url"><span itemprop="name">碰撞检测</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='dashed'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='/images/img_icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="/images/img_icon.png">
-            <meta itemprop="name" content="busyo">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-09-26T23:46:22+08:00">2023-09-26</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a><span class="sep"></span><a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/">碰撞检测</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url"><span itemprop="name">算法</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%AE%97%E6%B3%95/%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/" itemprop="url"><span itemprop="name">碰撞检测</span></a>
-            </span>
+
+
           
         
-      </div>
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-09-26T23:46:22+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2023年9月26日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+<div class="new-meta-item browse">
+  <a class='notlink'>
+    <p>
+      <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
       
-        <div>
-          <a class='readmore' href='/article/2bef1c973f07/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
+      <span id="busuanzi_value_page_pv"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
+      
+      <span>次浏览</span>
+    </p>
+  </a>
+</div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：308 字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：1 分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>用圆或球来包裹物体，检测两个物体是否有碰撞。</p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20230926-235520-176.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20230926-235520-176.png" class="lazyload" data-srcset="https://img.busyo.buzz/imgUpload/20230926-235520-176.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div><br><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20230926-235822-428.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20230926-235822-428.png" class="lazyload" data-srcset="https://img.busyo.buzz/imgUpload/20230926-235822-428.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+
+<p>判断两个圆是否相交，只需要判断两个圆心的距离小于等于（也可以只是小于，看需求）两个圆的半径之和，若小于，则相交。</p>
+<p>二维空间和三维空间的原理相同，也是判断两个球心的距离小于等于两个球的半径之和。</p>
+<p>物体的包围球可能会存在较大的空隙，因此包围球检测的精度较低。</p>
+<p>我们在求距离的时候，可以使用平方来计算，因为平方的开销比开放小，这样可以优化性能。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Collections;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">CollisionData</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> Vector3 center = Vector3.zero;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">float</span> radius = <span class="number">1.0f</span>;</span><br><span class="line">&#125;</span><br><span class="line">---------------------------------------------</span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 球与球检测</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;data1&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;data2&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">CollisionCircle</span>(<span class="params">CollisionData data1,CollisionData data2</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//求两个球半径和的平方</span></span><br><span class="line">    <span class="built_in">float</span> totalRadius = Mathf.Pow(data1.radius + data2.radius, <span class="number">2</span>);</span><br><span class="line">    <span class="comment">//球两个球心之间的距离平方</span></span><br><span class="line">    <span class="built_in">float</span> distance = (data1.center - data2.center).sqrMagnitude;</span><br><span class="line">    <span class="comment">//距离小于等于半径和则碰撞</span></span><br><span class="line">    <span class="keyword">if</span> (distance &lt;= totalRadius)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="碰撞检测示例工程"><a href="#碰撞检测示例工程" class="headerlink" title="碰撞检测示例工程"></a>碰撞检测示例工程</h2><center><a class="ghcard" rel="external nofollow noopener noreferrer noopener" target="_blank" href="https://github.com/busyoGG/CollisionDetection"><img src="https://github-readme-stats.vercel.app/api/pin/?username=busyoGG&repo=CollisionDetection&theme=onedark&show_owner=true" class="lazyload" data-srcset="https://github-readme-stats.vercel.app/api/pin/?username=busyoGG&repo=CollisionDetection&theme=onedark&show_owner=true" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/></a></center>
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-09-27T00:05:40+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2023年9月27日</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://busyogg.github.io/article/3c9cb66ca768/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Busyo's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Busyo's Blog">
-    <meta itemprop="description" content="Busyo的博客，分享记录与思考">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/article/3c9cb66ca768/"  itemprop="url">
-        碰撞检测之OBB
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>利用SAT分离轴检测实现OBB检测的原理</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='dashed'>
-      <div>
-        
           
-          <a class='avatar' href='/'><img src='/images/img_icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="/images/img_icon.png">
-            <meta itemprop="name" content="busyo">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-09-25T23:27:33+08:00">2023-09-25</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a><span class="sep"></span><a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/">碰撞检测</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url"><span itemprop="name">算法</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%AE%97%E6%B3%95/%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/" itemprop="url"><span itemprop="name">碰撞检测</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/article/3c9cb66ca768/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
   
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://busyogg.github.io/article/1f60a8286c97/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Busyo's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Busyo's Blog">
-    <meta itemprop="description" content="Busyo的博客，分享记录与思考">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/article/1f60a8286c97/"  itemprop="url">
-        碰撞检测之AABB
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>AABB检测原理</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='dashed'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='/images/img_icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="/images/img_icon.png">
-            <meta itemprop="name" content="busyo">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-09-25T22:35:26+08:00">2023-09-25</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a><span class="sep"></span><a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/">碰撞检测</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url"><span itemprop="name">算法</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%AE%97%E6%B3%95/%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/" itemprop="url"><span itemprop="name">碰撞检测</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/article/1f60a8286c97/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>C#</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>碰撞检测</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%AE%97%E6%B3%95/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>算法</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%9C%86/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>圆</p></a></div>
+  <span hidden itemprop="keywords">C# 碰撞检测 算法 圆</span>
 
 
-    
-  
-</div>
-<aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
-  
-
-  
-    
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='/images/img_home_icon.png'/>
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://busyogg.github.io/article/2bef1c973f07/&title=碰撞检测之圆与圆 - Busyo's Blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
         </a>
       
     
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://busyogg.github.io/article/2bef1c973f07/&title=碰撞检测之圆与圆 - Busyo's Blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
     
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">Busyo's Blog</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://busyogg.github.io/article/2bef1c973f07/&title=碰撞检测之圆与圆 - Busyo's Blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
     
+      
     
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/busyoGG/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
+      
     
   </div>
-</section>
+</div>
 
-    
-  
 
-  
-    
-    
+
+        
       
-
-  <section class='widget desktop mobile  music'>
-    
-
-    <div class='content'>
-      
-
-  
-    <meting-js
-      theme='#1BCDFC'
-      autoplay='false'
-      volume='0.7'
-      loop='all'
-      order='list'
-      fixed='false'
-      list-max-height='320px'
-      server='netease'
-      type='playlist'
-      id='897784673'
-      list-folded='true'>
-    </meting-js>
-  
-
-
     </div>
-  </section>
-
-
+    <!-- Custom Files bottomMeta begin -->
     
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
   
 
   
-    
-    
+    <div class="prev-next">
       
-  
-  <section class="widget category desktop pjax">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/Laya/" href="/categories/Laya/"
-            active-action="action-categoriesLaya"
-            ><div class='name'>Laya</div><div class='badge'>(10)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/Laya/Bug/" href="/categories/Laya/Bug/"
-            active-action="action-categoriesLayaBug"
-            ><div class='name'>Bug</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/Laya/Shader/" href="/categories/Laya/Shader/"
-            active-action="action-categoriesLayaShader"
-            ><div class='name'>Shader</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/Laya/%E5%B7%A5%E5%85%B7/" href="/categories/Laya/%E5%B7%A5%E5%85%B7/"
-            active-action="action-categoriesLayaE5B7A5E585B7"
-            ><div class='name'>工具</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/Laya/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" href="/categories/Laya/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"
-            active-action="action-categoriesLayaE8A7A3E586B3E696B9E6A188"
-            ><div class='name'>解决方案</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Unity/" href="/categories/Unity/"
-            active-action="action-categoriesUnity"
-            ><div class='name'>Unity</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/Unity/%E5%B7%A5%E5%85%B7/" href="/categories/Unity/%E5%B7%A5%E5%85%B7/"
-            active-action="action-categoriesUnityE5B7A5E585B7"
-            ><div class='name'>工具</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%88%86%E4%BA%AB/" href="/categories/%E5%88%86%E4%BA%AB/"
-            active-action="action-categoriesE58886E4BAAB"
-            ><div class='name'>分享</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%99%E7%A8%8B/" href="/categories/%E6%95%99%E7%A8%8B/"
-            active-action="action-categoriesE69599E7A88B"
-            ><div class='name'>教程</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E6%95%99%E7%A8%8B/Hexo/" href="/categories/%E6%95%99%E7%A8%8B/Hexo/"
-            active-action="action-categoriesE69599E7A88BHexo"
-            ><div class='name'>Hexo</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%AE%97%E6%B3%95/" href="/categories/%E7%AE%97%E6%B3%95/"
-            active-action="action-categoriesE7AE97E6B395"
-            ><div class='name'>算法</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E7%AE%97%E6%B3%95/%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/" href="/categories/%E7%AE%97%E6%B3%95/%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/"
-            active-action="action-categoriesE7AE97E6B395E7A2B0E6929EE6A380E6B58B"
-            ><div class='name'>碰撞检测</div><div class='badge'>(3)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
       
-  
-  <section class="widget tagcloud desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/AABB/" style="font-size: 14px; color: #999">AABB</a> <a href="/tags/Bug/" style="font-size: 16px; color: #8b8b8b">Bug</a> <a href="/tags/C/" style="font-size: 20px; color: #707070">C#</a> <a href="/tags/ECS/" style="font-size: 14px; color: #999">ECS</a> <a href="/tags/GitHub/" style="font-size: 16px; color: #8b8b8b">GitHub</a> <a href="/tags/Hexo/" style="font-size: 16px; color: #8b8b8b">Hexo</a> <a href="/tags/Jszip/" style="font-size: 14px; color: #999">Jszip</a> <a href="/tags/Laya/" style="font-size: 24px; color: #555">Laya</a> <a href="/tags/OBB/" style="font-size: 14px; color: #999">OBB</a> <a href="/tags/Opengl/" style="font-size: 14px; color: #999">Opengl</a> <a href="/tags/SAT%E5%88%86%E7%A6%BB%E8%BD%B4/" style="font-size: 14px; color: #999">SAT分离轴</a> <a href="/tags/SSL%E8%AF%81%E4%B9%A6/" style="font-size: 14px; color: #999">SSL证书</a> <a href="/tags/Shader/" style="font-size: 14px; color: #999">Shader</a> <a href="/tags/Typescript/" style="font-size: 22px; color: #636363">Typescript</a> <a href="/tags/Unity/" style="font-size: 16px; color: #8b8b8b">Unity</a> <a href="/tags/%E5%9B%9B%E5%8F%89%E6%A0%91/" style="font-size: 14px; color: #999">四叉树</a> <a href="/tags/%E5%9C%86/" style="font-size: 14px; color: #999">圆</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 18px; color: #7e7e7e">工具</a> <a href="/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB/" style="font-size: 20px; color: #707070">工具类</a> <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%BC%80%E6%94%BE%E5%9F%9F/" style="font-size: 14px; color: #999">微信开放域</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 18px; color: #7e7e7e">教程</a> <a href="/tags/%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/" style="font-size: 18px; color: #7e7e7e">碰撞检测</a> <a href="/tags/%E7%A9%BA%E9%97%B4%E7%AE%A1%E7%90%86/" style="font-size: 14px; color: #999">空间管理</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 18px; color: #7e7e7e">算法</a> <a href="/tags/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84/" style="font-size: 18px; color: #7e7e7e">系统架构</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E5%8A%A0%E9%80%9F/" style="font-size: 14px; color: #999">网络加速</a>
+        <a class='next' href='/article/3c9cb66ca768/'>
+          <p class='title'>碰撞检测之OBB<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>简介OBB检测，即有向包围盒（Oriented Bounding Box）检测，是一种检测两个物体有没有相交的算法。物体根据包围盒中心、包围盒大小以及包围盒旋转轴构造有向包围盒，该包围盒比AAB...</p>
+        </a>
+      
     </div>
-  </section>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+<!-- <div data-role="content"><script src = "/script/AfterProcess.js"></script></div> -->
+<script src = "/script/AfterProcess.js"></script>
 
 
+  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/article/2bef1c973f07/index.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
 
   
@@ -3007,66 +2812,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
   
-<section class="widget desktop ">
-  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
   <header>
     
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>19 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>本站总字数：</div>
-          <div>32.2k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站访客数：</div>
-          
-          <div><span id="busuanzi_value_site_uv"><i class="fa-solid fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站总访问量：</div>
-          
-          <div><span id="busuanzi_value_site_pv"><i class="fa-solid fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          <div id="last-update-show">2023-09-27 日</div>
-        </div>
-      
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E7%90%86"><span class="toc-number">2.</span> <span class="toc-text">原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B%E7%A4%BA%E4%BE%8B%E5%B7%A5%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">碰撞检测示例工程</span></a></li></ol>
     </div>
-  </div>
-</section>
+  </section>
 
   
 
@@ -3095,10 +2855,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- pjax占位 -->
   </div>
 
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
   <!-- Custom Files side begin -->
   
   <!-- Custom Files side end -->
 </aside>
+
 
 
           <!--此文件用来存放一些不方便取值的变量-->
@@ -3107,7 +2880,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3880,7 +3653,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/tags/碰撞检测/","name":"碰撞检测"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"Busyo的博客，分享记录与思考","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/算法/","name":"算法"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/算法/碰撞检测/","name":"碰撞检测"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/2bef1c973f07/","name":"碰撞检测之圆与圆"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"碰撞检测之圆与圆","description":"Busyo的博客，分享记录与思考","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/2bef1c973f07/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/2bef1c973f07/","wordCount":0,"datePublished":"2023-09-26T15:46:22.000Z","dateModified":"2023-09-26T16:05:40.940Z","articleSection":"算法","keywords":"C#,碰撞检测,算法,圆","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
