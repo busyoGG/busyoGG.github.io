@@ -45,12 +45,36 @@ window.AfterProcess = {
 
             }
         }
-        console.log("测试代码", eles);
+    },
+
+    ResetTitle: ()=>{
+        var eles = document.querySelectorAll("h1,h2,h3,h4,h5,h6");
+        var picker = window.getComputedStyle;
+        for (let i = 1, len = eles.length; i < len; i++) {
+            let child = eles[i].firstChild;
+            let eleStyle = picker(eles[i]);
+            //创建标识
+            let customDiv = document.createElement("div");
+            customDiv.style.display = "flex";
+            customDiv.style.width = "15px";
+            customDiv.style.backgroundColor = "#61c454";
+            customDiv.style.height = eleStyle.fontSize;
+            customDiv.style.marginRight = "10px";
+            customDiv.style.marginTop = (parseFloat(eleStyle.lineHeight) - parseFloat(eleStyle.fontSize)) * 0.5 + "px";
+            customDiv.style.borderRadius = "5px";
+            // console.log("字体大小",eleStyle.fontSize,parseFloat(eleStyle.lineHeight),parseFloat(eleStyle.fontSize))
+            // customDiv.style.verticalAlign
+            eles[i].style.display = "flex";
+            eles[i].style.verticalAlign = "center"
+
+            eles[i].insertBefore(customDiv, child);
+        }
     },
 
     Init: () => {
         console.log("初始化界面");
         AfterProcess.ResetCodeStyle();
+        AfterProcess.ResetTitle();
     }
 }
 AfterProcess.Init();
