@@ -1844,7 +1844,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1698690354981),
+    lastupdate: new Date(1698775065348),
     sidebar: {
       for_page: ["blogger","music","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2805,6 +2805,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
+        <a class='prev' href='/article/69e4e16ef4ee/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>连招系统</p>
+          <p class='content'>简介使用有限状态机构造的连招系统，支持技能连招、打断、变招。暂不支持长按技能和蓄力技能。
+原理在Update中持续判断状态切换，并根据当前状态执行对应的操作。
+状态机分为五个状态，Idle、Ru...</p>
+        </a>
+      
       
         <a class='next' href='/article/e2b04b62f691/'>
           <p class='title'>碰撞检测之射线与AABB和OBB<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
@@ -3471,7 +3478,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://img.busyo.buzz/imgUpload/20230912-225915-540.png","https://img.busyo.buzz/imgUpload/20230912-225941-99.png","https://img.busyo.buzz/imgUpload/20230913-233343-954.png"];
+  let imgs = ["https://img.busyo.buzz/imgUpload/20230912-225941-99.png","https://img.busyo.buzz/imgUpload/20230913-233343-954.png","https://img.busyo.buzz/imgUpload/20230912-225915-540.png"];
   let index = 0;
   let IntervalParallax = null;
 
