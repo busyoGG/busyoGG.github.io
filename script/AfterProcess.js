@@ -48,6 +48,14 @@ window.AfterProcess = {
     },
 
     ResetTitle: ()=>{
+        let colors = {
+            "H1":"#61c454",
+            "H2":"#61c454",
+            "H3":"#f5bd4f",
+            "H4":"#ed6a5e",
+            "H5":"#e40056",
+            "H6":"#029ae2",
+        }
         var eles = document.querySelectorAll("h1,h2,h3,h4,h5,h6");
         var picker = window.getComputedStyle;
         for (let i = 1, len = eles.length; i < len; i++) {
@@ -57,7 +65,7 @@ window.AfterProcess = {
             let customDiv = document.createElement("div");
             customDiv.style.display = "flex";
             customDiv.style.width = "15px";
-            customDiv.style.backgroundColor = "#61c454";
+            customDiv.style.backgroundColor = colors[eles[i].tagName];
             customDiv.style.height = eleStyle.fontSize;
             customDiv.style.marginRight = "10px";
             customDiv.style.marginTop = (parseFloat(eleStyle.lineHeight) - parseFloat(eleStyle.fontSize)) * 0.5 + "px";
