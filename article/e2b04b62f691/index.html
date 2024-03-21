@@ -46,7 +46,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-10-15T12:29:10.000Z">
-<meta property="article:modified_time" content="2023-10-26T11:46:58.118Z">
+<meta property="article:modified_time" content="2024-03-21T14:53:13.187Z">
 <meta property="article:author" content="Busyo">
 <meta property="article:tag" content="算法">
 <meta property="article:tag" content="C#">
@@ -1847,7 +1847,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1710939203166),
+    lastupdate: new Date(1711032817349),
     sidebar: {
       for_page: ["blogger","music","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2657,7 +2657,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>即：每个轴两条边的两个交点中的近点P1、P3中的最大值，要比远点P2、P4中的最小值还小，这样射线就与矩形相交。</p>
 <p>所以对于射线与矩形，我们有$max(P1,P3)&lt;min(P2,P4)$，化为通式的话就是$max(Pmin_x,Pmin_y)&lt;min(Pmax_x,Pmax_y)$</p>
 <p>拓展到三维空间也是一样，二维空间是比较两个轴，三维空间就是比较三个轴，也要满足$max(Pmin_x,Pmin_y,Pmin_z)&lt;min(Pmax_x,Pmax_y,Pmax_z)$的关系。</p>
-<h3 id="在OBB中"><a href="#在OBB中" class="headerlink" title="在OBB中"></a>在OBB中</h3><p>我们设射线R的起点为C1，长度为t，方向为Dir；平面S的法线为n，平面中一点为D，平面到原点的距离为d，平面与射线的交点为P，我们可以得到</p>
+<h3 id="在OBB中"><a href="#在OBB中" class="headerlink" title="在OBB中"></a>在OBB中</h3><p>我们设射线R的起点为C1，长度为t，方向为Dir；平面S的法线为n，平面中一点为D，平面到R起点的距离为d，平面与射线的交点为P，我们可以得到</p>
 <p>射线的方程为： $P&#x3D;C1+t*Dir$</p>
 <p>平面的方程为： $Dot(P,n)&#x3D;d$</p>
 <p>当射线与平面相交的时候，两个方程的值相等，我们可以得到如下关系： $Dot(C1+t*Dir,n)&#x3D;d$</p>
@@ -2665,7 +2665,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>我们想要求出射线的长度t，因此方程改造一下变成： $Dot(t*Dir,n)&#x3D;d-Dot(C1,n)$</p>
 <p>由于点乘符合结合律，所以方程化为： $t*Dot(Dir,n)&#x3D;d-Dot(C1,n)$</p>
 <p>化简得到： $t&#x3D;(d-Dot(C1,n))&#x2F;Dot(Dir,n)$</p>
-<p>因为我们不知道，根据平面方程，我们可以得到： $t&#x3D;(Dot(P,n)-Dot(C1,n))&#x2F;Dot(Dir,n)$</p>
+<p>因为我们不知道d，所以根据平面方程，我们可以得到： $t&#x3D;(Dot(P,n)-Dot(C1,n))&#x2F;Dot(Dir,n)$</p>
 <p>由分配律，我们最终得到： $t&#x3D;(Dot(P-C1,n))&#x2F;Dot(Dir,n)$</p>
 <p>在OBB包围盒中，最大点和最小点分别横跨三个最大面和最小面，因此满足方程：  </p>
 <p>$Dot(P_{min},n)&#x3D;d$</p>
@@ -2689,6 +2689,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="其他情况"><a href="#其他情况" class="headerlink" title="其他情况"></a>其他情况</h3><p>和射线与圆相交检测一样，当射线在包围盒内的时候一定相交；当射线与包围盒相反的时候一定不相交。</p>
 <p>对于AABB来说，只要判断射线起点和AABB包围盒的最大最小点的关系就可以判断是否在包围盒内，对于OBB来说要把射线起点映射到OBB坐标系中，然后按照AABB的方式来判断。</p>
 <h2 id="碰撞检测示例工程"><a href="#碰撞检测示例工程" class="headerlink" title="碰撞检测示例工程"></a>碰撞检测示例工程</h2><center><a class="ghcard" rel="external nofollow noopener noreferrer noopener" target="_blank" href="https://github.com/busyoGG/CollisionDetection"><img src="https://github-readme-stats.vercel.app/api/pin/?username=busyoGG&repo=CollisionDetection&theme=onedark&show_owner=true" class="lazyload" data-srcset="https://github-readme-stats.vercel.app/api/pin/?username=busyoGG&repo=CollisionDetection&theme=onedark&show_owner=true" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/></a></center>
+
+<div class="timeline"><div class="timenode"><div class="meta"><p><p>2024-03-21</p>
+</p></div><div class="body"><ol><li>修复描述错误。</li></ol></div></div>
+<div class="timenode"><div class="meta"><p><p>2023-10-15</p>
+</p></div><div class="body"><ol><li>更新基本内容。</li></ol></div></div></div>
   </div>
   
   
@@ -2712,10 +2717,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-10-26T19:46:58+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-03-21T22:53:13+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年10月26日</p>
+    <p>更新于：2024年3月21日</p>
   </a>
 </div>
 
@@ -3714,7 +3719,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/算法/","name":"算法"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/算法/碰撞检测/","name":"碰撞检测"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/e2b04b62f691/","name":"碰撞检测之射线与AABB和OBB"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"碰撞检测之射线与AABB和OBB","description":"射线与OBB以及AABB检测的原理","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/e2b04b62f691/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/e2b04b62f691/","wordCount":0,"datePublished":"2023-10-15T12:29:10.000Z","dateModified":"2023-10-26T11:46:58.118Z","articleSection":"算法","keywords":"算法,C#,碰撞检测,AABB,OBB,射线","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/算法/","name":"算法"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/算法/碰撞检测/","name":"碰撞检测"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/e2b04b62f691/","name":"碰撞检测之射线与AABB和OBB"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"碰撞检测之射线与AABB和OBB","description":"射线与OBB以及AABB检测的原理","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/e2b04b62f691/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/e2b04b62f691/","wordCount":0,"datePublished":"2023-10-15T12:29:10.000Z","dateModified":"2024-03-21T14:53:13.187Z","articleSection":"算法","keywords":"算法,C#,碰撞检测,AABB,OBB,射线","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
