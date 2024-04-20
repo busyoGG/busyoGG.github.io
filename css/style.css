@@ -7910,10 +7910,11 @@ video {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: inline-block !important;
+  outline: 3px solid #fff;
   border-radius: 15px !important;
   -webkit-border-radius: 15px !important;
-  box-shadow: 0px 0px 20px !important;
-  -webkit-box-shadow: 0px 0px 20px !important;
+  box-shadow: 0px 0px 20px #aaa !important;
+  -webkit-box-shadow: 0px 0px 20px #aaa !important;
   --bpx-box-shadow: var(--bg3) !important;
 }
 .plyr__controls {
@@ -7989,6 +7990,37 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: block !important; /* 鼠标悬停时显示 */
+}
+.note {
+  padding: 3px 16px 3px 30px !important;
+  box-shadow: 0px 0px 10px #aaa !important;
+  -webkit-box-shadow: 0px 0px 10px #aaa !important;
+}
+.iziToast {
+  border-radius: 15px !important;
+  -webkit-border-radius: 15px !important;
+  padding: 0px 45px 10px 0px !important;
+}
+.iziToast:after {
+  border-radius: 15px !important;
+  -webkit-border-radius: 15px !important;
+  box-shadow: 0px 0px 10px #aaa !important;
+  -webkit-box-shadow: 0px 0px 10px #aaa !important;
+}
+.iziToast>.iziToast-progressbar {
+  bottom: 5px !important;
+  width: 50% !important;
+  left: 25% !important;
+  background-color: #eee !important;
+  height: 6px !important;
+  border-radius: 3px !important;
+  -webkit-border-radius: 3px !important;
+}
+.iziToast>.iziToast-progressbar div {
+  height: 6px !important;
+  border-radius: 3px !important;
+  -webkit-border-radius: 3px !important;
+  background-color: #bbb !important;
 }
 #l_main > article.cus-indent p {
   text-indent: 2em;
