@@ -8022,6 +8022,10 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
   -webkit-border-radius: 3px !important;
   background-color: #bbb !important;
 }
+.mermaid {
+  background: none !important;
+  border: none !important;
+}
 #l_main > article.cus-indent p {
   text-indent: 2em;
 }
