@@ -46,7 +46,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-08-23T15:09:11.000Z">
-<meta property="article:modified_time" content="2024-01-23T11:46:49.228Z">
+<meta property="article:modified_time" content="2024-05-18T15:40:10.219Z">
 <meta property="article:author" content="Busyo">
 <meta property="article:tag" content="Laya">
 <meta property="article:tag" content="微信开放域">
@@ -1844,7 +1844,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1715606980512),
+    lastupdate: new Date(1716060423073),
     sidebar: {
       for_page: ["blogger","music","lastupdate","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2622,7 +2622,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：342 字</p>
+      <p>字数：344 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2645,17 +2645,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>Laya对接微信开放域可以新建开放域项目来创建一个范例，开放域项目打包的时候不会打包资源文件，因此要在主域提前加载对应的资源文件并传递给开放域，能传递的有两种类型，一是ui图集，二是json，亮着调用不同接口<br>例：</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Laya</span>.<span class="property">loader</span>.<span class="title function_">load</span>(<span class="string">&quot;res/atlas/rank.atlas&quot;</span>,<span class="title class_">Laya</span>.<span class="property">Handler</span>.<span class="title function_">create</span>(<span class="variable language_">this</span>,<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">      <span class="title class_">Laya</span>.<span class="property">MiniAdpter</span>.<span class="title function_">sendAtlasToOpenDataContext</span>(<span class="string">&quot;res/atlas/rank.atlas&quot;</span>); </span><br><span class="line">      <span class="comment">//json</span></span><br><span class="line">      <span class="comment">//Laya.MiniAdpter.sendJsonDataToDataContext()</span></span><br><span class="line">&#125;));</span><br></pre></td></tr></table></figure>
+    <p>Laya 对接微信开放域可以新建开放域项目来创建一个范例，开放域项目打包的时候不会打包资源文件，因此要在主域提前加载对应的资源文件并传递给开放域，能传递的有两种类型，一是 ui 图集，二是 json，亮着调用不同接口<br>例：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Laya</span>.<span class="property">loader</span>.<span class="title function_">load</span>(</span><br><span class="line">  <span class="string">&quot;res/atlas/rank.atlas&quot;</span>,</span><br><span class="line">  <span class="title class_">Laya</span>.<span class="property">Handler</span>.<span class="title function_">create</span>(<span class="variable language_">this</span>, <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="title class_">Laya</span>.<span class="property">MiniAdpter</span>.<span class="title function_">sendAtlasToOpenDataContext</span>(<span class="string">&quot;res/atlas/rank.atlas&quot;</span>);</span><br><span class="line">    <span class="comment">//json</span></span><br><span class="line">    <span class="comment">//Laya.MiniAdpter.sendJsonDataToDataContext()</span></span><br><span class="line">  &#125;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 
-<p>展示子域的时候laya会自动设置canvas，但是子域一旦有嵌套层级，该方法就会产生偏移，解决方法为：</p>
+<p>展示子域的时候 laya 会自动设置 canvas，但是子域一旦有嵌套层级，该方法就会产生偏移，解决方法为：</p>
 <ol>
 <li>调整子域对象层级到根层级</li>
 <li>手动触发<code>changeMatrix</code>事件。注意，如果手动触发该事件，则需要按照源码对应的格式构造传递的参数。<br>例：</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//此处canvasData为自定义对象，包含matrix，width，height三个属性，可以不需要按照此处代码构建对象，但一定要传入对应属性的参数</span><br><span class="line">this.openData.postMsg(&#123;</span><br><span class="line">	type: &quot;changeMatrix&quot;,</span><br><span class="line">	a: canvasData.matrix.a,</span><br><span class="line">	b: canvasData.matrix.b,</span><br><span class="line">	c: canvasData.matrix.c,</span><br><span class="line">	d: canvasData.matrix.d,</span><br><span class="line">	tx: canvasData.matrix.tx,</span><br><span class="line">	ty: canvasData.matrix.ty,</span><br><span class="line">	w: canvasData.width,</span><br><span class="line">	h: canvasData.height,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
-<p>注意，如果要手动触发该事件，则需要延迟一帧的时间，防止UI界面还没有自动适配好宽高导致传入的canvas坐标偏移</p>
+<p>注意，如果要手动触发该事件，则需要延迟一帧的时间，防止 UI 界面还没有自动适配好宽高导致传入的 canvas 坐标偏移</p>
 
   </div>
   
@@ -2680,10 +2680,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-01-23T19:46:49+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-18T23:40:10+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2024年1月23日</p>
+    <p>更新于：2024年5月18日</p>
   </a>
 </div>
 
@@ -2765,16 +2765,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/article/1099d6589f61/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Laya自定义事件系统</p>
-          <p class='content'>基本原理在事件传递的过程中设置一个中间对象，负责管理监听者和发送者，以达到解耦合的目的。  
-首先我们定义一个方法来注册监听对象，该对象包含节点（即作用域）、事件名和事件函数，然后我们在事件触发...</p>
+          <p class='content'>基本原理在事件传递的过程中设置一个中间对象，负责管理监听者和发送者，以达到解耦合的目的。
+首先我们定义一个方法来注册监听对象，该对象包含节点（即作用域）、事件名和事件函数，然后我们在事件触发的时...</p>
         </a>
       
       
         <a class='next' href='/article/810371225f39/'>
           <p class='title'>关于LAYA编译await/async语法报错的问题<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>在项目中安装tslib即可，可以在vscode终端中输入npm install tslib
-或者在tsconfig.js中配置添加lib，promise（未测试）
-
+          <p class='content'>在项目中安装 tslib 即可，可以在 vscode 终端中输入 npm install tslib
+或者在 tsconfig.js 中配置添加 lib，promise（未测试）
 
 </p>
         </a>
@@ -3632,7 +3631,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Laya/","name":"Laya"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Laya/解决方案/","name":"解决方案"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/fcfc4d29d0e4/","name":"关于Laya对接微信开放域的问题"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"关于Laya对接微信开放域的问题","description":"对接微信开放域过程中遇到的问题和解决方案","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/fcfc4d29d0e4/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/fcfc4d29d0e4/","wordCount":0,"datePublished":"2023-08-23T15:09:11.000Z","dateModified":"2024-01-23T11:46:49.228Z","articleSection":"Laya","keywords":"Laya,微信开放域,解决方案","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Laya/","name":"Laya"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Laya/解决方案/","name":"解决方案"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/fcfc4d29d0e4/","name":"关于Laya对接微信开放域的问题"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"关于Laya对接微信开放域的问题","description":"对接微信开放域过程中遇到的问题和解决方案","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/fcfc4d29d0e4/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/fcfc4d29d0e4/","wordCount":0,"datePublished":"2023-08-23T15:09:11.000Z","dateModified":"2024-05-18T15:40:10.219Z","articleSection":"Laya","keywords":"Laya,微信开放域,解决方案","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

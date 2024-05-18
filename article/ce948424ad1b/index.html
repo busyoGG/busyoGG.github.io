@@ -46,7 +46,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-01-22T18:00:49.000Z">
-<meta property="article:modified_time" content="2024-01-27T20:09:09.003Z">
+<meta property="article:modified_time" content="2024-05-18T15:39:48.641Z">
 <meta property="article:author" content="Busyo">
 <meta property="article:tag" content="Unity">
 <meta property="article:tag" content="解决方案">
@@ -1844,7 +1844,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1715606980512),
+    lastupdate: new Date(1716060423073),
     sidebar: {
       for_page: ["blogger","music","lastupdate","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2649,19 +2649,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>因此，逻辑与渲染可以获得不同的更新频率，通常是逻辑计算的频率要低于渲染，这样可以减少复杂逻辑的性能开销。</p>
 <p>渲染表现在每两个逻辑帧之间进行插值，这样就能使画面平滑，不会因为低频逻辑更新而产生顿感。</p>
 <h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>如果项目结构是面向对象的话，可以考虑使用事件来通知渲染对象更新数据并插值，或者渲染对象持有逻辑对象，在更新的时候获取对应数据。</p>
-<p>本例使用的是ECS的结构，因此只需要在渲染系统写好插值逻辑，系统自然会遍历更新。</p>
+<p>本例使用的是 ECS 的结构，因此只需要在渲染系统写好插值逻辑，系统自然会遍历更新。</p>
 <ol>
-<li>如果目标位置或旋转有更新，直接重置上一位置和旋转为当前渲染对象的坐标和旋转，并重置插值进度为0。</li>
+<li>如果目标位置或旋转有更新，直接重置上一位置和旋转为当前渲染对象的坐标和旋转，并重置插值进度为 0。</li>
 <li>更新插值进度。</li>
-<li>根据上一位置或上一旋转和目标位置或目标旋转，进行lerp插值，然后赋值给渲染对象。</li>
-<li>如果插值进度完成，则重置上一位置和旋转为当前渲染对象的坐标和旋转，并重置插值进度为0。</li>
+<li>根据上一位置或上一旋转和目标位置或目标旋转，进行 lerp 插值，然后赋值给渲染对象。</li>
+<li>如果插值进度完成，则重置上一位置和旋转为当前渲染对象的坐标和旋转，并重置插值进度为 0。</li>
 </ol>
 <p>如果有缩放需求的也可以同理操作。</p>
 <div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20240123-194404-913.gif' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20240123-194404-913.gif" class="lazyload" data-srcset="https://img.busyo.buzz/imgUpload/20240123-194404-913.gif" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 
 <p>上图白色线框为逻辑包围盒位置，可以看出逻辑更新频率低的情况下有顿感，渲染对象的方块追逐逻辑位置插值靠近。</p>
 <h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h2><div class="timeline"><div class="timenode"><div class="meta"><p><p>2024-01-23</p>
-</p></div><div class="body"><ol><li>更新基础内容。</li></ol></div></div></div>
+</p></div><div class="body"><ol><li>更新基础内容。</li></ol></div></div>
+   </div>
+
   </div>
   
   
@@ -2685,10 +2687,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-01-28T04:09:09+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-18T23:39:48+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2024年1月28日</p>
+    <p>更新于：2024年5月18日</p>
   </a>
 </div>
 
@@ -3647,7 +3649,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Unity/","name":"Unity"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Unity/解决方案/","name":"解决方案"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/ce948424ad1b/","name":"逻辑与渲染分离"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"逻辑与渲染分离","description":"把游戏逻辑和渲染分离，可以减少逻辑计算的频率，游戏的表现也不会影响到逻辑的运行。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/ce948424ad1b/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/ce948424ad1b/","wordCount":0,"datePublished":"2024-01-22T18:00:49.000Z","dateModified":"2024-01-27T20:09:09.003Z","articleSection":"Unity","keywords":"Unity,解决方案,渲染","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Unity/","name":"Unity"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Unity/解决方案/","name":"解决方案"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/ce948424ad1b/","name":"逻辑与渲染分离"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"逻辑与渲染分离","description":"把游戏逻辑和渲染分离，可以减少逻辑计算的频率，游戏的表现也不会影响到逻辑的运行。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/ce948424ad1b/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/ce948424ad1b/","wordCount":0,"datePublished":"2024-01-22T18:00:49.000Z","dateModified":"2024-05-18T15:39:48.641Z","articleSection":"Unity","keywords":"Unity,解决方案,渲染","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

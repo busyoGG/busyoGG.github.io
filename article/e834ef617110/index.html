@@ -46,7 +46,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-08-31T20:09:13.000Z">
-<meta property="article:modified_time" content="2023-09-17T16:54:29.826Z">
+<meta property="article:modified_time" content="2024-05-18T15:38:01.307Z">
 <meta property="article:author" content="Busyo">
 <meta property="article:tag" content="教程">
 <meta property="article:tag" content="Hexo">
@@ -1844,7 +1844,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1715606980512),
+    lastupdate: new Date(1716060423073),
     sidebar: {
       for_page: ["blogger","music","lastupdate","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2628,7 +2628,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：4 分钟</p>
+      <p>时长：5 分钟</p>
     </a>
   </div>
 
@@ -2645,124 +2645,84 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="基础介绍"><a href="#基础介绍" class="headerlink" title="基础介绍"></a>基础介绍</h2><p>Hexo是一个快速、简洁且高效的博客框架，具有超快速度、支持 Markdown、一键部署、插件和可扩展性（引自<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">官网简介</a>）。</p>
-<p>该框架可以部署到个人服务器或者GitHub上，本文主要是介绍如何部署到GitHub，以及配置的调整。</p>
-<h2 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h2><p>Hexo博客需要安装相关依赖程序</p>
+    <h2 id="基础介绍"><a href="#基础介绍" class="headerlink" title="基础介绍"></a>基础介绍</h2><p>Hexo 是一个快速、简洁且高效的博客框架，具有超快速度、支持 Markdown、一键部署、插件和可扩展性（引自<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">官网简介</a>）。</p>
+<p>该框架可以部署到个人服务器或者 GitHub 上，本文主要是介绍如何部署到 GitHub，以及配置的调整。</p>
+<h2 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h2><p>Hexo 博客需要安装相关依赖程序</p>
 <ul>
 <li>Node.js</li>
 <li>Git</li>
 </ul>
 <p>安装方法请自行查找。</p>
-<h2 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h2><p>Hexo博客利用Node.js的npm安装，我们打开cmd或者powershell，输入以下命令安装Hexo相关的工具</p>
+<h2 id="Hexo-安装"><a href="#Hexo-安装" class="headerlink" title="Hexo 安装"></a>Hexo 安装</h2><p>Hexo 博客利用 Node.js 的 npm 安装，我们打开 cmd 或者 powershell，输入以下命令安装 Hexo 相关的工具</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>然后我们使用以下命令创建我们的博客文件夹，其中folder代表要创建文件夹的路径，不指定的话默认在当前文件夹创建，然后我们进入文件夹开始创建我们的博客</p>
+
+<p>然后我们使用以下命令创建我们的博客文件夹，其中 folder 代表要创建文件夹的路径，不指定的话默认在当前文件夹创建，然后我们进入文件夹开始创建我们的博客</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
 <p>如果出现<code>无法加载文件 C:\Users\*\AppData\Roaming\npm\nodemon.ps1</code><br>之类的报错，可以使用以下方法解决（<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_58062502/article/details/131246476">参考链接</a>）：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Start-Process powershell -Verb runAs</span><br><span class="line">set-ExecutionPolicy RemoteSigned</span><br></pre></td></tr></table></figure>
+
 <p>或者进入项目文件夹，运行：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx nodemon run dev</span><br></pre></td></tr></table></figure>
 
-<p>现在我们的博客文件夹的雏形就创建好了。接下来就是把我们的博客部署到GitHub上了。</p>
-<h3 id="部署GitHub"><a href="#部署GitHub" class="headerlink" title="部署GitHub"></a>部署GitHub</h3><ol>
-<li>首先我们要有一个GitHub的账号。</li>
-<li>然后我们创建一个git仓库，用户名即你的git账户名<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://p.sda1.dev/13/461af9f9433bdf6286c4da1db5295e3d/image.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://p.sda1.dev/13/461af9f9433bdf6286c4da1db5295e3d/image.png" class="lazyload" data-srcset="https://p.sda1.dev/13/461af9f9433bdf6286c4da1db5295e3d/image.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div><br><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://p.sda1.dev/13/2005f895594be6df3b3dcff0dc6869ba/image.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://p.sda1.dev/13/2005f895594be6df3b3dcff0dc6869ba/image.png" class="lazyload" data-srcset="https://p.sda1.dev/13/2005f895594be6df3b3dcff0dc6869ba/image.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></li>
-<li>打开博客文件夹下的_comfig.yml，找到对应项目填入以下内容（没找到就自己写入）<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: 这里填入你之前在GitHub上创建仓库的完整路径，记得加上 .git</span><br><span class="line">branch: main</span><br></pre></td></tr></table></figure></li>
-<li>安装Hexo的git工具<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure></li>
-<li>打开git终端<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://p.sda1.dev/13/97eb5e72a42df667d0cd6215402c593f/image.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://p.sda1.dev/13/97eb5e72a42df667d0cd6215402c593f/image.png" class="lazyload" data-srcset="https://p.sda1.dev/13/97eb5e72a42df667d0cd6215402c593f/image.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-输入以下命令，第一条为清空发布文件夹，第二条为生成发布文件夹，第三条为上传。<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g </span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-此时会遇到一个问题，<code>err: Error: Spawn failed</code>，我们需要去生成新 SSH 密钥，<a target="_blank" rel="noopener" href="https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">GitHub官方文档生成ssh</a>，然后我们在git终端获取我们创建的 SSH 秘钥<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh</span><br><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure>
-然后填入这个界面 New SSH key<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://p.sda1.dev/13/c5cfd326ebb85017a39fd86f03852796/image.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://p.sda1.dev/13/c5cfd326ebb85017a39fd86f03852796/image.png" class="lazyload" data-srcset="https://p.sda1.dev/13/c5cfd326ebb85017a39fd86f03852796/image.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></li>
+<p>现在我们的博客文件夹的雏形就创建好了。接下来就是把我们的博客部署到 GitHub 上了。</p>
+<h3 id="部署-GitHub"><a href="#部署-GitHub" class="headerlink" title="部署 GitHub"></a>部署 GitHub</h3><ol>
+<li>首先我们要有一个 GitHub 的账号。</li>
+<li>然后我们创建一个 git 仓库，用户名即你的 git 账户名<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://p.sda1.dev/13/461af9f9433bdf6286c4da1db5295e3d/image.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://p.sda1.dev/13/461af9f9433bdf6286c4da1db5295e3d/image.png" class="lazyload" data-srcset="https://p.sda1.dev/13/461af9f9433bdf6286c4da1db5295e3d/image.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div><br><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://p.sda1.dev/13/2005f895594be6df3b3dcff0dc6869ba/image.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://p.sda1.dev/13/2005f895594be6df3b3dcff0dc6869ba/image.png" class="lazyload" data-srcset="https://p.sda1.dev/13/2005f895594be6df3b3dcff0dc6869ba/image.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></li>
+<li>打开博客文件夹下的_comfig.yml，找到对应项目填入以下内容（没找到就自己写入）</li>
 </ol>
-<p>接下来我们推送博客到GitHub上应该就没有问题了，推送后过一会儿我们就能通过 用户名.github.io 的链接访问博客了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: 这里填入你之前在GitHub上创建仓库的完整路径，记得加上 .git</span><br><span class="line">branch: main</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>安装 Hexo 的 git 工具</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>打开 git 终端<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://p.sda1.dev/13/97eb5e72a42df667d0cd6215402c593f/image.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://p.sda1.dev/13/97eb5e72a42df667d0cd6215402c593f/image.png" class="lazyload" data-srcset="https://p.sda1.dev/13/97eb5e72a42df667d0cd6215402c593f/image.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+输入以下命令，第一条为清空发布文件夹，第二条为生成发布文件夹，第三条为上传。</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>此时会遇到一个问题，<code>err: Error: Spawn failed</code>，我们需要去生成新 SSH 密钥，<a target="_blank" rel="noopener" href="https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">GitHub 官方文档生成 ssh</a>，然后我们在 git 终端获取我们创建的 SSH 秘钥</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh</span><br><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure>
+
+<p>然后填入这个界面 New SSH key</p>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://p.sda1.dev/13/c5cfd326ebb85017a39fd86f03852796/image.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://p.sda1.dev/13/c5cfd326ebb85017a39fd86f03852796/image.png" class="lazyload" data-srcset="https://p.sda1.dev/13/c5cfd326ebb85017a39fd86f03852796/image.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+
+<p>接下来我们推送博客到 GitHub 上应该就没有问题了，推送后过一会儿我们就能通过 用户名.github.io 的链接访问博客了</p>
 <h2 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h2><div class="tag link"><a class="link-card" title="官网文档 - 指令" target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/commands"><div class="left"><img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/256/safari.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/256/safari.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/></div><div class="right"><p class="text">官网文档 - 指令</p><p class="url">https://hexo.io/zh-cn/docs/commands</p></div></a></div>
 
-<p>创建文章可以用如下命令来创建一个md后缀的markdown页面，这个命令还有其他按参数，具体可以查阅官网文档。</p>
+<p>创建文章可以用如下命令来创建一个 md 后缀的 markdown 页面，这个命令还有其他按参数，具体可以查阅官网文档。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;文章名&quot;</span><br></pre></td></tr></table></figure>
 
 <p>其他项目相关的命令如下</p>
 <figure class="highlight shell"><figcaption><span>运行本地服务器</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight shell"><figcaption><span>生成发布文件夹</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+
 <div class="note warning"><p>部分文件使用要先生成才能链接成功</p></div>
+
 <figure class="highlight shell"><figcaption><span>清除发布文件夹</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight shell"><figcaption><span>发布到git</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
 <div class="note warning"><p>本命令需要在git终端执行</p></div>
 
-<h2 id="配置修改"><a href="#配置修改" class="headerlink" title="配置修改"></a>配置修改</h2><p>除了上文提到的deploy设置外，我们还可以更改博客的一些信息</p>
+<h2 id="配置修改"><a href="#配置修改" class="headerlink" title="配置修改"></a>配置修改</h2><p>除了上文提到的 deploy 设置外，我们还可以更改博客的一些信息</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: 博客名</span><br><span class="line">subtitle: 副标题</span><br><span class="line">description: 简介</span><br><span class="line">keywords:</span><br><span class="line">author: 作者名</span><br><span class="line">language: zh-CN</span><br><span class="line">timezone: &#x27;&#x27;</span><br><span class="line">favicon: /images/img_icon.png #网站图标</span><br></pre></td></tr></table></figure>
-<p>这里的图标我用了本地文件，在source文件夹下创建的images文件夹内的img_icon.png，在生成后路径会变成<code>/public/images/img_icon.png</code>，这里的public就是生成的文件夹，images前面加斜杠代表从根目录开始，否则会以打开的路径后面加图标路径。其他资源的调用也是类似的情况。这里也可以用网络路径。</p>
+
+<p>这里的图标我用了本地文件，在 source 文件夹下创建的 images 文件夹内的 img_icon.png，在生成后路径会变成<code>/public/images/img_icon.png</code>，这里的 public 就是生成的文件夹，images 前面加斜杠代表从根目录开始，否则会以打开的路径后面加图标路径。其他资源的调用也是类似的情况。这里也可以用网络路径。</p>
 <p>其次就是文章访问路径的修改，默认是以时间+文章名作为访问路径，我们可以通过以下配置修改</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">url: https://busyogg.github.io/ #网址</span><br><span class="line">permalink: article/:category/:title/ #访问路径</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure>
 
 <p>路径的规则为</p>
-<table>
-<thead>
-<tr>
-<th>变量</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>:year</td>
-<td>文章的发表年份（4 位数）</td>
-</tr>
-<tr>
-<td>:month</td>
-<td>文章的发表月份（2 位数）</td>
-</tr>
-<tr>
-<td>:i_month</td>
-<td>文章的发表月份（不含前导零）</td>
-</tr>
-<tr>
-<td>:day</td>
-<td>文章的发表日期 (2 位数)</td>
-</tr>
-<tr>
-<td>:i_day</td>
-<td>文章的发表日期（不含前导零）</td>
-</tr>
-<tr>
-<td>:hour</td>
-<td>文章发表时的小时 (2 位数)</td>
-</tr>
-<tr>
-<td>:minute</td>
-<td>文章发表时的分钟 (2 位数)</td>
-</tr>
-<tr>
-<td>:second</td>
-<td>文章发表时的秒钟 (2 位数)</td>
-</tr>
-<tr>
-<td>:title</td>
-<td>文件名称 (相对于 “source&#x2F;_posts&#x2F;“ 文件夹)</td>
-</tr>
-<tr>
-<td>:name</td>
-<td>文件名称</td>
-</tr>
-<tr>
-<td>:post_title</td>
-<td>文章标题</td>
-</tr>
-<tr>
-<td>:id</td>
-<td>文章 ID (清除缓存时不具有持久性)</td>
-</tr>
-<tr>
-<td>:category</td>
-<td>分类。如果文章没有分类，则是 default_category 配置</td>
-</tr>
-<tr>
-<td>:hash</td>
-<td>文件名（与 :title 相同）和日期的 SHA1 哈希值（12位16进制数）</td>
-</tr>
-</tbody></table>
-<p>路径开头不带斜杠，我路径的article为文章存放的根文件夹，可加可不加，可自定义名称，根据个人需求决定。</p>
+<p>| 变量        | 描述                                                            |<br>| ———– | ————————————————————— | —— |<br>| :year       | 文章的发表年份（4 位数）                                        |<br>| :month      | 文章的发表月份（2 位数）                                        |<br>| :i_month    | 文章的发表月份（不含前导零）                                    |<br>| :day        | 文章的发表日期 (2 位数)                                         |<br>| :i_day      | 文章的发表日期（不含前导零）                                    |<br>| :hour       | 文章发表时的小时 (2 位数)                                       |<br>| :minute     | 文章发表时的分钟 (2 位数)                                       |<br>| :second     | 文章发表时的秒钟 (2 位数)                                       |<br>| :title      | 文件名称 (相对于 “source&#x2F;_posts&#x2F;“ 文件夹)                      |<br>| :name       | 文件名称                                                        |<br>| :post_title | 文章标题                                                        |<br>| :id         | 文章 ID (清除缓存时不具有持久性)                                |<br>| :category   | 分类。如果文章没有分类，则是 default_category 配置              | 信息。 |<br>| :hash       | 文件名（与 :title 相同）和日期的 SHA1 哈希值（12 位 16 进制数） |</p>
+<p>路径开头不带斜杠，我路径的 article 为文章存放的根文件夹，可加可不加，可自定义名称，根据个人需求决定。</p>
 <h2 id="其他注意事项"><a href="#其他注意事项" class="headerlink" title="其他注意事项"></a>其他注意事项</h2><ul>
-<li>所有对config文件的修改都需要重新执行 <code>hexo server</code>命令</li>
-<li>source文件夹用于保存项目文件，对文章的修改可以实时更新，但要增加source文件夹下面的文件的话就需要重新执行<code>hexo generate</code>来生成文件</li>
-<li>文章创建的样板文件为<code>post.md</code>，在scaffolds文件夹下，在创建文章的时候会帮你提前输入一些内容。其他样板文件同理。</li>
+<li>所有对 config 文件的修改都需要重新执行 <code>hexo server</code>命令</li>
+<li>source 文件夹用于保存项目文件，对文章的修改可以实时更新，但要增加 source 文件夹下面的文件的话就需要重新执行<code>hexo generate</code>来生成文件</li>
+<li>文章创建的样板文件为<code>post.md</code>，在 scaffolds 文件夹下，在创建文章的时候会帮你提前输入一些内容。其他样板文件同理。</li>
 </ul>
 
   </div>
@@ -2814,10 +2774,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-09-18T00:54:29+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-18T23:38:01+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年9月18日</p>
+    <p>更新于：2024年5月18日</p>
   </a>
 </div>
 
@@ -2899,17 +2859,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/article/38effc2a84e9/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Hexo博客搭建 美化篇</p>
-          <p class='content'>简介本网站使用的是Volantis主题，并对其进行了自定义改造。
+          <p class='content'>简介本网站使用的是 Volantis 主题，并对其进行了自定义改造。
 安装在 _config.yml 文件中修改以下项目
 config.yml1theme: volantis
-然后通过npm安装主题...</p>
+
+然后通过 npm...</p>
         </a>
       
       
         <a class='next' href='/article/ad277da9d73c/'>
           <p class='title'>Unity Console控制台打印拓展工具<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>简介本项目旨在展开console控制台打印的内容显示，减少打印对象内容未知的情况，同时简化多参数打印的调用。
-本项目部分功能使用LitJson实现，数组、字典、json数据均会另起一行显示，其他...</p>
+          <p class='content'>简介本项目旨在展开 console 控制台打印的内容显示，减少打印对象内容未知的情况，同时简化多参数打印的调用。
+本项目部分功能使用 LitJson 实现，数组、字典、json 数据均会另起一行...</p>
         </a>
       
     </div>
@@ -2969,7 +2930,7 @@ config.yml1theme: volantis
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">基础介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%9D%E8%B5%96"><span class="toc-number">2.</span> <span class="toc-text">依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo%E5%AE%89%E8%A3%85"><span class="toc-number">3.</span> <span class="toc-text">Hexo安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2GitHub"><span class="toc-number">3.1.</span> <span class="toc-text">部署GitHub</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="toc-number">4.</span> <span class="toc-text">基本命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E4%BF%AE%E6%94%B9"><span class="toc-number">5.</span> <span class="toc-text">配置修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">6.</span> <span class="toc-text">其他注意事项</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">基础介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%9D%E8%B5%96"><span class="toc-number">2.</span> <span class="toc-text">依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo-%E5%AE%89%E8%A3%85"><span class="toc-number">3.</span> <span class="toc-text">Hexo 安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2-GitHub"><span class="toc-number">3.1.</span> <span class="toc-text">部署 GitHub</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="toc-number">4.</span> <span class="toc-text">基本命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E4%BF%AE%E6%94%B9"><span class="toc-number">5.</span> <span class="toc-text">配置修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">6.</span> <span class="toc-text">其他注意事项</span></a></li></ol>
     </div>
   </section>
 
@@ -3775,7 +3736,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/教程/","name":"教程"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/教程/Hexo/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/e834ef617110/","name":"Hexo博客搭建 基础篇"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hexo博客搭建 基础篇","description":"Hexo博客搭建教程基础篇，包含搭建的过程和遇到的坑","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/e834ef617110/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/e834ef617110/","wordCount":0,"datePublished":"2023-08-31T20:09:13.000Z","dateModified":"2023-09-17T16:54:29.826Z","articleSection":"教程","keywords":"教程,Hexo,GitHub","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/教程/","name":"教程"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/教程/Hexo/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/e834ef617110/","name":"Hexo博客搭建 基础篇"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hexo博客搭建 基础篇","description":"Hexo博客搭建教程基础篇，包含搭建的过程和遇到的坑","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/e834ef617110/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/e834ef617110/","wordCount":0,"datePublished":"2023-08-31T20:09:13.000Z","dateModified":"2024-05-18T15:38:01.307Z","articleSection":"教程","keywords":"教程,Hexo,GitHub","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

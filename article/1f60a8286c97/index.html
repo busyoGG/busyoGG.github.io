@@ -46,7 +46,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-09-25T14:35:26.000Z">
-<meta property="article:modified_time" content="2023-09-26T14:30:28.331Z">
+<meta property="article:modified_time" content="2024-05-18T15:38:29.519Z">
 <meta property="article:author" content="Busyo">
 <meta property="article:tag" content="算法">
 <meta property="article:tag" content="C#">
@@ -1845,7 +1845,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1715606980512),
+    lastupdate: new Date(1716060423073),
     sidebar: {
       for_page: ["blogger","music","lastupdate","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2623,7 +2623,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：855 字</p>
+      <p>字数：875 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2646,28 +2646,29 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>AABB检测，即轴对齐包围盒（Axis-Aligned Bounding Boxes）检测，是一种检测两个物体有没有相交的算法。物体根据坐标轴形成包围盒，通过检测顶点关系来判断是否相交。</p>
+    <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>AABB 检测，即轴对齐包围盒（Axis-Aligned Bounding Boxes）检测，是一种检测两个物体有没有相交的算法。物体根据坐标轴形成包围盒，通过检测顶点关系来判断是否相交。</p>
 <h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><h3 id="一维"><a href="#一维" class="headerlink" title="一维"></a>一维</h3><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20230925-224500-150.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20230925-224500-150.png" class="lazyload" data-srcset="https://img.busyo.buzz/imgUpload/20230925-224500-150.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 
-<p>如上图所示，在一维坐标轴中，存在一个物体AB，一个物体CD以及一个物体EF。</p>
-<p>当我们要检测物体AB和CD是否相交的时候，我们不难看出，只要物体CD的最大坐标和最小坐标都不在物体AB的坐标之间，那我们就认为这两个物体没有相交。</p>
-<p>当我们检测物体AB和物体EF是否相交的时候，我们观察到物体AB和物体EF的坐标相交了，因此这两个物体相交。</p>
+<p>如上图所示，在一维坐标轴中，存在一个物体 AB，一个物体 CD 以及一个物体 EF。</p>
+<p>当我们要检测物体 AB 和 CD 是否相交的时候，我们不难看出，只要物体 CD 的最大坐标和最小坐标都不在物体 AB 的坐标之间，那我们就认为这两个物体没有相交。</p>
+<p>当我们检测物体 AB 和物体 EF 是否相交的时候，我们观察到物体 AB 和物体 EF 的坐标相交了，因此这两个物体相交。</p>
 <p>由此我们可以得出，当一个物体的最大坐标和最小坐标都不在另一个物体的最大坐标和最小坐标之间，则两个物体没有相交。</p>
-<h3 id="二维"><a href="#二维" class="headerlink" title="二维"></a>二维</h3><p>这个原理拓展到二维坐标中，即2D平面中也成立。</p>
+<h3 id="二维"><a href="#二维" class="headerlink" title="二维"></a>二维</h3><p>这个原理拓展到二维坐标中，即 2D 平面中也成立。</p>
 <div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20230925-225446-996.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20230925-225446-996.png" class="lazyload" data-srcset="https://img.busyo.buzz/imgUpload/20230925-225446-996.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 
-<p>同样的，我们在平面中也存在A、B、C、D四个物体。</p>
-<p>对于物体A和物体D，在X轴中，我们需要判断D的X最大值和D的X最小值都不在A的X最大值和X最小值中，我们就能判断连个物体不相交。</p>
-<p>对于物体A和物体C，在X轴中，我们需要判断C的Y最大值和C的Y最小值都不在A的Y最大值和Y最小值中，我们就能判断连个物体不相交。</p>
+<p>同样的，我们在平面中也存在 A、B、C、D 四个物体。</p>
+<p>对于物体 A 和物体 D，在 X 轴中，我们需要判断 D 的 X 最大值和 D 的 X 最小值都不在 A 的 X 最大值和 X 最小值中，我们就能判断连个物体不相交。</p>
+<p>对于物体 A 和物体 C，在 X 轴中，我们需要判断 C 的 Y 最大值和 C 的 Y 最小值都不在 A 的 Y 最大值和 Y 最小值中，我们就能判断连个物体不相交。</p>
 <p>因此，对于平面来说，我们只是拓展了一个轴的检测，并且这两个轴的检测只要有一个成立，就表示两个物体不相交。</p>
-<p>我们在做平面AABB检测的时候会出现三种情况，即B、C、D三个物体和A物体之间的关系。这三种情况只要出现一种成立即可。所以，我们判断物体关系的时候就判断不成立的情况，用<code>或</code>来连接，可以减少计算量。并且当我们判断的时候可以直接用一个物体的最大值去比另一个物体的最小值，用最小值去比最大值，进一步减少计算。</p>
-<h3 id="三维"><a href="#三维" class="headerlink" title="三维"></a>三维</h3><p>在三维空间中进行AABB检测与在二维空间中检测并无不同，只是要检测的轴再增加一个Z轴。三个轴之间的关系也是<code>或</code>的关系。</p>
+<p>我们在做平面 AABB 检测的时候会出现三种情况，即 B、C、D 三个物体和 A 物体之间的关系。这三种情况只要出现一种成立即可。所以，我们判断物体关系的时候就判断不成立的情况，用<code>或</code>来连接，可以减少计算量。并且当我们判断的时候可以直接用一个物体的最大值去比另一个物体的最小值，用最小值去比最大值，进一步减少计算。</p>
+<h3 id="三维"><a href="#三维" class="headerlink" title="三维"></a>三维</h3><p>在三维空间中进行 AABB 检测与在二维空间中检测并无不同，只是要检测的轴再增加一个 Z 轴。三个轴之间的关系也是<code>或</code>的关系。</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//包围盒数据结构</span></span><br><span class="line"><span class="keyword">using</span> System.Collections;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">CollisionData</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> Vector3 max = Vector3.zero;</span><br><span class="line">    <span class="keyword">public</span> Vector3 min = Vector3.zero;</span><br><span class="line">&#125;</span><br><span class="line">---------------------------------------------</span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> AABB检测</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;data1&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;data2&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span>//AABB检测</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="built_in">bool</span> <span class="title">CollisionAABB</span>(<span class="params">CollisionData data1,CollisionData data2</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//包围盒1的最小值比包围盒2的最大值还大 或 包围盒1的最大值比包围盒2的最小值还小 则不碰撞</span></span><br><span class="line">    <span class="keyword">if</span> (data1.max.x &lt; data2.min.x || data1.max.y &lt; data2.min.y || data1.max.z &lt; data2.min.z ||</span><br><span class="line">        data1.min.x &gt; data2.max.x || data1.min.y &gt; data2.max.y || data1.min.z &gt; data2.max.z)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>AABB检测在物体有旋转的情况下会造成包围盒过大，因此检测的精度不是很高。具体情况如下图所示。</p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>AABB 检测在物体有旋转的情况下会造成包围盒过大，因此检测的精度不是很高。具体情况如下图所示。</p>
 <div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20230925-233451-905.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20230925-233451-905.png" class="lazyload" data-srcset="https://img.busyo.buzz/imgUpload/20230925-233451-905.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 
 <h2 id="碰撞检测示例工程"><a href="#碰撞检测示例工程" class="headerlink" title="碰撞检测示例工程"></a>碰撞检测示例工程</h2><center><a class="ghcard" rel="external nofollow noopener noreferrer noopener" target="_blank" href="https://github.com/busyoGG/CollisionDetection"><img src="https://github-readme-stats.vercel.app/api/pin/?username=busyoGG&repo=CollisionDetection&theme=onedark&show_owner=true" class="lazyload" data-srcset="https://github-readme-stats.vercel.app/api/pin/?username=busyoGG&repo=CollisionDetection&theme=onedark&show_owner=true" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/></a></center>
+
   </div>
   
   
@@ -2691,10 +2692,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-09-26T22:30:28+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-18T23:38:29+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年9月26日</p>
+    <p>更新于：2024年5月18日</p>
   </a>
 </div>
 
@@ -2776,13 +2777,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/article/3c9cb66ca768/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>碰撞检测之OBB</p>
-          <p class='content'>简介OBB检测，即有向包围盒（Oriented Bounding Box）检测，是一种检测两个物体有没有相交的算法。物体根据包围盒中心、包围盒大小以及包围盒旋转轴构造有向包围盒，该包围盒比AAB...</p>
+          <p class='content'>简介OBB 检测，即有向包围盒（Oriented Bounding Box）检测，是一种检测两个物体有没有相交的算法。物体根据包围盒中心、包围盒大小以及包围盒旋转轴构造有向包围盒，该包围盒比 A...</p>
         </a>
       
       
         <a class='next' href='/article/be8112f144cf/'>
           <p class='title'>TS实现ECS架构<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>简介ECS架构是 实体（Entity）-组件（Component）-系统（System） 组成的架构，主要目的是对数据和逻辑进行解耦以便更好的维护系统。其运行的原理也能提高CPU的缓存命中，即可...</p>
+          <p class='content'>简介ECS 架构是 实体（Entity）-组件（Component）-系统（System） 组成的架构，主要目的是对数据和逻辑进行解耦以便更好的维护系统。其运行的原理也能提高 CPU 的缓存命中...</p>
         </a>
       
     </div>
@@ -3648,7 +3649,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/算法/","name":"算法"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/算法/碰撞检测/","name":"碰撞检测"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/1f60a8286c97/","name":"碰撞检测之AABB"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"碰撞检测之AABB","description":"AABB检测原理","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/1f60a8286c97/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/1f60a8286c97/","wordCount":0,"datePublished":"2023-09-25T14:35:26.000Z","dateModified":"2023-09-26T14:30:28.331Z","articleSection":"算法","keywords":"算法,C#,碰撞检测,AABB","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/算法/","name":"算法"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/算法/碰撞检测/","name":"碰撞检测"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/1f60a8286c97/","name":"碰撞检测之AABB"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"碰撞检测之AABB","description":"AABB检测原理","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/1f60a8286c97/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/1f60a8286c97/","wordCount":0,"datePublished":"2023-09-25T14:35:26.000Z","dateModified":"2024-05-18T15:38:29.519Z","articleSection":"算法","keywords":"算法,C#,碰撞检测,AABB","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

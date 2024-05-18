@@ -46,7 +46,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-01-21T20:08:06.000Z">
-<meta property="article:modified_time" content="2024-03-01T14:35:13.295Z">
+<meta property="article:modified_time" content="2024-05-18T15:38:11.843Z">
 <meta property="article:author" content="Busyo">
 <meta property="article:tag" content="物理">
 <meta name="twitter:card" content="summary">
@@ -1842,7 +1842,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1715606980512),
+    lastupdate: new Date(1716060423073),
     sidebar: {
       for_page: ["blogger","music","lastupdate","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2655,24 +2655,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20240122-170755-256.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20240122-170755-256.png" class="lazyload" data-srcset="https://img.busyo.buzz/imgUpload/20240122-170755-256.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 
 <p>不过这样会存在一个问题，就是如果碰撞的顺序不同的话，得到的结果也不同，因此我选择保存接触到的碰撞对象，每次碰撞检测的时候检测上次的碰撞物体是否存在于列表中，存在则不动，不存在则新增到列表后面，没碰撞的物体移除列表。这样就能保证每次碰撞的顺序是按照接触到的物体顺序，而不是遍历的顺序。</p>
-<h2 id="下落"><a href="#下落" class="headerlink" title="下落"></a>下落</h2><p>我选择的是根据下落的公式 $v_g&#x3D;-gt$ 得到下落速度，乘以每帧时间 $v_{g_{dt}}&#x3D;v_g*dt$ 得到每帧的下落速度，再加到当前坐标的y值上即可。</p>
-<h2 id="跳跃"><a href="#跳跃" class="headerlink" title="跳跃"></a>跳跃</h2><p>跳跃是在下落的基础上，增加一个初始速度，通过公式 $v&#x3D;v_0-v_g$ 得到下落速度，然后跟上面下落一样处理得到新的y值。</p>
+<h2 id="下落"><a href="#下落" class="headerlink" title="下落"></a>下落</h2><p>我选择的是根据下落的公式 $v_g&#x3D;-gt$ 得到下落速度，乘以每帧时间 $v_{g_{dt}}&#x3D;v_g*dt$ 得到每帧的下落速度，再加到当前坐标的 y 值上即可。</p>
+<h2 id="跳跃"><a href="#跳跃" class="headerlink" title="跳跃"></a>跳跃</h2><p>跳跃是在下落的基础上，增加一个初始速度，通过公式 $v&#x3D;v_0-v_g$ 得到下落速度，然后跟上面下落一样处理得到新的 y 值。</p>
 <h2 id="爬坡"><a href="#爬坡" class="headerlink" title="爬坡"></a>爬坡</h2><p>在爬坡的时候，我根据坡面的法线方向和自体的上方向，得到一个旋转的四元数，然后用该四元数乘以前进方向，使前进方向旋转到坡面，这样在坡面的移动就相当于把原来的坐标系转移到坡面的坐标系中，再在坡面坐标系实现位移。</p>
 <p>用一个平面图来表示的话就像下图所示：</p>
 <div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20240122-183525-721.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20240122-183525-721.png" class="lazyload" data-srcset="https://img.busyo.buzz/imgUpload/20240122-183525-721.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 
 <p>推广到三维空间也是一样。</p>
 <h2 id="判断是否在平台上"><a href="#判断是否在平台上" class="headerlink" title="判断是否在平台上"></a>判断是否在平台上</h2><p>跳跃和坡面都需要判断是否在平台上，在平台上的话就停止下落并重置状态。</p>
-<p>判断是否在顶部，就判断自体最低点是否大于等于碰撞物体最高点；判断是会否在坡面，就判断移动方向和自体下方向的投影的绝对值是否大于0并小于自定义的坡度（0-1之间）。</p>
-<h2 id="跨台阶"><a href="#跨台阶" class="headerlink" title="跨台阶"></a>跨台阶</h2><p>跨台阶就是在做排斥的时候，判断自体最低点是否小于碰撞物体最高点，并且自体最低点加上自定义跨越高度是否大于碰撞物体最高点，都满足的情况下令排斥值的y值等于碰撞物体最高点减去自体最低点，即：</p>
+<p>判断是否在顶部，就判断自体最低点是否大于等于碰撞物体最高点；判断是会否在坡面，就判断移动方向和自体下方向的投影的绝对值是否大于 0 并小于自定义的坡度（0-1 之间）。</p>
+<h2 id="跨台阶"><a href="#跨台阶" class="headerlink" title="跨台阶"></a>跨台阶</h2><p>跨台阶就是在做排斥的时候，判断自体最低点是否小于碰撞物体最高点，并且自体最低点加上自定义跨越高度是否大于碰撞物体最高点，都满足的情况下令排斥值的 y 值等于碰撞物体最高点减去自体最低点，即：</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (self.minY &lt; other.maxY &amp;&amp; self.minY + self.stepHeight &gt;= other.maxY)</span><br><span class="line">&#123;</span><br><span class="line">  offset.y = other.maxY - self.minY;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>否则就按照正常的排斥计算。</p>
 <h2 id="攀爬"><a href="#攀爬" class="headerlink" title="攀爬"></a>攀爬</h2><h3 id="攀爬判定"><a href="#攀爬判定" class="headerlink" title="攀爬判定"></a>攀爬判定</h3><p>发生碰撞并且移动方向和碰撞法线的投影小于一定值（自定义）超过一定时间的时候判定为开始攀爬。</p>
-<p>头顶有障碍物的时候取消攀爬。（攀爬面法线y值小于一定值为头顶有障碍物）</p>
+<p>头顶有障碍物的时候取消攀爬。（攀爬面法线 y 值小于一定值为头顶有障碍物）</p>
 <h3 id="攀爬计算"><a href="#攀爬计算" class="headerlink" title="攀爬计算"></a>攀爬计算</h3><p>攀爬和爬坡一样需要把坐标系转移到攀爬平面上。</p>
 <ol>
-<li>令原始输入方向（即输入值ADWS）面向攀爬平面法线的反方向，得到面向输入方向。  <div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20240122-190738-743.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20240122-190738-743.png" class="lazyload" data-srcset="https://img.busyo.buzz/imgUpload/20240122-190738-743.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></li>
+<li>令原始输入方向（即输入值 ADWS）面向攀爬平面法线的反方向，得到面向输入方向。<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20240122-190738-743.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20240122-190738-743.png" class="lazyload" data-srcset="https://img.busyo.buzz/imgUpload/20240122-190738-743.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></li>
 <li>计算自体上方向和攀爬平面法线的旋转四元数。</li>
 <li>旋转四元数乘以面向输入方向得到最终攀爬方向。（和爬坡一样的操作）</li>
 </ol>
@@ -2692,7 +2692,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h2><div class="timeline"><div class="timenode"><div class="meta"><p><p>2024-03-01</p>
 </p></div><div class="body"><p>1.更新推物体思路</p></div></div>
 <div class="timenode"><div class="meta"><p><p>2024-01-22</p>
-</p></div><div class="body"><ol><li>更新基础内容</li></ol><ul><li>移动</li><li>碰撞</li><li>下落</li><li>跳跃</li><li>爬坡</li><li>判定平台</li><li>跨台阶</li><li>攀爬</li></ul></div></div></div>
+</p></div><div class="body"><ol><li>更新基础内容</li></ol><ul><li>移动</li><li>碰撞</li><li>下落</li><li>跳跃</li><li>爬坡</li><li>判定平台</li><li>跨台阶</li><li>攀爬</li></ul></div></div>
+  </div>
+
   </div>
   
   
@@ -2716,10 +2718,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-03-01T22:35:13+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-18T23:38:11+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2024年3月1日</p>
+    <p>更新于：2024年5月18日</p>
   </a>
 </div>
 
@@ -3730,7 +3732,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/设计思路/","name":"设计思路"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/b83ee5a642c0/","name":"物理引擎Demo思路"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"物理引擎Demo思路","description":"分享一些做物理Demo的思路","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/b83ee5a642c0/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/b83ee5a642c0/","wordCount":0,"datePublished":"2024-01-21T20:08:06.000Z","dateModified":"2024-03-01T14:35:13.295Z","articleSection":"设计思路","keywords":"物理","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/设计思路/","name":"设计思路"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/b83ee5a642c0/","name":"物理引擎Demo思路"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"物理引擎Demo思路","description":"分享一些做物理Demo的思路","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/b83ee5a642c0/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/b83ee5a642c0/","wordCount":0,"datePublished":"2024-01-21T20:08:06.000Z","dateModified":"2024-05-18T15:38:11.843Z","articleSection":"设计思路","keywords":"物理","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

@@ -46,7 +46,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-08-24T09:03:15.000Z">
-<meta property="article:modified_time" content="2023-11-04T16:18:43.705Z">
+<meta property="article:modified_time" content="2024-05-18T15:36:21.054Z">
 <meta property="article:author" content="Busyo">
 <meta property="article:tag" content="C#">
 <meta property="article:tag" content="工具类">
@@ -1845,7 +1845,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1715606980512),
+    lastupdate: new Date(1716060423073),
     sidebar: {
       for_page: ["blogger","music","lastupdate","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2646,10 +2646,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h2><p>在事件传递的过程中设置一个中间对象，负责管理监听者和发送者，以达到解耦合的目的。  </p>
+    <h2 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h2><p>在事件传递的过程中设置一个中间对象，负责管理监听者和发送者，以达到解耦合的目的。</p>
 <p>首先我们定义一个方法来注册监听对象，该对象包含节点（即作用域）、事件名和事件函数，然后我们在事件触发的时候调用触发函数，来触发所有监听该事件的对象。触发函数包含事件名和参数。</p>
-<p>此处我们以字典 _eventDictionary 来存储监听对象，以事件名作为字典的key，在字典里我们以作用域为key定义另一个字典，防止同名事件冲突以及同作用域事件重复添加。</p>
-<p>同时，由于我们需要一个清除节点上所有事件的方法，因此我们单独设置一个字典 _eventNode 用来保存节点和事件的关系。在清除节点上所有事件的时候只需要遍历该字典 _eventNode 中对应作用域（传入的node）的事件并且从事件字典 _eventDictionary 中查找对应的事件对象及其作用域即可。</p>
+<p>此处我们以字典 _eventDictionary 来存储监听对象，以事件名作为字典的 key，在字典里我们以作用域为 key 定义另一个字典，防止同名事件冲突以及同作用域事件重复添加。</p>
+<p>同时，由于我们需要一个清除节点上所有事件的方法，因此我们单独设置一个字典 _eventNode 用来保存节点和事件的关系。在清除节点上所有事件的时候只需要遍历该字典 _eventNode 中对应作用域（传入的 node）的事件并且从事件字典 _eventDictionary 中查找对应的事件对象及其作用域即可。</p>
 <p>具体的调用过程如下图所示：</p>
 <div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://p.sda1.dev/12/9a5cb691d1f7dd4a245b7894b48a9c75/image.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://p.sda1.dev/12/9a5cb691d1f7dd4a245b7894b48a9c75/image.png" class="lazyload" data-srcset="https://p.sda1.dev/12/9a5cb691d1f7dd4a245b7894b48a9c75/image.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 
@@ -2666,7 +2666,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <center><a class="ghcard" rel="external nofollow noopener noreferrer noopener" target="_blank" href="https://github.com/busyoGG/EventManagerForUnity"><img src="https://github-readme-stats.vercel.app/api/pin/?username=busyoGG&repo=EventManagerForUnity&theme=onedark&show_owner=true" class="lazyload" data-srcset="https://github-readme-stats.vercel.app/api/pin/?username=busyoGG&repo=EventManagerForUnity&theme=onedark&show_owner=true" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/></a></center>
 ## 其他版本
 
-<p><a href="../1099d6589f61">Laya版本</a></p>
+<p><a href="../1099d6589f61">Laya 版本</a></p>
 
   </div>
   
@@ -2691,10 +2691,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-11-05T00:18:43+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-18T23:36:21+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年11月5日</p>
+    <p>更新于：2024年5月18日</p>
   </a>
 </div>
 
@@ -2777,14 +2777,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <a class='prev' href='/article/923369eacdd4/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Js/Ts缓动系统</p>
           <p class='content'>基本原理概述缓动的基本原理很简单，就是设置一个初值和终值，在每帧更新的时候根据特定的缓动函数算出对应的中间值并插值。
-本工具类分为4个部分：缓动工具类、缓动辅助类、缓动核心类、缓动时间类。同时，...</p>
+本工具类分为 4 个部分：缓动工具类、缓动辅助类、缓动核心类、缓动时间类。同...</p>
         </a>
       
       
         <a class='next' href='/article/1099d6589f61/'>
           <p class='title'>Laya自定义事件系统<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>基本原理在事件传递的过程中设置一个中间对象，负责管理监听者和发送者，以达到解耦合的目的。  
-首先我们定义一个方法来注册监听对象，该对象包含节点（即作用域）、事件名和事件函数，然后我们在事件触发...</p>
+          <p class='content'>基本原理在事件传递的过程中设置一个中间对象，负责管理监听者和发送者，以达到解耦合的目的。
+首先我们定义一个方法来注册监听对象，该对象包含节点（即作用域）、事件名和事件函数，然后我们在事件触发的时...</p>
         </a>
       
     </div>
@@ -3650,7 +3650,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Unity/","name":"Unity"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Unity/工具/","name":"工具"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/2474251272a9/","name":"Unity自定义事件系统"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Unity自定义事件系统","description":"自定义事件系统原理与具体实现","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/2474251272a9/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/2474251272a9/","wordCount":0,"datePublished":"2023-08-24T09:03:15.000Z","dateModified":"2023-11-04T16:18:43.705Z","articleSection":"Unity","keywords":"C#,工具类,系统架构,Unity","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Unity/","name":"Unity"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Unity/工具/","name":"工具"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/2474251272a9/","name":"Unity自定义事件系统"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Unity自定义事件系统","description":"自定义事件系统原理与具体实现","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/2474251272a9/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/2474251272a9/","wordCount":0,"datePublished":"2023-08-24T09:03:15.000Z","dateModified":"2024-05-18T15:36:21.054Z","articleSection":"Unity","keywords":"C#,工具类,系统架构,Unity","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

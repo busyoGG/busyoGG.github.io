@@ -46,7 +46,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-08-23T13:17:56.000Z">
-<meta property="article:modified_time" content="2023-09-18T12:54:37.048Z">
+<meta property="article:modified_time" content="2024-05-18T15:40:13.707Z">
 <meta property="article:author" content="Busyo">
 <meta property="article:tag" content="Laya">
 <meta property="article:tag" content="Bug">
@@ -1843,7 +1843,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1715606980512),
+    lastupdate: new Date(1716060423073),
     sidebar: {
       for_page: ["blogger","music","lastupdate","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2621,7 +2621,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：112 字</p>
+      <p>字数：114 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2644,10 +2644,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>该版本的粒子有两类，支持GPUInstance的ShurikenParticleInstance和ShurikenParticle，前者在不停创建销毁的过程中在统计面板上会累计内存增长，看上去和内存泄漏一样。其原因为销毁对象的时候没有对_instanceParticleVertexBuffer对象进行内存统计。</p>
+    <p>该版本的粒子有两类，支持 GPUInstance 的 ShurikenParticleInstance 和 ShurikenParticle，前者在不停创建销毁的过程中在统计面板上会累计内存增长，看上去和内存泄漏一样。其原因为销毁对象的时候没有对_instanceParticleVertexBuffer 对象进行内存统计。</p>
 <p>解决方案</p>
-<p>在<code> destroy()</code>方法中针对_instanceParticleVertexBuffer改为如下内容</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">_instanceParticleVertexBuffer</span>) &#123;</span><br><span class="line">        <span class="keyword">var</span> memorySize = <span class="variable language_">this</span>.<span class="property">_instanceParticleVertexBuffer</span>.<span class="property">_byteLength</span>;</span><br><span class="line">	<span class="title class_">Laya</span>.<span class="property">Resource</span>.<span class="title function_">_addMemory</span>(-memorySize, -memorySize);</span><br><span class="line">	<span class="variable language_">this</span>.<span class="property">_instanceParticleVertexBuffer</span>.<span class="title function_">destroy</span>();</span><br><span class="line">    	<span class="variable language_">this</span>.<span class="property">_instanceParticleVertexBuffer</span> = <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在<code> destroy()</code>方法中针对_instanceParticleVertexBuffer 改为如下内容</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">_instanceParticleVertexBuffer</span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> memorySize = <span class="variable language_">this</span>.<span class="property">_instanceParticleVertexBuffer</span>.<span class="property">_byteLength</span>;</span><br><span class="line">  <span class="title class_">Laya</span>.<span class="property">Resource</span>.<span class="title function_">_addMemory</span>(-memorySize, -memorySize);</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">_instanceParticleVertexBuffer</span>.<span class="title function_">destroy</span>();</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">_instanceParticleVertexBuffer</span> = <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
   </div>
   
@@ -2672,10 +2672,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-09-18T20:54:37+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-18T23:40:13+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年9月18日</p>
+    <p>更新于：2024年5月18日</p>
   </a>
 </div>
 
@@ -2759,8 +2759,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Laya进度条shader</p>
           <p class='content'>原理
 
-根据传入的进度[0,1]剔除对应颜色值RGB之一的像素，上图为进度条所需的从颜色值0到颜色值1的贴图（透明底图，进度条的圈为从白到黑的不透明圆环）。
-此代码负责剔除一定颜色值的像素，利用...</p>
+根据传入的进度[0,1]剔除对应颜色值 RGB 之一的像素，上图为进度条所需的从颜色值 0 到颜色值 1 的贴图（透明底图，进度条的圈为从白到黑的不透明圆环）。
+此代码负责剔除一定颜色值...</p>
         </a>
       
       
@@ -3617,7 +3617,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Laya/","name":"Laya"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Laya/Bug/","name":"Bug"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/07675fbaf5d8/","name":"关于Laya 2.13版本 粒子特效内存泄漏问题"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"关于Laya 2.13版本 粒子特效内存泄漏问题","description":"Laya引擎数据面板的一个小bug","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/07675fbaf5d8/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/07675fbaf5d8/","wordCount":0,"datePublished":"2023-08-23T13:17:56.000Z","dateModified":"2023-09-18T12:54:37.048Z","articleSection":"Laya","keywords":"Laya,Bug","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Laya/","name":"Laya"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Laya/Bug/","name":"Bug"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/07675fbaf5d8/","name":"关于Laya 2.13版本 粒子特效内存泄漏问题"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"关于Laya 2.13版本 粒子特效内存泄漏问题","description":"Laya引擎数据面板的一个小bug","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/07675fbaf5d8/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/07675fbaf5d8/","wordCount":0,"datePublished":"2023-08-23T13:17:56.000Z","dateModified":"2024-05-18T15:40:13.707Z","articleSection":"Laya","keywords":"Laya,Bug","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
