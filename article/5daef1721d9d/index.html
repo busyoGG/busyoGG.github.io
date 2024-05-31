@@ -35,7 +35,7 @@
   <!-- feed -->
   <!-- 页面元数据 -->
   <title>红点系统 - Busyo's Blog</title>
-  <meta name="keywords" content="Laya,工具类,Typescript,系统架构,null">
+  <meta name="keywords" content="Laya,工具类,系统架构,Typescript,null">
   <meta desc name="description" content="简单的红点系统 - Busyo - Busyo's Blog">
   
 <meta property="og:type" content="article">
@@ -50,8 +50,8 @@
 <meta property="article:author" content="Busyo">
 <meta property="article:tag" content="Laya">
 <meta property="article:tag" content="工具类">
-<meta property="article:tag" content="Typescript">
 <meta property="article:tag" content="系统架构">
+<meta property="article:tag" content="Typescript">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -64,7 +64,7 @@
   --color-site-bg: #f4f4f4;
   --color-site-inner: #fff;
   --color-site-footer: #666;
-  --color-card: #fff;
+  --color-card: rgba(255,255,255,0.8);
   --color-text: #444;
   --color-block: #f6f6f6;
   --color-inlinecode: #c74f00;
@@ -77,7 +77,7 @@
   --color-h6: #666;
   --color-p: #444;
   --color-list: #666;
-  --color-list-hl: #cc923b;
+  --color-list-hl: #985e77;
   --color-meta: #888;
   --color-read-bkg: #e0d8c8;
   --color-read-post: #f8f1e2;
@@ -99,7 +99,7 @@
   background: transparent;
 }
 *::-webkit-scrollbar-thumb {
-  background: #ffb74a;
+  background: #be7695;
   cursor: pointer;
   border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -679,7 +679,7 @@ button {
 .cover-wrapper.dock .menu .list-h a.active i+p,
 .cover-wrapper.featured .menu .list-h a.active i+p,
 .cover-wrapper.focus .menu .list-h a.active i+p {
-  color: #ffb74a;
+  color: #be7695;
 }
 .cover-wrapper.dock .menu .list-h a.active img+p,
 .cover-wrapper.featured .menu .list-h a.active img+p,
@@ -776,11 +776,11 @@ button {
   :root:not([color-scheme]) {
     --color-site-body: #121212;
     --color-read-bkg: #1f1f1f;
-    --color-read-post: #262626;
+    --color-read-post: rgba(38,38,38,0.8);
     --color-site-bg: #1f1f1f;
     --color-site-inner: rgba(238,238,238,0.871);
     --color-site-footer: rgba(170,170,170,0.871);
-    --color-card: #262626;
+    --color-card: rgba(38,38,38,0.8);
     --color-text: rgba(238,238,238,0.871);
     --color-block: #1f1f1f;
     --color-codeblock: #111;
@@ -793,7 +793,7 @@ button {
     --color-h6: rgba(255,255,255,0.6);
     --color-p: rgba(217,217,217,0.871);
     --color-list: rgba(217,217,217,0.871);
-    --color-list-hl: #ffc56e;
+    --color-list-hl: #cb91aa;
     --color-meta: rgba(191,191,191,0.871);
     --color-link: rgba(191,191,191,0.871);
     --color-copyright-bkg: #21252b;
@@ -848,11 +848,11 @@ button {
 [color-scheme='dark'] {
   --color-site-body: #121212;
   --color-read-bkg: #1f1f1f;
-  --color-read-post: #262626;
+  --color-read-post: rgba(38,38,38,0.8);
   --color-site-bg: #1f1f1f;
   --color-site-inner: rgba(238,238,238,0.871);
   --color-site-footer: rgba(170,170,170,0.871);
-  --color-card: #262626;
+  --color-card: rgba(38,38,38,0.8);
   --color-text: rgba(238,238,238,0.871);
   --color-block: #1f1f1f;
   --color-codeblock: #111;
@@ -865,7 +865,7 @@ button {
   --color-h6: rgba(255,255,255,0.6);
   --color-p: rgba(217,217,217,0.871);
   --color-list: rgba(217,217,217,0.871);
-  --color-list-hl: #ffc56e;
+  --color-list-hl: #cb91aa;
   --color-meta: rgba(191,191,191,0.871);
   --color-link: rgba(191,191,191,0.871);
   --color-copyright-bkg: #21252b;
@@ -1134,7 +1134,7 @@ button {
   -moz-transition: all 0.28s ease;
   -o-transition: all 0.28s ease;
   -ms-transition: all 0.28s ease;
-  color: #ffb74a;
+  color: #be7695;
 }
 .l_header .switcher >li >a:hover {
   border: none;
@@ -1246,7 +1246,7 @@ button {
   line-height: 1.3;
   width: 100%;
   color: var(--color-text);
-  background: #fafafa;
+  background: rgba(250,250,250,0.8);
   box-shadow: none;
   -webkit-box-shadow: none;
   box-sizing: border-box;
@@ -1287,7 +1287,7 @@ button {
     width: 0;
     overflow: hidden;
     position: absolute;
-    background: #fff;
+    background: rgba(255,255,255,0.8);
     transition: all 0.28s ease;
     -webkit-transition: all 0.28s ease;
     -khtml-transition: all 0.28s ease;
@@ -1314,7 +1314,7 @@ ul.m-pc >li>a {
 }
 ul.m-pc >li>a:active,
 ul.m-pc >li>a.active {
-  border-bottom: 2px solid #ffb74a;
+  border-bottom: 2px solid #be7695;
 }
 ul.m-pc li:hover >ul.list-v,
 ul.list-v li:hover >ul.list-v {
@@ -1453,7 +1453,7 @@ ul.list-v >li>a:hover {
 }
 .l_header ul.nav-list-h>li >a:active,
 .l_header ul.nav-list-h>li >a.active {
-  color: #ffb74a;
+  color: #be7695;
 }
 .l_header ul.nav-list-h>li:hover>a {
   color: var(--color-list-hl);
@@ -1845,7 +1845,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1717157100254),
+    lastupdate: new Date(1717190955712),
     sidebar: {
       for_page: ["blogger","music","repos","lastupdate","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2279,224 +2279,274 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin end-->
     <!-- front-matter body_begin begin -->
     <!-- front-matter body_begin end -->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header always shadow floatable blur show"  >
-  <div class='container'>
-  <div id='wrapper'>
-    <div class='nav-sub'>
-      <p class="title"></p>
-      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
-        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self"  href="/" onclick="return false;" title="comment"></a></li>
-        
-          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self"  href="/" onclick="return false;" title="toc"></a></li>
-        
-      </ul>
-    </div>
-		<div class="nav-main">
-      
-        
-        <a class="title flat-box" target="_self" href='/'>
-          
-            <img no-lazy class='logo' src='/images/img_logo.png'/>
-          
-          
-          
-        </a>
-      
-
-			<div class='menu navigation'>
-				<ul class='nav-list-h m-pc'>
-          
-          
-          
+    <div class="head-bar head-bar-hover">
+  <header itemscope itemtype="http://schema.org/WPHeader" id="l_header"
+    class="l_header-hover l_header always shadow floatable blur show"
+     >
+    
+    <div class='container'>
+      <div id='wrapper'>
+        <div class='nav-sub'>
+          <p class="title"></p>
+          <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+            <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self" href="/" onclick="return false;"
+                title="comment"></a></li>
             
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="主页"
-                  
-                  
-                  
-                    active-action="action-home"
-                  >
-                  <i class='fa-solid fa-rss fa-fw'></i>主页
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>归档
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box header toggle-mode-btn">
-                  <i class='fa-solid fa-moon fa-fw'></i>暗黑模式
-                </a>
-              <li>
-            
-          
-          
-				</ul>
-			</div>
-      
-      <div class="m_search">
-        <form name="searchform" class="form u-search-form">
-          <i class="icon fa-solid fa-search fa-fw"></i>
-          <input type="text" class="input u-search-input" placeholder="Search..." />
-        </form>
-      </div>
-      
-
-			<ul class='switcher nav-list-h m-phone'>
-				
-					<li><a class="s-search fa-solid fa-search fa-fw" target="_self" href="/" onclick="return false;" title="search"></a></li>
-				
-				<li>
-          <a class="s-menu fa-solid fa-bars fa-fw" target="_self" href="/" onclick="return false;" title="menu"></a>
-          <ul class="menu-phone list-v navigation white-box">
-            
+              <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self" href="/" onclick="return false;"
+                  title="toc"></a></li>
               
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="主页"
-                  
-                  
-                  
-                    active-action="action-home"
-                  >
-                  <i class='fa-solid fa-rss fa-fw'></i>主页
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>归档
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box header toggle-mode-btn">
-                  <i class='fa-solid fa-moon fa-fw'></i>暗黑模式
-                </a>
-              <li>
-            
-          
-            
           </ul>
-        </li>
-			</ul>
+        </div>
+        <div class="nav-main">
+          
+            
+              <a class="title flat-box" target="_self" href='/'>
+                
+                  <img no-lazy class='logo' src='/images/img_logo.png' />
+                  
+                    
+                        
+              </a>
+              
 
-      <!-- Custom Files header begin -->
-      
-      <!-- Custom Files header end -->
-		</div>
-	</div>
-  </div>
-</header>
+                <div class='menu navigation'>
+                  <ul class='nav-list-h m-pc'>
+                    
+                      
+                                  
+                                    
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="主页" 
+                                  
+                                        
+                                              
+                                                active-action="action-home"
+                                                  >
+                                                    <i class='fa-solid fa-rss fa-fw'></i>
+                                                      主页
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                      
+                                    
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" 
+                                  
+                                        
+                                              
+                                                active-action="action-categories"
+                                                  >
+                                                    <i class='fa-solid fa-folder-open fa-fw'></i>
+                                                      分类
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                      
+                                    
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" 
+                                  
+                                        
+                                              
+                                                active-action="action-tags"
+                                                  >
+                                                    <i class='fa-solid fa-tags fa-fw'></i>
+                                                      标签
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                      
+                                    
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" 
+                                  
+                                        
+                                              
+                                                active-action="action-archives"
+                                                  >
+                                                    <i class='fa-solid fa-archive fa-fw'></i>
+                                                      归档
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                      
+                                    
+                        
+                            <li>
+                              <a class="menuitem flat-box header toggle-mode-btn">
+                                <i class='fa-solid fa-moon fa-fw'></i>暗黑模式
+                              </a>
+                            <li>
+                              
+                                
+                                      
+                  </ul>
+                </div>
+                
+                
+                  <div class="m_search">
+                    <form name="searchform" class="form u-search-form">
+                      <i class="icon fa-solid fa-search fa-fw"></i>
+                      <input type="text" class="input u-search-input"
+                        placeholder="Search..." />
+                    </form>
+                  </div>
+                  
+                    <ul class='switcher nav-list-h m-phone'>
+                      
+                        <li><a class="s-search fa-solid fa-search fa-fw" target="_self" href="/" onclick="return false;"
+                            title="search"></a></li>
+                        
+                          <li>
+                            <a class="s-menu fa-solid fa-bars fa-fw" target="_self" href="/" onclick="return false;"
+                              title="menu"></a>
+                            <ul class="menu-phone list-v navigation white-box">
+                              
+                                
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="主页" 
+                                  
+                                        
+                                              
+                                                active-action="action-home"
+                                                  >
+                                                    <i class='fa-solid fa-rss fa-fw'></i>
+                                                      主页
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                  
+                                
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" 
+                                  
+                                        
+                                              
+                                                active-action="action-categories"
+                                                  >
+                                                    <i class='fa-solid fa-folder-open fa-fw'></i>
+                                                      分类
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                  
+                                
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" 
+                                  
+                                        
+                                              
+                                                active-action="action-tags"
+                                                  >
+                                                    <i class='fa-solid fa-tags fa-fw'></i>
+                                                      标签
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                  
+                                
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" 
+                                  
+                                        
+                                              
+                                                active-action="action-archives"
+                                                  >
+                                                    <i class='fa-solid fa-archive fa-fw'></i>
+                                                      归档
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                  
+                                
+                        
+                            <li>
+                              <a class="menuitem flat-box header toggle-mode-btn">
+                                <i class='fa-solid fa-moon fa-fw'></i>暗黑模式
+                              </a>
+                            <li>
+                              
+                                
+                                  
+                            </ul>
+                          </li>
+                    </ul>
+                    <div class="lockBar"><div class="lock-emoji" onclick="changeLock(this)">🔓</div></div>
+
+                    <!-- Custom Files header begin -->
+                    
+                      <!-- Custom Files header end -->
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
 <!-- mermaid.js 需要在 require.js 前面加载 -->
 <script src='https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js'></script>
+<script>
 
+  function initLock(){
+    var isLock = localStorage.getItem("isLock") || false;
+    var obj = document.getElementsByClassName("lock-emoji")[0];
+    var ele = document.getElementsByClassName("head-bar")[0];
+    var head = document.getElementsByClassName("l_header")[0];
+    if(isLock == "true"){
+      ele.classList.remove("head-bar-hover");
+      head.classList.remove("l_header-hover");
+      obj.innerHTML = "🔒";
+    }else{
+      ele.classList.add("head-bar-hover");
+      head.classList.add("l_header-hover");
+      obj.innerHTML = "🔓";
+    }
+    console.log("初始化",isLock);
+  }
+
+  function changeLock(obj){
+    var isLock = localStorage.getItem("isLock") || false;
+    console.log("切换")
+    var ele = document.getElementsByClassName("head-bar")[0];
+    var head = document.getElementsByClassName("l_header")[0];
+    if(isLock == "false"){
+      ele.classList.remove("head-bar-hover");
+      head.classList.remove("l_header-hover");
+      obj.innerHTML = "🔒";
+    }else{
+      ele.classList.add("head-bar-hover");
+      head.classList.add("l_header-hover");
+      obj.innerHTML = "🔓";
+    }
+    isLock = isLock == "false" ? "true" : "false";
+    console.log(isLock);
+    localStorage.setItem("isLock",isLock);
+  }
+
+  initLock();
+</script>
     <div id="l_body">
       <div id="l_cover">
   
@@ -2724,8 +2774,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Laya/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Laya</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>工具类</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Typescript/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Typescript</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>系统架构</p></a></div>
-  <span hidden itemprop="keywords">Laya 工具类 Typescript 系统架构</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Laya/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Laya</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>工具类</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>系统架构</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Typescript/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Typescript</p></a></div>
+  <span hidden itemprop="keywords">Laya 工具类 系统架构 Typescript</span>
 
 
         
@@ -3677,7 +3727,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Laya/","name":"Laya"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Laya/工具/","name":"工具"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/5daef1721d9d/","name":"红点系统"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"红点系统","description":"简单的红点系统","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/5daef1721d9d/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/5daef1721d9d/","wordCount":0,"datePublished":"2023-11-09T07:43:02.000Z","dateModified":"2024-05-18T15:40:07.308Z","articleSection":"Laya","keywords":"Laya,工具类,Typescript,系统架构","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Laya/","name":"Laya"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Laya/工具/","name":"工具"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/5daef1721d9d/","name":"红点系统"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"红点系统","description":"简单的红点系统","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/5daef1721d9d/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/5daef1721d9d/","wordCount":0,"datePublished":"2023-11-09T07:43:02.000Z","dateModified":"2024-05-18T15:40:07.308Z","articleSection":"Laya","keywords":"Laya,工具类,系统架构,Typescript","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

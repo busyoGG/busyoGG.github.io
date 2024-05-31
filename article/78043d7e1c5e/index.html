@@ -46,7 +46,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-05-30T11:53:07.000Z">
-<meta property="article:modified_time" content="2024-05-31T09:44:16.863Z">
+<meta property="article:modified_time" content="2024-05-31T17:58:47.337Z">
 <meta property="article:author" content="Busyo">
 <meta property="article:tag" content="C#">
 <meta property="article:tag" content="Unity">
@@ -65,7 +65,7 @@
   --color-site-bg: #f4f4f4;
   --color-site-inner: #fff;
   --color-site-footer: #666;
-  --color-card: #fff;
+  --color-card: rgba(255,255,255,0.8);
   --color-text: #444;
   --color-block: #f6f6f6;
   --color-inlinecode: #c74f00;
@@ -78,7 +78,7 @@
   --color-h6: #666;
   --color-p: #444;
   --color-list: #666;
-  --color-list-hl: #cc923b;
+  --color-list-hl: #985e77;
   --color-meta: #888;
   --color-read-bkg: #e0d8c8;
   --color-read-post: #f8f1e2;
@@ -100,7 +100,7 @@
   background: transparent;
 }
 *::-webkit-scrollbar-thumb {
-  background: #ffb74a;
+  background: #be7695;
   cursor: pointer;
   border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -680,7 +680,7 @@ button {
 .cover-wrapper.dock .menu .list-h a.active i+p,
 .cover-wrapper.featured .menu .list-h a.active i+p,
 .cover-wrapper.focus .menu .list-h a.active i+p {
-  color: #ffb74a;
+  color: #be7695;
 }
 .cover-wrapper.dock .menu .list-h a.active img+p,
 .cover-wrapper.featured .menu .list-h a.active img+p,
@@ -777,11 +777,11 @@ button {
   :root:not([color-scheme]) {
     --color-site-body: #121212;
     --color-read-bkg: #1f1f1f;
-    --color-read-post: #262626;
+    --color-read-post: rgba(38,38,38,0.8);
     --color-site-bg: #1f1f1f;
     --color-site-inner: rgba(238,238,238,0.871);
     --color-site-footer: rgba(170,170,170,0.871);
-    --color-card: #262626;
+    --color-card: rgba(38,38,38,0.8);
     --color-text: rgba(238,238,238,0.871);
     --color-block: #1f1f1f;
     --color-codeblock: #111;
@@ -794,7 +794,7 @@ button {
     --color-h6: rgba(255,255,255,0.6);
     --color-p: rgba(217,217,217,0.871);
     --color-list: rgba(217,217,217,0.871);
-    --color-list-hl: #ffc56e;
+    --color-list-hl: #cb91aa;
     --color-meta: rgba(191,191,191,0.871);
     --color-link: rgba(191,191,191,0.871);
     --color-copyright-bkg: #21252b;
@@ -849,11 +849,11 @@ button {
 [color-scheme='dark'] {
   --color-site-body: #121212;
   --color-read-bkg: #1f1f1f;
-  --color-read-post: #262626;
+  --color-read-post: rgba(38,38,38,0.8);
   --color-site-bg: #1f1f1f;
   --color-site-inner: rgba(238,238,238,0.871);
   --color-site-footer: rgba(170,170,170,0.871);
-  --color-card: #262626;
+  --color-card: rgba(38,38,38,0.8);
   --color-text: rgba(238,238,238,0.871);
   --color-block: #1f1f1f;
   --color-codeblock: #111;
@@ -866,7 +866,7 @@ button {
   --color-h6: rgba(255,255,255,0.6);
   --color-p: rgba(217,217,217,0.871);
   --color-list: rgba(217,217,217,0.871);
-  --color-list-hl: #ffc56e;
+  --color-list-hl: #cb91aa;
   --color-meta: rgba(191,191,191,0.871);
   --color-link: rgba(191,191,191,0.871);
   --color-copyright-bkg: #21252b;
@@ -1135,7 +1135,7 @@ button {
   -moz-transition: all 0.28s ease;
   -o-transition: all 0.28s ease;
   -ms-transition: all 0.28s ease;
-  color: #ffb74a;
+  color: #be7695;
 }
 .l_header .switcher >li >a:hover {
   border: none;
@@ -1247,7 +1247,7 @@ button {
   line-height: 1.3;
   width: 100%;
   color: var(--color-text);
-  background: #fafafa;
+  background: rgba(250,250,250,0.8);
   box-shadow: none;
   -webkit-box-shadow: none;
   box-sizing: border-box;
@@ -1288,7 +1288,7 @@ button {
     width: 0;
     overflow: hidden;
     position: absolute;
-    background: #fff;
+    background: rgba(255,255,255,0.8);
     transition: all 0.28s ease;
     -webkit-transition: all 0.28s ease;
     -khtml-transition: all 0.28s ease;
@@ -1315,7 +1315,7 @@ ul.m-pc >li>a {
 }
 ul.m-pc >li>a:active,
 ul.m-pc >li>a.active {
-  border-bottom: 2px solid #ffb74a;
+  border-bottom: 2px solid #be7695;
 }
 ul.m-pc li:hover >ul.list-v,
 ul.list-v li:hover >ul.list-v {
@@ -1454,7 +1454,7 @@ ul.list-v >li>a:hover {
 }
 .l_header ul.nav-list-h>li >a:active,
 .l_header ul.nav-list-h>li >a.active {
-  color: #ffb74a;
+  color: #be7695;
 }
 .l_header ul.nav-list-h>li:hover>a {
   color: var(--color-list-hl);
@@ -1846,7 +1846,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1717157100254),
+    lastupdate: new Date(1717190955712),
     sidebar: {
       for_page: ["blogger","music","repos","lastupdate","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2280,224 +2280,274 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin end-->
     <!-- front-matter body_begin begin -->
     <!-- front-matter body_begin end -->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header always shadow floatable blur show"  >
-  <div class='container'>
-  <div id='wrapper'>
-    <div class='nav-sub'>
-      <p class="title"></p>
-      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
-        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self"  href="/" onclick="return false;" title="comment"></a></li>
-        
-          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self"  href="/" onclick="return false;" title="toc"></a></li>
-        
-      </ul>
-    </div>
-		<div class="nav-main">
-      
-        
-        <a class="title flat-box" target="_self" href='/'>
-          
-            <img no-lazy class='logo' src='/images/img_logo.png'/>
-          
-          
-          
-        </a>
-      
-
-			<div class='menu navigation'>
-				<ul class='nav-list-h m-pc'>
-          
-          
-          
+    <div class="head-bar head-bar-hover">
+  <header itemscope itemtype="http://schema.org/WPHeader" id="l_header"
+    class="l_header-hover l_header always shadow floatable blur show"
+     >
+    
+    <div class='container'>
+      <div id='wrapper'>
+        <div class='nav-sub'>
+          <p class="title"></p>
+          <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+            <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self" href="/" onclick="return false;"
+                title="comment"></a></li>
             
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="主页"
-                  
-                  
-                  
-                    active-action="action-home"
-                  >
-                  <i class='fa-solid fa-rss fa-fw'></i>主页
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>归档
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box header toggle-mode-btn">
-                  <i class='fa-solid fa-moon fa-fw'></i>暗黑模式
-                </a>
-              <li>
-            
-          
-          
-				</ul>
-			</div>
-      
-      <div class="m_search">
-        <form name="searchform" class="form u-search-form">
-          <i class="icon fa-solid fa-search fa-fw"></i>
-          <input type="text" class="input u-search-input" placeholder="Search..." />
-        </form>
-      </div>
-      
-
-			<ul class='switcher nav-list-h m-phone'>
-				
-					<li><a class="s-search fa-solid fa-search fa-fw" target="_self" href="/" onclick="return false;" title="search"></a></li>
-				
-				<li>
-          <a class="s-menu fa-solid fa-bars fa-fw" target="_self" href="/" onclick="return false;" title="menu"></a>
-          <ul class="menu-phone list-v navigation white-box">
-            
+              <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self" href="/" onclick="return false;"
+                  title="toc"></a></li>
               
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="主页"
-                  
-                  
-                  
-                    active-action="action-home"
-                  >
-                  <i class='fa-solid fa-rss fa-fw'></i>主页
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>归档
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box header toggle-mode-btn">
-                  <i class='fa-solid fa-moon fa-fw'></i>暗黑模式
-                </a>
-              <li>
-            
-          
-            
           </ul>
-        </li>
-			</ul>
+        </div>
+        <div class="nav-main">
+          
+            
+              <a class="title flat-box" target="_self" href='/'>
+                
+                  <img no-lazy class='logo' src='/images/img_logo.png' />
+                  
+                    
+                        
+              </a>
+              
 
-      <!-- Custom Files header begin -->
-      
-      <!-- Custom Files header end -->
-		</div>
-	</div>
-  </div>
-</header>
+                <div class='menu navigation'>
+                  <ul class='nav-list-h m-pc'>
+                    
+                      
+                                  
+                                    
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="主页" 
+                                  
+                                        
+                                              
+                                                active-action="action-home"
+                                                  >
+                                                    <i class='fa-solid fa-rss fa-fw'></i>
+                                                      主页
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                      
+                                    
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" 
+                                  
+                                        
+                                              
+                                                active-action="action-categories"
+                                                  >
+                                                    <i class='fa-solid fa-folder-open fa-fw'></i>
+                                                      分类
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                      
+                                    
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" 
+                                  
+                                        
+                                              
+                                                active-action="action-tags"
+                                                  >
+                                                    <i class='fa-solid fa-tags fa-fw'></i>
+                                                      标签
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                      
+                                    
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" 
+                                  
+                                        
+                                              
+                                                active-action="action-archives"
+                                                  >
+                                                    <i class='fa-solid fa-archive fa-fw'></i>
+                                                      归档
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                      
+                                    
+                        
+                            <li>
+                              <a class="menuitem flat-box header toggle-mode-btn">
+                                <i class='fa-solid fa-moon fa-fw'></i>暗黑模式
+                              </a>
+                            <li>
+                              
+                                
+                                      
+                  </ul>
+                </div>
+                
+                
+                  <div class="m_search">
+                    <form name="searchform" class="form u-search-form">
+                      <i class="icon fa-solid fa-search fa-fw"></i>
+                      <input type="text" class="input u-search-input"
+                        placeholder="Search..." />
+                    </form>
+                  </div>
+                  
+                    <ul class='switcher nav-list-h m-phone'>
+                      
+                        <li><a class="s-search fa-solid fa-search fa-fw" target="_self" href="/" onclick="return false;"
+                            title="search"></a></li>
+                        
+                          <li>
+                            <a class="s-menu fa-solid fa-bars fa-fw" target="_self" href="/" onclick="return false;"
+                              title="menu"></a>
+                            <ul class="menu-phone list-v navigation white-box">
+                              
+                                
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="主页" 
+                                  
+                                        
+                                              
+                                                active-action="action-home"
+                                                  >
+                                                    <i class='fa-solid fa-rss fa-fw'></i>
+                                                      主页
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                  
+                                
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" 
+                                  
+                                        
+                                              
+                                                active-action="action-categories"
+                                                  >
+                                                    <i class='fa-solid fa-folder-open fa-fw'></i>
+                                                      分类
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                  
+                                
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" 
+                                  
+                                        
+                                              
+                                                active-action="action-tags"
+                                                  >
+                                                    <i class='fa-solid fa-tags fa-fw'></i>
+                                                      标签
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                  
+                                
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" 
+                                  
+                                        
+                                              
+                                                active-action="action-archives"
+                                                  >
+                                                    <i class='fa-solid fa-archive fa-fw'></i>
+                                                      归档
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                  
+                                
+                        
+                            <li>
+                              <a class="menuitem flat-box header toggle-mode-btn">
+                                <i class='fa-solid fa-moon fa-fw'></i>暗黑模式
+                              </a>
+                            <li>
+                              
+                                
+                                  
+                            </ul>
+                          </li>
+                    </ul>
+                    <div class="lockBar"><div class="lock-emoji" onclick="changeLock(this)">🔓</div></div>
+
+                    <!-- Custom Files header begin -->
+                    
+                      <!-- Custom Files header end -->
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
 <!-- mermaid.js 需要在 require.js 前面加载 -->
 <script src='https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js'></script>
+<script>
 
+  function initLock(){
+    var isLock = localStorage.getItem("isLock") || false;
+    var obj = document.getElementsByClassName("lock-emoji")[0];
+    var ele = document.getElementsByClassName("head-bar")[0];
+    var head = document.getElementsByClassName("l_header")[0];
+    if(isLock == "true"){
+      ele.classList.remove("head-bar-hover");
+      head.classList.remove("l_header-hover");
+      obj.innerHTML = "🔒";
+    }else{
+      ele.classList.add("head-bar-hover");
+      head.classList.add("l_header-hover");
+      obj.innerHTML = "🔓";
+    }
+    console.log("初始化",isLock);
+  }
+
+  function changeLock(obj){
+    var isLock = localStorage.getItem("isLock") || false;
+    console.log("切换")
+    var ele = document.getElementsByClassName("head-bar")[0];
+    var head = document.getElementsByClassName("l_header")[0];
+    if(isLock == "false"){
+      ele.classList.remove("head-bar-hover");
+      head.classList.remove("l_header-hover");
+      obj.innerHTML = "🔒";
+    }else{
+      ele.classList.add("head-bar-hover");
+      head.classList.add("l_header-hover");
+      obj.innerHTML = "🔓";
+    }
+    isLock = isLock == "false" ? "true" : "false";
+    console.log(isLock);
+    localStorage.setItem("isLock",isLock);
+  }
+
+  initLock();
+</script>
     <div id="l_body">
       <div id="l_cover">
   
@@ -2624,7 +2674,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：2.1k 字</p>
+      <p>字数：2.2k 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2672,9 +2722,7 @@ graph LR;
 
 <p>每个 UI 都有父容器，父容器本身不提供样式修改，只是构成 UI 的最上层单位。如果有需要的话可以自己添加样式修改的逻辑。</p>
 <h4 id="初始化列表"><a href="#初始化列表" class="headerlink" title="初始化列表"></a>初始化列表</h4><p>初始化 UI 就是判断 member 特性是否包含 E_Editor ，并且字段是 List 类型。</p>
-<p>目前列表只有一种对象，即 Object 对象。</p>
-<p>列表 Object 的初始化和 UI 中的初始化略有不同。主要在于列表元素修改后赋值的方法不一样。具体差别可以查看源码。</p>
-<p>列表元素生成后，需要添加拖拽监听，以便于能够通过拖拽来交换列表元素的顺序。</p>
+<p>列表的初始化与普通 UI 初始化略有不同，不过其内部 Item 的生成逻辑和普通 UI 是相同的。</p>
 <p>目前列表不支持虚拟化。</p>
 <p>列表结构如下：</p>
 <pre class="mermaid">graph TD;
@@ -2687,7 +2735,7 @@ graph LR;
 
 <p>列表还衍生了添加列表元素和移除列表元素两个方法。</p>
 <p>添加列表元素通过字段名获取对应的列表和字段，然后通过和列表初始化一样的方法来添加列表元素；移除列表元素的逻辑和添加类似，只是逻辑比添加简单一点。</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 添加列表元素</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;id&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">ListAdd</span>(<span class="params"><span class="built_in">string</span> id</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    VisualElement element = GetElement(id);</span><br><span class="line">    VisualElement list = element.Children().ElementAt(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    FieldInfo field = _type.GetField(id, _flag);</span><br><span class="line"></span><br><span class="line">    E_Editor editor = field.GetCustomAttribute&lt;E_Editor&gt;();</span><br><span class="line"></span><br><span class="line">    IList data = field.GetValue(<span class="keyword">this</span>) <span class="keyword">as</span> IList;</span><br><span class="line">    data.Add(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">    Action&lt;Object&gt; setData = o =&gt; &#123; data[data.Count - <span class="number">1</span>] = o; &#125;;</span><br><span class="line"></span><br><span class="line">    VisualElement listItem = GenerateListItem(field, editor.GetEType(), <span class="literal">null</span>, setData);</span><br><span class="line"></span><br><span class="line">    RegisterDrag(listItem, list, data);</span><br><span class="line"></span><br><span class="line">    list.Add(listItem);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 移除最后一个数组元素</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;id&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">ListRemove</span>(<span class="params"><span class="built_in">string</span> id</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    VisualElement element = GetElement(id);</span><br><span class="line">    VisualElement list = element.Children().ElementAt(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (list.childCount == <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        Debug.LogWarning(<span class="string">&quot;没有元素了&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    list.RemoveAt(list.childCount - <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    FieldInfo field = _type.GetField(id, _flag);</span><br><span class="line">    IList data = field.GetValue(<span class="keyword">this</span>) <span class="keyword">as</span> IList;</span><br><span class="line">    data.RemoveAt(data.Count - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 添加列表元素</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;id&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">ListAdd</span>(<span class="params"><span class="built_in">string</span> id</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    VisualElement element = GetElement(id);</span><br><span class="line">    VisualElement list = element.Children().ElementAt(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    FieldInfo field = _type.GetField(id, _flag);</span><br><span class="line"></span><br><span class="line">    E_Editor editor = field.GetCustomAttribute&lt;E_Editor&gt;();</span><br><span class="line"></span><br><span class="line">    IList data = field.GetValue(<span class="keyword">this</span>) <span class="keyword">as</span> IList;</span><br><span class="line">    data.Add(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">    Action&lt;<span class="built_in">object</span>&gt; setData = o =&gt; &#123; data[data.Count - <span class="number">1</span>] = o; &#125;;</span><br><span class="line"></span><br><span class="line">    VisualElement subBox = <span class="keyword">new</span> VisualElement();</span><br><span class="line">    list.Add(subBox);</span><br><span class="line"></span><br><span class="line">    GenerateItem(subBox, field, editor.GetEType(), <span class="literal">null</span>, setData, <span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">    RegisterDrag(subBox, list, data);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 移除最后一个数组元素</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;id&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">ListRemove</span>(<span class="params"><span class="built_in">string</span> id</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    VisualElement element = GetElement(id);</span><br><span class="line">    VisualElement list = element.Children().ElementAt(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (list.childCount == <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        Debug.LogWarning(<span class="string">&quot;没有元素了&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    list.RemoveAt(list.childCount - <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    FieldInfo field = _type.GetField(id, _flag);</span><br><span class="line">    IList data = field.GetValue(<span class="keyword">this</span>) <span class="keyword">as</span> IList;</span><br><span class="line">    data.RemoveAt(data.Count - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="初始化-Box"><a href="#初始化-Box" class="headerlink" title="初始化 Box"></a>初始化 Box</h4><p>初始化 Box 需要判断是否具有 <code>VE_Box</code> 特性，一般来说 <code>VE_Box</code> 不会与 <code>E_Editor</code> 混用。</p>
 <p>初始化 Box 需要单独一个字段来创建 Box，字段为 string 类型，字段的值就是 Box 的名称，用于后面查找 Box。Box 的显示名称需要配合 <code>E_Name</code> 来设置。</p>
@@ -2700,7 +2748,7 @@ graph LR;
 </ol>
 <p>Box 样式初始化相对简单，只需要根据对应的特性设置 style 即可。</p>
 <p>UI 元素样式不仅需要设置 style，还因为设置 style 后会影响原来的伪类的样式，因此需要重新设置监听并修改不同情况下的 UI 元素样式。</p>
-<div class="note warnning"><p>Button UI 因为本身劫持了所有左键事件，因此需要额外的处理，详情见源码</p></div>
+<div class="note warning"><p>Button UI 因为本身劫持了所有左键事件，因此需要额外的处理，详情见源码</p></div>
 
 <h3 id="初始化拖拽"><a href="#初始化拖拽" class="headerlink" title="初始化拖拽"></a>初始化拖拽</h3><p>初始化拖拽我们对每个列表元素监听三个事件：</p>
 <ol>
@@ -2729,6 +2777,8 @@ A --> B --> C --> D --> E</pre>
 <p>然后我们把所有元素都变为相对布局，置 left 和 top 为 0。</p>
 <p>如果父容器中存在占位元素，就移除（因为有可能只有按下没有移动，就不存在占位元素）。在有占位元素的情况下，判断是否有经过元素交换，没有的话就把拖拽元素插入回原来的索引。</p>
 <p>最后重置各种状态，包括释放鼠标。</p>
+<div class="note info"><p>由于focus事件会阻止事件冒泡，会导致鼠标抬起事件无法触发，拖拽状态无法重置，因此我们在根节点监听鼠标左键按下的事件，然后在拖拽的鼠标移动事件中添加该判断条件，当focus的时候根节点的鼠标按下监听被阻止，此时判定鼠标移动的时候就判定为没有拖拽，从而解决这个问题。</p></div>
+
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 注册拖拽</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;ele&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;parent&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">RegisterDrag</span>(<span class="params">VisualElement ele, VisualElement parent, IList data</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    VisualElement empty = <span class="keyword">new</span> VisualElement();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">int</span> defIndex = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">bool</span> isCapture = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">    ele.RegisterCallback&lt;PointerDownEvent&gt;(evt =&gt;</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (evt.button == <span class="number">0</span>) <span class="comment">// 左键</span></span><br><span class="line">        &#123;</span><br><span class="line">            _dragElement = ele;</span><br><span class="line"></span><br><span class="line">            _defPos = evt.position;</span><br><span class="line">            _defTL = <span class="keyword">new</span> Vector2(_dragElement.resolvedStyle.left - _dragElement.resolvedStyle.marginLeft,</span><br><span class="line">                _dragElement.resolvedStyle.top - _dragElement.resolvedStyle.marginTop);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    ele.RegisterCallback&lt;PointerMoveEvent&gt;(evt =&gt;</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (!isCapture &amp;&amp; _dragElement != <span class="literal">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            ele.CapturePointer(evt.pointerId);</span><br><span class="line">            isCapture = <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">foreach</span> (<span class="keyword">var</span> child <span class="keyword">in</span> parent.Children())</span><br><span class="line">            &#123;</span><br><span class="line">                child.style.position = Position.Absolute;</span><br><span class="line">                <span class="comment">// Debug.Log(child.resolvedStyle.left);</span></span><br><span class="line">                child.style.left = child.resolvedStyle.left - child.resolvedStyle.marginLeft;</span><br><span class="line">                child.style.top = child.resolvedStyle.top - child.resolvedStyle.marginTop;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//占位</span></span><br><span class="line">            defIndex = parent.IndexOf(_dragElement);</span><br><span class="line">            parent.Insert(defIndex, empty);</span><br><span class="line">            _dragElement.BringToFront();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (_dragElement != <span class="literal">null</span> &amp;&amp; ele.HasPointerCapture(evt.pointerId))</span><br><span class="line">        &#123;</span><br><span class="line">            Vector2 delta = <span class="keyword">new</span> Vector2(evt.position.x, evt.position.y) - _defPos;</span><br><span class="line">            _dragElement.style.top = _defTL.y + delta.y;</span><br><span class="line">            _dragElement.style.left = _defTL.x + delta.x;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    ele.RegisterCallback&lt;PointerUpEvent&gt;(evt =&gt;</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (_dragElement != <span class="literal">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">bool</span> isExchange = <span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">foreach</span> (<span class="keyword">var</span> child <span class="keyword">in</span> parent.Children())</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (child != _dragElement &amp;&amp; child.worldBound.Contains(evt.position))</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">//UI 交换</span></span><br><span class="line">                    <span class="built_in">int</span> insertIndex = parent.IndexOf(child);</span><br><span class="line">                    parent.Remove(_dragElement);</span><br><span class="line">                    parent.Insert(insertIndex, _dragElement);</span><br><span class="line">                    parent.Insert(defIndex, child);</span><br><span class="line"></span><br><span class="line">                    <span class="comment">//数据交换</span></span><br><span class="line">                    (data[defIndex], data[insertIndex]) = (data[insertIndex], data[defIndex]);</span><br><span class="line">                    isExchange = <span class="literal">true</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">foreach</span> (<span class="keyword">var</span> child <span class="keyword">in</span> parent.Children())</span><br><span class="line">            &#123;</span><br><span class="line">                child.style.position = Position.Relative;</span><br><span class="line">                child.style.left = <span class="number">0</span>;</span><br><span class="line">                child.style.top = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (parent.IndexOf(empty) != <span class="number">-1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                parent.Remove(empty);</span><br><span class="line">                <span class="keyword">if</span> (!isExchange)</span><br><span class="line">                &#123;</span><br><span class="line">                    parent.Insert(defIndex, _dragElement);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            _dragElement.ReleasePointer(evt.pointerId);</span><br><span class="line">            _dragElement = <span class="literal">null</span>;</span><br><span class="line">            isCapture = <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h2><center><a class="ghcard" rel="external nofollow noopener noreferrer noopener" target="_blank" href="https://github.com/busyoGG/EditorUIExtention"><img src="https://github-readme-stats.vercel.app/api/pin/?username=busyoGG&repo=EditorUIExtention&theme=onedark&show_owner=true" class="lazyload" data-srcset="https://github-readme-stats.vercel.app/api/pin/?username=busyoGG&repo=EditorUIExtention&theme=onedark&show_owner=true" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/></a></center>
@@ -2759,10 +2809,10 @@ A --> B --> C --> D --> E</pre>
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-31T17:44:16+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-06-01T01:58:47+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2024年5月31日</p>
+    <p>更新于：2024年6月1日</p>
   </a>
 </div>
 
@@ -3717,7 +3767,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Unity/","name":"Unity"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Unity/编辑器/","name":"编辑器"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/78043d7e1c5e/","name":"Unity-编辑器 UI 开发优化框架 EditorUIExtension VE 篇"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Unity-编辑器 UI 开发优化框架 EditorUIExtension VE 篇","description":"基于 VisualElement 的编辑器 UI 框架，目的是简化编辑器开发时的 UI 构建。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/78043d7e1c5e/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/78043d7e1c5e/","wordCount":0,"datePublished":"2024-05-30T11:53:07.000Z","dateModified":"2024-05-31T09:44:16.863Z","articleSection":"Unity","keywords":"C#,Unity,编辑器,框架,VisualElement","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Unity/","name":"Unity"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Unity/编辑器/","name":"编辑器"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/78043d7e1c5e/","name":"Unity-编辑器 UI 开发优化框架 EditorUIExtension VE 篇"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Unity-编辑器 UI 开发优化框架 EditorUIExtension VE 篇","description":"基于 VisualElement 的编辑器 UI 框架，目的是简化编辑器开发时的 UI 构建。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/78043d7e1c5e/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/78043d7e1c5e/","wordCount":0,"datePublished":"2024-05-30T11:53:07.000Z","dateModified":"2024-05-31T17:58:47.337Z","articleSection":"Unity","keywords":"C#,Unity,编辑器,框架,VisualElement","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
