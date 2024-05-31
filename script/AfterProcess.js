@@ -132,7 +132,7 @@ window.AfterProcess = {
     AfterProcess.ResetCodeStyle();
     AfterProcess.ResetTitle();
     AfterProcess.InitVideo();
-    mermaid.init(undefined, '.mermaid');
+    mermaid.init(undefined, ".mermaid");
   },
 };
 AfterProcess.Init();

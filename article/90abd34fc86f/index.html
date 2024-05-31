@@ -36,17 +36,17 @@
   <!-- 页面元数据 -->
   <title>用自己买的服务器进行内网穿透 - Busyo's Blog</title>
   <meta name="keywords" content="内网穿透,服务器,FRP,null">
-  <meta desc name="description" content="大部分时候我们自己网络的IP是内网IP，又想要别人能够通过外网来访问我们电脑里的项目，这时候就需要内网穿透。 - Busyo - Busyo's Blog">
+  <meta desc name="description" content="大部分时候我们自己网络的 IP 是内网 IP，又想要别人能够通过外网来访问我们电脑里的项目，这时候就需要内网穿透。 - Busyo - Busyo's Blog">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="用自己买的服务器进行内网穿透">
 <meta property="og:url" content="https://busyogg.github.io/article/90abd34fc86f/index.html">
 <meta property="og:site_name" content="Busyo&#39;s Blog">
-<meta property="og:description" content="大部分时候我们自己网络的IP是内网IP，又想要别人能够通过外网来访问我们电脑里的项目，这时候就需要内网穿透。">
+<meta property="og:description" content="大部分时候我们自己网络的 IP 是内网 IP，又想要别人能够通过外网来访问我们电脑里的项目，这时候就需要内网穿透。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-01-20T17:07:09.000Z">
-<meta property="article:modified_time" content="2024-01-27T20:09:18.596Z">
+<meta property="article:modified_time" content="2024-05-30T12:27:21.412Z">
 <meta property="article:author" content="Busyo">
 <meta property="article:tag" content="内网穿透">
 <meta property="article:tag" content="服务器">
@@ -1844,7 +1844,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1716061481970),
+    lastupdate: new Date(1717157100254),
     sidebar: {
       for_page: ["blogger","music","repos","lastupdate","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2618,7 +2618,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：467 字</p>
+      <p>字数：468 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2641,14 +2641,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>大部分时候我们自己网络的IP是内网IP，又想要别人能够通过外网来访问我们电脑里的项目，这时候就需要内网穿透。</p>
-<p>除了花生壳等第三方以外，我们还可以用自己买的服务器的公网IP来进行内网穿透。</p>
+    <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>大部分时候我们自己网络的 IP 是内网 IP，又想要别人能够通过外网来访问我们电脑里的项目，这时候就需要内网穿透。</p>
+<p>除了花生壳等第三方以外，我们还可以用自己买的服务器的公网 IP 来进行内网穿透。</p>
 <p>当然，如果你条件允许的话，直接用高配的服务器就好。此处的适用场景为服务器配置不足，自己电脑配置足够的情况下，通过服务器转发访问到我们自己的电脑。</p>
 <h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>我们可以使用开源项目 <a target="_blank" rel="noopener" href="https://github.com/fatedier/frp">FRP</a> 来实现。</p>
 <ol>
-<li>首先我们下载release中对应平台的文件。</li>
-<li>其次我们在服务端部署frps相关的所有文件到任意目录。然后修改配置文件（也可以默认不修改，默认端口为7000）。然后通过 <code>./frps -c ./frps.toml</code> 命令来启动服务。</li>
-<li>接下来我们在客户端部署frpc相关的所有文件到任意目录。然后按照下面的要求修改配置文件。最后通过 <code>./frpc -c ./frpc.toml</code> 命令来启动服务。</li>
+<li>首先我们下载 release 中对应平台的文件。</li>
+<li>其次我们在服务端部署 frps 相关的所有文件到任意目录。然后修改配置文件（也可以默认不修改，默认端口为 7000）。然后通过 <code>./frps -c ./frps.toml</code> 命令来启动服务。</li>
+<li>接下来我们在客户端部署 frpc 相关的所有文件到任意目录。然后按照下面的要求修改配置文件。最后通过 <code>./frpc -c ./frpc.toml</code> 命令来启动服务。</li>
 </ol>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">serverAddr</span> <span class="string">=</span> <span class="string">&quot;x.x.x.x&quot;</span> <span class="string">//服务器ip</span></span><br><span class="line"><span class="string">serverPort</span> <span class="string">=</span> <span class="number">7000</span> <span class="string">//服务端端口，和frps配置的一致</span></span><br><span class="line"><span class="comment"># 如果默认的 STUN 服务器不可用，可以配置一个新的 STUN 服务器</span></span><br><span class="line"><span class="comment"># natHoleStunServer = &quot;xxx&quot;</span></span><br><span class="line"></span><br><span class="line">[[<span class="string">proxies</span>]]</span><br><span class="line"><span class="string">name</span> <span class="string">=</span> <span class="string">&quot;test-tcp&quot;</span> <span class="string">//随便写</span></span><br><span class="line"><span class="string">type</span> <span class="string">=</span> <span class="string">&quot;tcp&quot;</span> <span class="string">//协议</span></span><br><span class="line"><span class="string">localIP</span> <span class="string">=</span> <span class="string">&quot;127.0.0.1&quot;</span> <span class="string">//本地服务ip</span></span><br><span class="line"><span class="string">localPort</span> <span class="string">=</span> <span class="number">22</span> <span class="string">//本地服务端口</span></span><br><span class="line"><span class="string">remotePort</span> <span class="string">=</span> <span class="number">6000</span> <span class="string">//访问时使用的端口</span></span><br></pre></td></tr></table></figure>
 
@@ -2657,6 +2657,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>接下来只要使用 <code>x.x.x.x:6000</code> 就能访问到内网的服务了。</p>
 <h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h2><div class="timeline"><div class="timenode"><div class="meta"><p><p>2024-01-21</p>
 </p></div><div class="body"><p>1.更新基本内容。</p></div></div></div>
+
   </div>
   
   
@@ -2700,10 +2701,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-01-28T04:09:18+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-30T20:27:21+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2024年1月28日</p>
+    <p>更新于：2024年5月30日</p>
   </a>
 </div>
 
@@ -2784,7 +2785,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class="prev-next">
       
         <a class='prev' href='/article/b83ee5a642c0/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>物理引擎Demo思路</p>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>物理引擎 Demo 思路</p>
           <p class='content'>移动移动的时候只需要以对象坐标为基础，加上移动的方向和速度，即可得到下一个坐标。
 碰撞在一帧移动完成后，检测最新位置是否有和其他物体碰撞，如果有的话：
 
@@ -3440,7 +3441,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://img.busyo.buzz/imgUpload/20230912-225941-99.png"];
+  let imgs = ["https://img.busyo.buzz/imgUpload/20240531-200434-634.jpg"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3667,7 +3668,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/分享/","name":"分享"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/90abd34fc86f/","name":"用自己买的服务器进行内网穿透"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"用自己买的服务器进行内网穿透","description":"大部分时候我们自己网络的IP是内网IP，又想要别人能够通过外网来访问我们电脑里的项目，这时候就需要内网穿透。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/90abd34fc86f/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/90abd34fc86f/","wordCount":0,"datePublished":"2024-01-20T17:07:09.000Z","dateModified":"2024-01-27T20:09:18.596Z","articleSection":"分享","keywords":"内网穿透,服务器,FRP","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/分享/","name":"分享"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/90abd34fc86f/","name":"用自己买的服务器进行内网穿透"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"用自己买的服务器进行内网穿透","description":"大部分时候我们自己网络的 IP 是内网 IP，又想要别人能够通过外网来访问我们电脑里的项目，这时候就需要内网穿透。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/90abd34fc86f/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/90abd34fc86f/","wordCount":0,"datePublished":"2024-01-20T17:07:09.000Z","dateModified":"2024-05-30T12:27:21.412Z","articleSection":"分享","keywords":"内网穿透,服务器,FRP","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

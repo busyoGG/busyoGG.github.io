@@ -34,19 +34,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>物理引擎Demo思路 - Busyo's Blog</title>
+  <title>物理引擎 Demo 思路 - Busyo's Blog</title>
   <meta name="keywords" content="物理,null">
-  <meta desc name="description" content="分享一些做物理Demo的思路 - Busyo - Busyo's Blog">
+  <meta desc name="description" content="分享一些做物理 Demo 的思路 - Busyo - Busyo's Blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="物理引擎Demo思路">
+<meta property="og:title" content="物理引擎 Demo 思路">
 <meta property="og:url" content="https://busyogg.github.io/article/b83ee5a642c0/index.html">
 <meta property="og:site_name" content="Busyo&#39;s Blog">
-<meta property="og:description" content="分享一些做物理Demo的思路">
+<meta property="og:description" content="分享一些做物理 Demo 的思路">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-01-21T20:08:06.000Z">
-<meta property="article:modified_time" content="2024-05-18T15:38:11.843Z">
+<meta property="article:modified_time" content="2024-05-30T12:27:11.723Z">
 <meta property="article:author" content="Busyo">
 <meta property="article:tag" content="物理">
 <meta name="twitter:card" content="summary">
@@ -1842,7 +1842,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1716061481970),
+    lastupdate: new Date(1717157100254),
     sidebar: {
       for_page: ["blogger","music","repos","lastupdate","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2552,7 +2552,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        物理引擎Demo思路
+        物理引擎 Demo 思路
       </h1>
       <div class='new-meta-box'>
         
@@ -2688,12 +2688,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>计算 $powerRatio&#x3D;另一物体被推力&#x2F;本物体推力$ ，然后将得到的数字乘到排斥力上，即 $offset*&#x3D;powerRatio$ ，即可得到新的排斥力大小。</p>
 <p>在计算排斥力大小之前，需要先计算另一物体需要移动的距离。</p>
 <p>设另一物体的排斥力为 reverseOffset</p>
-<p>根据以下公式： $reverseOffset&#x3D;offset*(1-powerRatio)$ 把所有 reverseOffset 都加到另一物体的 offset ，我们就能得到另一物体移动的距离。</p>
+<p>根据以下公式： $reverseOffset&#x3D;offset*(1-powerRatio)$ 把所有 reverseOffset 都加到另一物体的 offset，我们就能得到另一物体移动的距离。</p>
 <h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h2><div class="timeline"><div class="timenode"><div class="meta"><p><p>2024-03-01</p>
 </p></div><div class="body"><p>1.更新推物体思路</p></div></div>
 <div class="timenode"><div class="meta"><p><p>2024-01-22</p>
-</p></div><div class="body"><ol><li>更新基础内容</li></ol><ul><li>移动</li><li>碰撞</li><li>下落</li><li>跳跃</li><li>爬坡</li><li>判定平台</li><li>跨台阶</li><li>攀爬</li></ul></div></div>
-  </div>
+</p></div><div class="body"><ol><li>更新基础内容</li></ol><ul><li>移动</li><li>碰撞</li><li>下落</li><li>跳跃</li><li>爬坡</li><li>判定平台</li><li>跨台阶</li><li>攀爬</li></ul></div></div></div>
 
   </div>
   
@@ -2718,10 +2717,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-18T23:38:11+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-30T20:27:11+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2024年5月18日</p>
+    <p>更新于：2024年5月30日</p>
   </a>
 </div>
 
@@ -2744,7 +2743,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://busyogg.github.io/article/b83ee5a642c0/&title=物理引擎Demo思路 - Busyo's Blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://busyogg.github.io/article/b83ee5a642c0/&title=物理引擎 Demo 思路 - Busyo's Blog&summary="
           
           >
           
@@ -2756,7 +2755,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://busyogg.github.io/article/b83ee5a642c0/&title=物理引擎Demo思路 - Busyo's Blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://busyogg.github.io/article/b83ee5a642c0/&title=物理引擎 Demo 思路 - Busyo's Blog&summary="
           
           >
           
@@ -2768,7 +2767,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://busyogg.github.io/article/b83ee5a642c0/&title=物理引擎Demo思路 - Busyo's Blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://busyogg.github.io/article/b83ee5a642c0/&title=物理引擎 Demo 思路 - Busyo's Blog&summary="
           
           >
           
@@ -2810,9 +2809,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='next' href='/article/90abd34fc86f/'>
           <p class='title'>用自己买的服务器进行内网穿透<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>简介大部分时候我们自己网络的IP是内网IP，又想要别人能够通过外网来访问我们电脑里的项目，这时候就需要内网穿透。
-除了花生壳等第三方以外，我们还可以用自己买的服务器的公网IP来进行内网穿透。
-当...</p>
+          <p class='content'>简介大部分时候我们自己网络的 IP 是内网 IP，又想要别人能够通过外网来访问我们电脑里的项目，这时候就需要内网穿透。
+除了花生壳等第三方以外，我们还可以用自己买的服务器的公网 IP 来进行内网...</p>
         </a>
       
     </div>
@@ -3455,7 +3453,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://img.busyo.buzz/imgUpload/20230912-225941-99.png"];
+  let imgs = ["https://img.busyo.buzz/imgUpload/20240531-200434-634.jpg"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3736,7 +3734,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/设计思路/","name":"设计思路"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/b83ee5a642c0/","name":"物理引擎Demo思路"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"物理引擎Demo思路","description":"分享一些做物理Demo的思路","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/b83ee5a642c0/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/b83ee5a642c0/","wordCount":0,"datePublished":"2024-01-21T20:08:06.000Z","dateModified":"2024-05-18T15:38:11.843Z","articleSection":"设计思路","keywords":"物理","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/设计思路/","name":"设计思路"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/b83ee5a642c0/","name":"物理引擎 Demo 思路"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"物理引擎 Demo 思路","description":"分享一些做物理 Demo 的思路","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/b83ee5a642c0/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/b83ee5a642c0/","wordCount":0,"datePublished":"2024-01-21T20:08:06.000Z","dateModified":"2024-05-30T12:27:11.723Z","articleSection":"设计思路","keywords":"物理","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

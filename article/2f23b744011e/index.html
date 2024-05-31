@@ -34,19 +34,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Unity-ECS框架 - Busyo's Blog</title>
+  <title>Unity-ECS 框架 - Busyo's Blog</title>
   <meta name="keywords" content="C#,工具类,系统架构,Unity,null">
-  <meta desc name="description" content="ECS架构是 实体（Entity）-组件（Component）-系统（System） 组成的架构，主要目的是对数据和逻辑进行解耦以便更好的维护系统。其运行的原理也能提高CPU的缓存命中，即可以提高游戏运行的性能。 - Busyo - Busyo's Blog">
+  <meta desc name="description" content="ECS 架构是 实体（Entity）- 组件（Component）- 系统（System）组成的架构，主要目的是对数据和逻辑进行解耦以便更好的维护系统。其运行的原理也能提高 CPU 的缓存命中，即可以提高游戏运行的性能。 - Busyo - Busyo's Blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Unity-ECS框架">
+<meta property="og:title" content="Unity-ECS 框架">
 <meta property="og:url" content="https://busyogg.github.io/article/2f23b744011e/index.html">
 <meta property="og:site_name" content="Busyo&#39;s Blog">
-<meta property="og:description" content="ECS架构是 实体（Entity）-组件（Component）-系统（System） 组成的架构，主要目的是对数据和逻辑进行解耦以便更好的维护系统。其运行的原理也能提高CPU的缓存命中，即可以提高游戏运行的性能。">
+<meta property="og:description" content="ECS 架构是 实体（Entity）- 组件（Component）- 系统（System）组成的架构，主要目的是对数据和逻辑进行解耦以便更好的维护系统。其运行的原理也能提高 CPU 的缓存命中，即可以提高游戏运行的性能。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-03-07T16:03:54.000Z">
-<meta property="article:modified_time" content="2024-05-18T15:37:03.816Z">
+<meta property="article:modified_time" content="2024-05-30T12:29:01.952Z">
 <meta property="article:author" content="Busyo">
 <meta property="article:tag" content="C#">
 <meta property="article:tag" content="工具类">
@@ -1845,7 +1845,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1716061481970),
+    lastupdate: new Date(1717157100254),
     sidebar: {
       for_page: ["blogger","music","repos","lastupdate","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2555,7 +2555,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        Unity-ECS框架
+        Unity-ECS 框架
       </h1>
       <div class='new-meta-box'>
         
@@ -2646,7 +2646,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>ECS 架构是 实体（Entity）-组件（Component）-系统（System） 组成的架构，主要目的是对数据和逻辑进行解耦以便更好的维护系统。其运行的原理也能提高 CPU 的缓存命中，即可以提高游戏运行的性能。</p>
+    <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>ECS 架构是 实体（Entity）- 组件（Component）- 系统（System）组成的架构，主要目的是对数据和逻辑进行解耦以便更好的维护系统。其运行的原理也能提高 CPU 的缓存命中，即可以提高游戏运行的性能。</p>
 <h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>ECS 架构简单来说就是用实体来组合组件，用组件来保存数据，用系统来进行运算。单一的实体没有任何意义，只有在组合组件之后这个实体才有意义。组件只能用于保存数据，不能自己进行任何的运算。系统只负责运算，不会持久化保存任何数据。这样就把数据和逻辑分离开来，通过组合的方式实现特定的功能，实现数据和逻辑的解耦，以及逻辑与逻辑之间的解耦。</p>
 <p>大致示意图如下：</p>
 <div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20230918-181357-327.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20230918-181357-327.png" class="lazyload" data-srcset="https://img.busyo.buzz/imgUpload/20230918-181357-327.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
@@ -2769,8 +2769,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>本文的 ECS 架构并未做多线程或并行处理，这部分内容请自行改造。</p>
 <p>本文内容与<a target="_blank" rel="noopener" href="https://busyo.buzz/article/be8112f144cf/">TS 实现 ECS 架构</a>一文基本相同，只是做了 Unity 版本的移植和调整并且修复一些 bug，不过建议以本文为主。</p>
 <h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h2><div class="timeline"><div class="timenode"><div class="meta"><p><p>2024-03-08</p>
-</p></div><div class="body"><ol><li>更新 ECS 基本内容。</li></ol></div></div>
-   </div>
+</p></div><div class="body"><ol><li>更新 ECS 基本内容。</li></ol></div></div></div>
 
   </div>
   
@@ -2795,10 +2794,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-18T23:37:03+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-30T20:29:01+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2024年5月18日</p>
+    <p>更新于：2024年5月30日</p>
   </a>
 </div>
 
@@ -2821,7 +2820,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://busyogg.github.io/article/2f23b744011e/&title=Unity-ECS框架 - Busyo's Blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://busyogg.github.io/article/2f23b744011e/&title=Unity-ECS 框架 - Busyo's Blog&summary="
           
           >
           
@@ -2833,7 +2832,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://busyogg.github.io/article/2f23b744011e/&title=Unity-ECS框架 - Busyo's Blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://busyogg.github.io/article/2f23b744011e/&title=Unity-ECS 框架 - Busyo's Blog&summary="
           
           >
           
@@ -2845,7 +2844,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://busyogg.github.io/article/2f23b744011e/&title=Unity-ECS框架 - Busyo's Blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://busyogg.github.io/article/2f23b744011e/&title=Unity-ECS 框架 - Busyo's Blog&summary="
           
           >
           
@@ -2879,7 +2878,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class="prev-next">
       
         <a class='prev' href='/article/e8fee5b5f443/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Unity-Inspector序列化字典</p>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Unity-Inspector 序列化字典</p>
           <p class='content'>简介众所周知，Unity 无法在 Inspector 面板上序列化显示字典的内容，因此我们需要用别的方法曲线救国。
 Unity 是可以序列化显示 List 的，因此我们的目标就是用 List 的...</p>
         </a>
@@ -3531,7 +3530,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://img.busyo.buzz/imgUpload/20230912-225941-99.png"];
+  let imgs = ["https://img.busyo.buzz/imgUpload/20240531-200434-634.jpg"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3758,7 +3757,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Unity/","name":"Unity"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Unity/工具/","name":"工具"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/2f23b744011e/","name":"Unity-ECS框架"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Unity-ECS框架","description":"ECS架构是 实体（Entity）-组件（Component）-系统（System） 组成的架构，主要目的是对数据和逻辑进行解耦以便更好的维护系统。其运行的原理也能提高CPU的缓存命中，即可以提高游戏运行的性能。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/2f23b744011e/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/2f23b744011e/","wordCount":0,"datePublished":"2024-03-07T16:03:54.000Z","dateModified":"2024-05-18T15:37:03.816Z","articleSection":"Unity","keywords":"C#,工具类,系统架构,Unity","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Unity/","name":"Unity"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Unity/工具/","name":"工具"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/2f23b744011e/","name":"Unity-ECS 框架"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Unity-ECS 框架","description":"ECS 架构是 实体（Entity）- 组件（Component）- 系统（System）组成的架构，主要目的是对数据和逻辑进行解耦以便更好的维护系统。其运行的原理也能提高 CPU 的缓存命中，即可以提高游戏运行的性能。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/2f23b744011e/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/2f23b744011e/","wordCount":0,"datePublished":"2024-03-07T16:03:54.000Z","dateModified":"2024-05-30T12:29:01.952Z","articleSection":"Unity","keywords":"C#,工具类,系统架构,Unity","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

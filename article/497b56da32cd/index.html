@@ -34,24 +34,25 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Unity-编辑器 UI 开发优化框架 EditorUIExtension - Busyo's Blog</title>
-  <meta name="keywords" content="C#,Unity,编辑器,框架,null">
+  <title>Unity-编辑器 UI 开发优化框架 EditorUIExtension IMGUI 篇 - Busyo's Blog</title>
+  <meta name="keywords" content="C#,Unity,编辑器,框架,IMGUI,null">
   <meta desc name="description" content="基于 IMGUI 的编辑器 UI 框架，目的是简化编辑器开发时的 UI 构建。 - Busyo - Busyo's Blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Unity-编辑器 UI 开发优化框架 EditorUIExtension">
+<meta property="og:title" content="Unity-编辑器 UI 开发优化框架 EditorUIExtension IMGUI 篇">
 <meta property="og:url" content="https://busyogg.github.io/article/497b56da32cd/index.html">
 <meta property="og:site_name" content="Busyo&#39;s Blog">
 <meta property="og:description" content="基于 IMGUI 的编辑器 UI 框架，目的是简化编辑器开发时的 UI 构建。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-03-16T19:59:41.000Z">
-<meta property="article:modified_time" content="2024-05-18T15:37:19.836Z">
+<meta property="article:modified_time" content="2024-05-31T08:26:21.870Z">
 <meta property="article:author" content="Busyo">
 <meta property="article:tag" content="C#">
 <meta property="article:tag" content="Unity">
 <meta property="article:tag" content="编辑器">
 <meta property="article:tag" content="框架">
+<meta property="article:tag" content="IMGUI">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -1845,7 +1846,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1716061481970),
+    lastupdate: new Date(1717157100254),
     sidebar: {
       for_page: ["blogger","music","repos","lastupdate","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2555,7 +2556,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        Unity-编辑器 UI 开发优化框架 EditorUIExtension
+        Unity-编辑器 UI 开发优化框架 EditorUIExtension IMGUI 篇
       </h1>
       <div class='new-meta-box'>
         
@@ -2623,7 +2624,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：1.1k 字</p>
+      <p>字数：1.2k 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2649,19 +2650,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>基于 IMGUI 的编辑器 UI 框架，目的是简化编辑器开发时的 UI 构建。利用特性标签进行 UI 的初始化。</p>
 <p>对于变量，我们只需要打上对应的标签，就能够在 UI 面板上显示对应的 UI。</p>
 <p>对于方法，我们只需要打上 Button 标签，就能够生成一个实现该方法的按钮。</p>
-<p>同时，本框架还支持对 UI 的样式和布局进行有限的修改，同样也是通过标签实现。</p>
+<p>同时，本框架还支持对 UI 的样式和布局进行有限的修改，同样也是通过特性实现。</p>
 <p>UI 界面的渲染顺序按照编辑器脚本对象的声明顺序排序，布局的结构也要按照顺序声明，可以看作是以代码的形式绘制 UI。</p>
 <p>本框架支持自定义拓展功能，具体的使用说明和拓展规则见：</p>
 <div class="note link green"><p><a target="_blank" rel="noopener" href="https://editor.busyo.buzz/">EditorUIExtention 文档</a></p></div>
 
-<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><h3 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h3><p>我们通过基类初始化获取 Type，然后通过 Type 获取 members 并且按照声明顺序排序，之后通过遍历，在其循环体内根据对应的标签类别进行 UI 的渲染函数初始化。</p>
-<h3 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h3><p>我们在定义标签的时候需要传入一个 <code>[CallerLineNumber] int</code> 类型的变量，该变量用于获取调用标签构造函数的行号，其中 <code>[CallerLineNumber]</code> 也是一个特性，用于获取调用方代码的行号。</p>
-<p>只有通过这个方法才能自动获取到正确的声明顺序。如果你不想用这个方法，也可以在标签显示声明一个表明顺序的变量，然后手动传参，并且修改编辑器初始化函数中的排序方法。</p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><h3 id="初始化特性"><a href="#初始化特性" class="headerlink" title="初始化特性"></a>初始化特性</h3><p>我们通过基类初始化获取 Type，然后通过 Type 获取 members 并且按照声明顺序排序，之后通过遍历，在其循环体内根据对应的特性类别进行 UI 的渲染函数初始化。</p>
+<p>为了防止频繁反射，因此所有的 UI 都在编辑器展示的时候构造，数据的获取和存储都从反射转为委托。又因为 IMGUI 构造 UI 的方法无法在 <code>OnGUI</code> 以外的地方使用，因此我们在初始化时得到的是构造对应 UI 的方法函数。</p>
+<h3 id="特性声明"><a href="#特性声明" class="headerlink" title="特性声明"></a>特性声明</h3><p>我们在定义特性的时候需要传入一个 <code>[CallerLineNumber] int</code> 类型的变量，该变量用于获取调用特性构造函数的行号，其中 <code>[CallerLineNumber]</code> 也是一个特性，用于获取调用方代码的行号。</p>
+<p>只有通过这个方法才能自动获取到正确的声明顺序。如果你不想用这个方法，也可以在特性显示声明一个表明顺序的变量，然后手动传参，并且修改编辑器初始化函数中的排序方法。</p>
 <h3 id="渲染"><a href="#渲染" class="headerlink" title="渲染"></a>渲染</h3><h4 id="渲染函数初始化"><a href="#渲染函数初始化" class="headerlink" title="渲染函数初始化"></a>渲染函数初始化</h4><div class="note info"><p>UI 渲染结构</p></div>
 
 <p>为了支持布局的修改，我们就要规划好整个渲染的结构和顺序。</p>
 <p>布局作为最外层的框架，需要把属于该布局的 UI 包裹在其中，并且可能存在布局套布局的情况。因此我们使用树结构来存储布局以及对应的 UI。</p>
-<p>我们把 UI 的渲染函数或布局的节点存储在同一个 object 列表中，以便在渲染时按照正确的顺序渲染。</p>
+<p>我们把 UI 的渲染函数或布局的节点存储在同一个 <code>object</code> 列表中，以便在渲染时按照正确的顺序渲染。</p>
 <p>同时，我们设置一个函数委托，用于在渲染布局的时候先把外层的布局 UI 渲染好，然后我们再渲染内部的具体 UI。</p>
 <div class="note info"><p>UI 渲染具体过程</p></div>
 
@@ -2693,9 +2695,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h2><p>由于本项目代码较多，因此请移步 GitHub 查看详细代码。</p>
 <center><a class="ghcard" rel="external nofollow noopener noreferrer noopener" target="_blank" href="https://github.com/busyoGG/EditorUIExtention"><img src="https://github-readme-stats.vercel.app/api/pin/?username=busyoGG&repo=EditorUIExtention&theme=onedark&show_owner=true" class="lazyload" data-srcset="https://github-readme-stats.vercel.app/api/pin/?username=busyoGG&repo=EditorUIExtention&theme=onedark&show_owner=true" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/></a></center>
 
-<h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h2><div class="timeline"><div class="timenode"><div class="meta"><p><p>2024-03-18</p>
-</p></div><div class="body"><ol><li>更新基础内容。</li></ol></div></div>
-   </div>
+<h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h2><div class="timeline"><div class="timenode"><div class="meta"><p><p>2024-05-30</p>
+</p></div><div class="body"><ol><li>修改部分说明。</li></ol></div></div>
+<div class="timenode"><div class="meta"><p><p>2024-03-18</p>
+</p></div><div class="body"><ol><li>更新基础内容。</li></ol></div></div></div>
 
   </div>
   
@@ -2720,10 +2723,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-18T23:37:19+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-31T16:26:21+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2024年5月18日</p>
+    <p>更新于：2024年5月31日</p>
   </a>
 </div>
 
@@ -2732,8 +2735,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>C#</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Unity/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Unity</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%BC%96%E8%BE%91%E5%99%A8/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>编辑器</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%A1%86%E6%9E%B6/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>框架</p></a></div>
-  <span hidden itemprop="keywords">C# Unity 编辑器 框架</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>C#</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Unity/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Unity</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%BC%96%E8%BE%91%E5%99%A8/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>编辑器</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%A1%86%E6%9E%B6/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>框架</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/IMGUI/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>IMGUI</p></a></div>
+  <span hidden itemprop="keywords">C# Unity 编辑器 框架 IMGUI</span>
 
 
         
@@ -2746,7 +2749,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://busyogg.github.io/article/497b56da32cd/&title=Unity-编辑器 UI 开发优化框架 EditorUIExtension - Busyo's Blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://busyogg.github.io/article/497b56da32cd/&title=Unity-编辑器 UI 开发优化框架 EditorUIExtension IMGUI 篇 - Busyo's Blog&summary="
           
           >
           
@@ -2758,7 +2761,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://busyogg.github.io/article/497b56da32cd/&title=Unity-编辑器 UI 开发优化框架 EditorUIExtension - Busyo's Blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://busyogg.github.io/article/497b56da32cd/&title=Unity-编辑器 UI 开发优化框架 EditorUIExtension IMGUI 篇 - Busyo's Blog&summary="
           
           >
           
@@ -2770,7 +2773,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://busyogg.github.io/article/497b56da32cd/&title=Unity-编辑器 UI 开发优化框架 EditorUIExtension - Busyo's Blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://busyogg.github.io/article/497b56da32cd/&title=Unity-编辑器 UI 开发优化框架 EditorUIExtension IMGUI 篇 - Busyo's Blog&summary="
           
           >
           
@@ -2804,14 +2807,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class="prev-next">
       
         <a class='prev' href='/article/8583c53078ec/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Cloudflare优选IP</p>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Cloudflare 优选 IP</p>
           <p class='content'>简介利用优选 IP 加快 Cloudflare 的访问速度，防止因为 IP 被墙导致的无法访问或者访问缓慢。
 原理通过修改 Cloudflare 的 A 记录 IP 地址，或者 CNAME 域名...</p>
         </a>
       
       
         <a class='next' href='/article/e8fee5b5f443/'>
-          <p class='title'>Unity-Inspector序列化字典<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='title'>Unity-Inspector 序列化字典<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>简介众所周知，Unity 无法在 Inspector 面板上序列化显示字典的内容，因此我们需要用别的方法曲线救国。
 Unity 是可以序列化显示 List 的，因此我们的目标就是用 List 的...</p>
         </a>
@@ -2873,7 +2876,7 @@ Unity 是可以序列化显示 List 的，因此我们的目标就是用 List �
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E7%90%86"><span class="toc-number">2.</span> <span class="toc-text">原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E7%AD%BE"><span class="toc-number">2.1.</span> <span class="toc-text">标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A3%B0%E6%98%8E"><span class="toc-number">2.2.</span> <span class="toc-text">声明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B8%B2%E6%9F%93"><span class="toc-number">2.3.</span> <span class="toc-text">渲染</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B8%B2%E6%9F%93%E5%87%BD%E6%95%B0%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">2.3.1.</span> <span class="toc-text">渲染函数初始化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B8%B2%E6%9F%93%E5%87%BD%E6%95%B0%E6%89%A7%E8%A1%8C"><span class="toc-number">2.3.2.</span> <span class="toc-text">渲染函数执行</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE"><span class="toc-number">3.</span> <span class="toc-text">项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97"><span class="toc-number">4.</span> <span class="toc-text">更新日志</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E7%90%86"><span class="toc-number">2.</span> <span class="toc-text">原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E7%89%B9%E6%80%A7"><span class="toc-number">2.1.</span> <span class="toc-text">初始化特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E6%80%A7%E5%A3%B0%E6%98%8E"><span class="toc-number">2.2.</span> <span class="toc-text">特性声明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B8%B2%E6%9F%93"><span class="toc-number">2.3.</span> <span class="toc-text">渲染</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B8%B2%E6%9F%93%E5%87%BD%E6%95%B0%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">2.3.1.</span> <span class="toc-text">渲染函数初始化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B8%B2%E6%9F%93%E5%87%BD%E6%95%B0%E6%89%A7%E8%A1%8C"><span class="toc-number">2.3.2.</span> <span class="toc-text">渲染函数执行</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE"><span class="toc-number">3.</span> <span class="toc-text">项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97"><span class="toc-number">4.</span> <span class="toc-text">更新日志</span></a></li></ol>
     </div>
   </section>
 
@@ -3456,7 +3459,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://img.busyo.buzz/imgUpload/20230912-225941-99.png"];
+  let imgs = ["https://img.busyo.buzz/imgUpload/20240531-200434-634.jpg"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3683,7 +3686,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Unity/","name":"Unity"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Unity/编辑器/","name":"编辑器"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/497b56da32cd/","name":"Unity-编辑器 UI 开发优化框架 EditorUIExtension"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Unity-编辑器 UI 开发优化框架 EditorUIExtension","description":"基于 IMGUI 的编辑器 UI 框架，目的是简化编辑器开发时的 UI 构建。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/497b56da32cd/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/497b56da32cd/","wordCount":0,"datePublished":"2024-03-16T19:59:41.000Z","dateModified":"2024-05-18T15:37:19.836Z","articleSection":"Unity","keywords":"C#,Unity,编辑器,框架","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Unity/","name":"Unity"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Unity/编辑器/","name":"编辑器"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/497b56da32cd/","name":"Unity-编辑器 UI 开发优化框架 EditorUIExtension IMGUI 篇"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Unity-编辑器 UI 开发优化框架 EditorUIExtension IMGUI 篇","description":"基于 IMGUI 的编辑器 UI 框架，目的是简化编辑器开发时的 UI 构建。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/497b56da32cd/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/497b56da32cd/","wordCount":0,"datePublished":"2024-03-16T19:59:41.000Z","dateModified":"2024-05-31T08:26:21.870Z","articleSection":"Unity","keywords":"C#,Unity,编辑器,框架,IMGUI","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

@@ -7911,8 +7911,8 @@ video {
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: inline-block !important;
   outline: 3px solid #fff;
-  border-radius: 15px !important;
-  -webkit-border-radius: 15px !important;
+  border-radius: 16px !important;
+  -webkit-border-radius: 16px !important;
   box-shadow: 0px 0px 20px #aaa !important;
   -webkit-box-shadow: 0px 0px 20px #aaa !important;
   --bpx-box-shadow: var(--bg3) !important;
@@ -7997,13 +7997,13 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
   -webkit-box-shadow: 0px 0px 10px #aaa !important;
 }
 .iziToast {
-  border-radius: 15px !important;
-  -webkit-border-radius: 15px !important;
+  border-radius: 16px !important;
+  -webkit-border-radius: 16px !important;
   padding: 0px 45px 10px 0px !important;
 }
 .iziToast:after {
-  border-radius: 15px !important;
-  -webkit-border-radius: 15px !important;
+  border-radius: 16px !important;
+  -webkit-border-radius: 16px !important;
   box-shadow: 0px 0px 10px #aaa !important;
   -webkit-box-shadow: 0px 0px 10px #aaa !important;
 }
@@ -8025,6 +8025,65 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
 .mermaid {
   background: none !important;
   border: none !important;
+}
+.blur {
+  background: rgba(255,255,255,0.8) !important;
+  backdrop-filter: saturate(350%) blur(15px);
+}
+[color-scheme='dark'] .blur {
+  background: rgba(38,38,38,0.8) !important;
+}
+:root:not([color-scheme]) {
+  --color-card: rgba(38,38,38,0.8) !important;
+}
+:root {
+  --color-card: rgba(255,255,255,0.8) !important;
+}
+.widget {
+  backdrop-filter: saturate(350%) blur(15px);
+  border-radius: 16px !important;
+  -webkit-border-radius: 16px !important;
+}
+.aplayer {
+  background: none !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  border: none !important;
+  margin: 0px 8px !important;
+}
+.aplayer-body {
+  background: none !important;
+}
+[color-scheme='dark'] .aplayer-body {
+  background: none !important;
+}
+.aplayer .aplayer-lrc:before {
+  background: none !important;
+}
+.aplayer .aplayer-lrc:after {
+  background: none !important;
+}
+.aplayer-info {
+  border-bottom: none !important;
+}
+:root:not([color-scheme]) .aplayer-info {
+  background: none !important;
+}
+.aplayer-pic {
+  border-radius: 16px !important;
+  -webkit-border-radius: 16px !important;
+}
+.content {
+  border-radius: 16px !important;
+  -webkit-border-radius: 16px !important;
+}
+.post {
+  border-radius: 16px !important;
+  -webkit-border-radius: 16px !important;
+}
+.l_header {
+  border-radius: 0px 0px 16px 16px !important;
+  -webkit-border-radius: 0px 0px 16px 16px !important;
 }
 #l_main > article.cus-indent p {
   text-indent: 2em;
