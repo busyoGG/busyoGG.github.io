@@ -8034,9 +8034,27 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
   background: rgba(38,38,38,0.8) !important;
 }
 .widget {
+  position: relative;
   backdrop-filter: saturate(350%) blur(15px);
   border-radius: 16px !important;
   -webkit-border-radius: 16px !important;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -khtml-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transition: width 0.3s ease-out;
+  -webkit-transition: width 0.3s ease-out;
+  -khtml-transition: width 0.3s ease-out;
+  -moz-transition: width 0.3s ease-out;
+  -o-transition: width 0.3s ease-out;
+  -ms-transition: width 0.3s ease-out;
+}
+.widget:hover {
+  width: 102% !important;
+  max-width: 102% !important;
 }
 .aplayer {
   background: none !important;
@@ -8081,6 +8099,7 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
   position: relative;
   width: 100%;
   left: 0;
+  max-width: 100%;
 }
 .l_header-hover {
   border-radius: 16px;
@@ -8128,6 +8147,18 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
   -moz-transition: margin-top 0.4s ease-out;
   -o-transition: margin-top 0.4s ease-out;
   -ms-transition: margin-top 0.4s ease-out;
+}
+.head-bar-focus {
+  max-width: 1112px;
+  transition: max-width 0.2s ease-out;
+  -webkit-transition: max-width 0.2s ease-out;
+  -khtml-transition: max-width 0.2s ease-out;
+  -moz-transition: max-width 0.2s ease-out;
+  -o-transition: max-width 0.2s ease-out;
+  -ms-transition: max-width 0.2s ease-out;
+}
+.head-bar-focus:hover {
+  max-width: 1125px;
 }
 .head-bar-hover {
   width: 30%;
@@ -8177,4 +8208,38 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
   -moz-transition: background 0.3s ease;
   -o-transition: background 0.3s ease;
   -ms-transition: background 0.3s ease;
+  cursor: pointer;
+}
+.card-ani {
+  position: relative !important;
+  width: 90% !important;
+  left: 50%; /* 将左边界放置在父容器的水平中心 */
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -khtml-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%); /* 将元素的水平中心移动到父容器的水平中心 */
+  margin-top: 50px;
+  transition: width 0.3s ease-out, margin-top 0.3s ease-in-out;
+  -webkit-transition: width 0.3s ease-out, margin-top 0.3s ease-in-out;
+  -khtml-transition: width 0.3s ease-out, margin-top 0.3s ease-in-out;
+  -moz-transition: width 0.3s ease-out, margin-top 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-out, margin-top 0.3s ease-in-out;
+  -ms-transition: width 0.3s ease-out, margin-top 0.3s ease-in-out;
+}
+.card-in:hover {
+  width: 101% !important;
+}
+.card-in {
+  width: 100% !important;
+  margin-top: 0px;
+}
+.logo-cover {
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  background: var(--color-card);
+  backdrop-filter: saturate(350%) blur(15px);
+  box-shadow: 0px 0px 20px #aaa !important;
+  -webkit-box-shadow: 0px 0px 20px #aaa !important;
 }

@@ -35,7 +35,7 @@
   <!-- feed -->
   <!-- 页面元数据 -->
   <title>Jszip在Laya引擎上的应用 - Busyo's Blog</title>
-  <meta name="keywords" content="Laya,工具类,Typescript,Jszip,null">
+  <meta name="keywords" content="Laya,Jszip,工具类,Typescript,null">
   <meta desc name="description" content="资源压缩的实现 - Busyo - Busyo's Blog">
   
 <meta property="og:type" content="article">
@@ -49,9 +49,9 @@
 <meta property="article:modified_time" content="2024-05-18T15:37:55.728Z">
 <meta property="article:author" content="Busyo">
 <meta property="article:tag" content="Laya">
+<meta property="article:tag" content="Jszip">
 <meta property="article:tag" content="工具类">
 <meta property="article:tag" content="Typescript">
-<meta property="article:tag" content="Jszip">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -1845,7 +1845,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1717221320954),
+    lastupdate: new Date(1717233943199),
     sidebar: {
       for_page: ["blogger","music","repos","lastupdate","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2495,7 +2495,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                             </ul>
                           </li>
                     </ul>
-                    <div class="lockBar"><div class="lock-emoji" onclick="changeLock(this)">🔓</div></div>
+                    <div class="lockBar"><div class="lock-emoji">🔓</div></div>
 
                     <!-- Custom Files header begin -->
                     
@@ -2507,46 +2507,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </div>
 <!-- mermaid.js 需要在 require.js 前面加载 -->
 <script src='https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js'></script>
-<script>
-
-  function initLock(){
-    var isLock = localStorage.getItem("isLock") || false;
-    var obj = document.getElementsByClassName("lock-emoji")[0];
-    var ele = document.getElementsByClassName("head-bar")[0];
-    var head = document.getElementsByClassName("l_header")[0];
-    if(isLock == "true"){
-      ele.classList.remove("head-bar-hover");
-      head.classList.remove("l_header-hover");
-      obj.innerHTML = "🔒";
-    }else{
-      ele.classList.add("head-bar-hover");
-      head.classList.add("l_header-hover");
-      obj.innerHTML = "🔓";
-    }
-    console.log("初始化",isLock);
-  }
-
-  function changeLock(obj){
-    var isLock = localStorage.getItem("isLock") || false;
-    console.log("切换")
-    var ele = document.getElementsByClassName("head-bar")[0];
-    var head = document.getElementsByClassName("l_header")[0];
-    if(isLock == "false"){
-      ele.classList.remove("head-bar-hover");
-      head.classList.remove("l_header-hover");
-      obj.innerHTML = "🔒";
-    }else{
-      ele.classList.add("head-bar-hover");
-      head.classList.add("l_header-hover");
-      obj.innerHTML = "🔓";
-    }
-    isLock = isLock == "false" ? "true" : "false";
-    console.log(isLock);
-    localStorage.setItem("isLock",isLock);
-  }
-
-  initLock();
-</script>
+<script src = "/script/NavBarScript.js"></script>
     <div id="l_body">
       <div id="l_cover">
   
@@ -2558,6 +2519,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <div class='cover-body'>
   <div class='top'>
+    
+      <img no-lazy class='logo logo-cover' src='/images/img_cover.png'/>
     
     
       <p class="title">Busyo's Blog</p>
@@ -2736,8 +2699,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Laya/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Laya</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>工具类</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Typescript/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Typescript</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Jszip/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Jszip</p></a></div>
-  <span hidden itemprop="keywords">Laya 工具类 Typescript Jszip</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Laya/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Laya</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Jszip/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Jszip</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>工具类</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Typescript/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Typescript</p></a></div>
+  <span hidden itemprop="keywords">Laya Jszip 工具类 Typescript</span>
 
 
         
@@ -3681,7 +3644,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Laya/","name":"Laya"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Laya/工具/","name":"工具"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/47f96467aabe/","name":"Jszip在Laya引擎上的应用"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Jszip在Laya引擎上的应用","description":"资源压缩的实现","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/47f96467aabe/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/47f96467aabe/","wordCount":0,"datePublished":"2023-08-23T13:17:56.000Z","dateModified":"2024-05-18T15:37:55.728Z","articleSection":"Laya","keywords":"Laya,工具类,Typescript,Jszip","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Busyo 的博客，分享记录与思考"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://busyogg.github.io/","name":"Busyo's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Laya/","name":"Laya"}},{"@type":"ListItem","position":2,"item":{"@id":"https://busyogg.github.io/categories/Laya/工具/","name":"工具"}},{"@type":"ListItem","position":3,"item":{"@id":"https://busyogg.github.io/article/47f96467aabe/","name":"Jszip在Laya引擎上的应用"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Busyo's Blog","url":"https://busyogg.github.io/","keywords":null,"description":"Busyo 的博客，分享记录与思考","author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/","description":"Busyo 的博客，分享记录与思考"},"publisher":{"@type":"Organization","name":"Busyo's Blog","url":"https://busyogg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://busyogg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Jszip在Laya引擎上的应用","description":"资源压缩的实现","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://busyogg.github.io/article/47f96467aabe/"},"author":{"@type":"Person","name":"Busyo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://busyogg.github.io/"},"publisher":{"@type":"Organization","name":"Busyo's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://busyogg.github.io/article/47f96467aabe/","wordCount":0,"datePublished":"2023-08-23T13:17:56.000Z","dateModified":"2024-05-18T15:37:55.728Z","articleSection":"Laya","keywords":"Laya,Jszip,工具类,Typescript","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

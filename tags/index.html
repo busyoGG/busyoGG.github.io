@@ -1841,7 +1841,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1717221320954),
+    lastupdate: new Date(1717233943199),
     sidebar: {
       for_page: ["blogger","music","repos","lastupdate","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2491,7 +2491,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                             </ul>
                           </li>
                     </ul>
-                    <div class="lockBar"><div class="lock-emoji" onclick="changeLock(this)">🔓</div></div>
+                    <div class="lockBar"><div class="lock-emoji">🔓</div></div>
 
                     <!-- Custom Files header begin -->
                     
@@ -2503,46 +2503,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </div>
 <!-- mermaid.js 需要在 require.js 前面加载 -->
 <script src='https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js'></script>
-<script>
-
-  function initLock(){
-    var isLock = localStorage.getItem("isLock") || false;
-    var obj = document.getElementsByClassName("lock-emoji")[0];
-    var ele = document.getElementsByClassName("head-bar")[0];
-    var head = document.getElementsByClassName("l_header")[0];
-    if(isLock == "true"){
-      ele.classList.remove("head-bar-hover");
-      head.classList.remove("l_header-hover");
-      obj.innerHTML = "🔒";
-    }else{
-      ele.classList.add("head-bar-hover");
-      head.classList.add("l_header-hover");
-      obj.innerHTML = "🔓";
-    }
-    console.log("初始化",isLock);
-  }
-
-  function changeLock(obj){
-    var isLock = localStorage.getItem("isLock") || false;
-    console.log("切换")
-    var ele = document.getElementsByClassName("head-bar")[0];
-    var head = document.getElementsByClassName("l_header")[0];
-    if(isLock == "false"){
-      ele.classList.remove("head-bar-hover");
-      head.classList.remove("l_header-hover");
-      obj.innerHTML = "🔒";
-    }else{
-      ele.classList.add("head-bar-hover");
-      head.classList.add("l_header-hover");
-      obj.innerHTML = "🔓";
-    }
-    isLock = isLock == "false" ? "true" : "false";
-    console.log(isLock);
-    localStorage.setItem("isLock",isLock);
-  }
-
-  initLock();
-</script>
+<script src = "/script/NavBarScript.js"></script>
     <div id="l_body">
       <div id="l_cover">
   
@@ -2554,6 +2515,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <div class='cover-body'>
   <div class='top'>
+    
+      <img no-lazy class='logo logo-cover' src='/images/img_cover.png'/>
     
     
       <p class="title">Busyo's Blog</p>
