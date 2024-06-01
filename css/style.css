@@ -8053,8 +8053,8 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
   -ms-transition: width 0.3s ease-out;
 }
 .widget:hover {
-  width: 102% !important;
-  max-width: 102% !important;
+  width: calc(100% + 4px) !important;
+  max-width: calc(100% + 4px) !important;
 }
 .aplayer {
   background: none !important;
@@ -8158,7 +8158,7 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
   -ms-transition: max-width 0.2s ease-out;
 }
 .head-bar-focus:hover {
-  max-width: 1125px;
+  max-width: 1124px;
 }
 .head-bar-hover {
   width: 30%;
@@ -8229,7 +8229,7 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
   -ms-transition: width 0.3s ease-out, margin-top 0.3s ease-in-out;
 }
 .card-in:hover {
-  width: 101% !important;
+  width: calc(100% + 4px) !important;
 }
 .card-in {
   width: 100% !important;
