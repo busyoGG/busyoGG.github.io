@@ -8076,8 +8076,21 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
   -webkit-border-radius: 16px !important;
 }
 .l_header {
-  border-radius: 0px 0px 16px 16px !important;
-  -webkit-border-radius: 0px 0px 16px 16px !important;
+  border-radius: 0px 0px 16px 16px;
+  -webkit-border-radius: 0px 0px 16px 16px;
+  position: relative;
+  width: 100%;
+  left: 0;
+}
+.l_header-hover {
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+}
+#safearea {
+  margin: 25px 16px 0;
+}
+.m_search {
+  margin-right: 10px;
 }
 #l_main > article.cus-indent p {
   text-indent: 2em;
@@ -8093,4 +8106,75 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
 #l_main > article.cus-indent .note p,
 #l_main > article.cus-indent .tag p {
   text-indent: initial;
+}
+.head-bar {
+  z-index: 9999;
+  width: 100%;
+  margin-top: -15px;
+  max-width: 1112px;
+  position: fixed;
+  height: 100px;
+  padding-top: 14px;
+  left: 50%; /* 将左边界放置在父容器的水平中心 */
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -khtml-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%); /* 将元素的水平中心移动到父容器的水平中心 */
+  transition: margin-top 0.4s ease-out;
+  -webkit-transition: margin-top 0.4s ease-out;
+  -khtml-transition: margin-top 0.4s ease-out;
+  -moz-transition: margin-top 0.4s ease-out;
+  -o-transition: margin-top 0.4s ease-out;
+  -ms-transition: margin-top 0.4s ease-out;
+}
+.head-bar-hover {
+  width: 30%;
+  margin-top: -70px;
+  transition: width 0.4s ease-out, margin-top 0.4s ease-out /* 定义过渡效果 */;
+  -webkit-transition: width 0.4s ease-out, margin-top 0.4s ease-out /* 定义过渡效果 */;
+  -khtml-transition: width 0.4s ease-out, margin-top 0.4s ease-out /* 定义过渡效果 */;
+  -moz-transition: width 0.4s ease-out, margin-top 0.4s ease-out /* 定义过渡效果 */;
+  -o-transition: width 0.4s ease-out, margin-top 0.4s ease-out /* 定义过渡效果 */;
+  -ms-transition: width 0.4s ease-out, margin-top 0.4s ease-out /* 定义过渡效果 */;
+}
+.head-bar-hover:hover {
+  margin-top: 0px;
+  width: 100%;
+}
+.lockBar {
+  width: 30px;
+  height: 64px;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -khtml-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  font-size: 25px;
+}
+.lock-emoji {
+  z-index: 9999;
+  background: var(--color-card);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  height: 38px;
+  margin-left: 20px;
+  margin-right: 20px;
+  transition: background 0.3s ease;
+  -webkit-transition: background 0.3s ease;
+  -khtml-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+  -ms-transition: background 0.3s ease;
 }
