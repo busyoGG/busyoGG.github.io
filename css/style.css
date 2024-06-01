@@ -8150,12 +8150,12 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
 }
 .head-bar-focus {
   max-width: 1112px;
-  transition: max-width 0.2s ease-out;
-  -webkit-transition: max-width 0.2s ease-out;
-  -khtml-transition: max-width 0.2s ease-out;
-  -moz-transition: max-width 0.2s ease-out;
-  -o-transition: max-width 0.2s ease-out;
-  -ms-transition: max-width 0.2s ease-out;
+  transition: max-width 0.2s ease-out, margin-top 0.4s ease-out;
+  -webkit-transition: max-width 0.2s ease-out, margin-top 0.4s ease-out;
+  -khtml-transition: max-width 0.2s ease-out, margin-top 0.4s ease-out;
+  -moz-transition: max-width 0.2s ease-out, margin-top 0.4s ease-out;
+  -o-transition: max-width 0.2s ease-out, margin-top 0.4s ease-out;
+  -ms-transition: max-width 0.2s ease-out, margin-top 0.4s ease-out;
 }
 .head-bar-focus:hover {
   max-width: 1124px;
