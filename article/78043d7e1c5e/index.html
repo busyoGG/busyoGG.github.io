@@ -1846,7 +1846,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1717681711066),
+    lastupdate: new Date(1718027488071),
     sidebar: {
       for_page: ["blogger","music","repos","lastupdate","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2855,6 +2855,12 @@ A --> B --> C --> D --> E</pre>
   
     <div class="prev-next">
       
+        <a class='prev' href='/article/0fe8ee05091b/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Unity-对象资源管理</p>
+          <p class='content'>简介基于 addressable，结合对象池进行对象资源的管理。并且提供定时清理资源的接口。
+原理资源管理打包的部分就是官方的 addressable 使用方式，本项目主要是对资源加载和持续化进...</p>
+        </a>
+      
       
         <a class='next' href='/article/ae332e92ff44/'>
           <p class='title'>碰撞检测之线段检测<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
@@ -3054,6 +3060,7 @@ A --> B --> C --> D --> E</pre>
 
 <script>
   if (window.mermaid) {
+    console.log("初始化mermaid");
     mermaid.initialize({
       theme: 'base',
       'themeVariables': {
@@ -3065,6 +3072,7 @@ A --> B --> C --> D --> E</pre>
         'fontFamily':'haipai'
       }
     });
+    console.log(mermaid.mermaidAPI.getConfig());
   }
 </script>
         <a id="s-top" class="fa-solid fa-arrow-up fa-fw" href="/" onclick="return false;" title="top"></a>
