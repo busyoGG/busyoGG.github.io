@@ -7913,9 +7913,27 @@ video {
   outline: 3px solid #fff;
   border-radius: 16px !important;
   -webkit-border-radius: 16px !important;
-  box-shadow: 0px 0px 20px #aaa !important;
-  -webkit-box-shadow: 0px 0px 20px #aaa !important;
+  box-shadow: 0px 0px 20px #888 !important;
+  -webkit-box-shadow: 0px 0px 20px #888 !important;
   --bpx-box-shadow: var(--bg3) !important;
+  transition: box-shadow 0.3s ease-out;
+  -webkit-transition: box-shadow 0.3s ease-out;
+  -khtml-transition: box-shadow 0.3s ease-out;
+  -moz-transition: box-shadow 0.3s ease-out;
+  -o-transition: box-shadow 0.3s ease-out;
+  -ms-transition: box-shadow 0.3s ease-out;
+}
+:root:not([color-scheme]) .plyr {
+  box-shadow: 0px 0px 20px #000 !important;
+  -webkit-box-shadow: 0px 0px 20px #000 !important;
+}
+.plyr:hover {
+  box-shadow: 0px 0px 30px #888 !important;
+  -webkit-box-shadow: 0px 0px 30px #888 !important;
+}
+:root:not([color-scheme]) .plyr:hover {
+  box-shadow: 0px 0px 30px #000 !important;
+  -webkit-box-shadow: 0px 0px 30px #000 !important;
 }
 .plyr__controls {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
@@ -7995,6 +8013,28 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
   padding: 3px 16px 3px 30px !important;
   box-shadow: 0px 0px 10px #aaa !important;
   -webkit-box-shadow: 0px 0px 10px #aaa !important;
+  border-radius: 20px !important;
+  -webkit-border-radius: 20px !important;
+  transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  -webkit-transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  -khtml-transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  -moz-transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  -o-transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  -ms-transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+:root:not([color-scheme]) .note {
+  box-shadow: 0px 0px 10px #000 !important;
+  -webkit-box-shadow: 0px 0px 10px #000 !important;
+}
+.note:hover {
+  background-color: #fff !important;
+  box-shadow: 0px 0px 20px #aaa !important;
+  -webkit-box-shadow: 0px 0px 20px #aaa !important;
+}
+:root:not([color-scheme]) .note:hover {
+  background-color: #282828 !important;
+  box-shadow: 0px 0px 20px #000 !important;
+  -webkit-box-shadow: 0px 0px 20px #000 !important;
 }
 .iziToast {
   border-radius: 16px !important;
@@ -8110,6 +8150,125 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
 }
 .m_search {
   margin-right: 10px;
+}
+.md ul>li::before {
+  content: " ";
+  height: 14px !important;
+  width: 14px !important;
+  background: transparent;
+  position: absolute;
+  left: 0; /* 调整位置使其在 marker 之前 */
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  box-shadow: inset 0 0 0 3px var(--color-list-hl);
+  -webkit-box-shadow: inset 0 0 0 3px var(--color-list-hl);
+  top: 0.35em;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -khtml-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+}
+.md ul>li:hover::before {
+  box-shadow: inset 0 0 0 8px var(--color-inlinecode);
+  -webkit-box-shadow: inset 0 0 0 8px var(--color-inlinecode);
+}
+.md ul>li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -6px;
+  width: 0%;
+  height: 96%;
+  border-radius: 15px 0px 0px 15px;
+  -webkit-border-radius: 15px 0px 0px 15px;
+  z-index: -1;
+  background: linear-gradient(to right, #fff 0%, transparent 100%); /* 背景颜色 */
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -khtml-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease; /* 过渡动画 */
+}
+:root:not([color-scheme]) .md ul>li::after {
+  background: linear-gradient(to right, #141414 0%, transparent 100%); /* 背景颜色 */
+}
+.md ul>li:hover::after {
+  width: 100%;
+}
+.md ul>li {
+  list-style: none;
+  position: relative;
+  padding-left: 25px;
+  margin-top: 3px;
+}
+.md ul {
+  padding-left: 0;
+  margin-left: 5px;
+}
+.md ol {
+  padding-left: 0;
+  margin-left: 5px;
+  counter-reset: custom-counter; /* 重置计数器 */
+}
+.md ol>li {
+  counter-increment: custom-counter; /* 递增计数器 */
+  list-style: none;
+  position: relative;
+  padding-left: 25px;
+  margin-top: 3px;
+}
+.md ol>li:hover {
+  background-size: 100% 100% !important;
+  -webkit-background-size: 100% 100% !important;
+  -moz-background-size: 100% 100% !important;
+}
+.md ol>li::before {
+  content: counter(custom-counter) ".";
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center; /* 文本居中 */
+  height: 20px !important;
+  width: 20px !important;
+  color: var(--color-list-hl);
+  position: absolute;
+  left: 0; /* 调整位置使其在 marker 之前 */
+  top: -0.2em;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -khtml-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+}
+.md ol>li:hover::before {
+  color: var(--color-inlinecode);
+}
+.md ol>li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -6px;
+  width: 0%;
+  height: 96%;
+  border-radius: 15px 0px 0px 15px;
+  -webkit-border-radius: 15px 0px 0px 15px;
+  z-index: -1;
+  background: linear-gradient(to right, #fff 0%, transparent 100%); /* 背景颜色 */
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -khtml-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease; /* 过渡动画 */
+}
+:root:not([color-scheme]) .md ol>li::after {
+  background: linear-gradient(to right, #141414 0%, transparent 100%); /* 背景颜色 */
+}
+.md ol>li:hover::after {
+  width: 100%;
 }
 #l_main > article.cus-indent p {
   text-indent: 2em;
