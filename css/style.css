@@ -8402,3 +8402,25 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
   box-shadow: 0px 0px 20px #aaa !important;
   -webkit-box-shadow: 0px 0px 20px #aaa !important;
 }
+.title_div {
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  -khtml-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+}
+.title_mark {
+  transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  -khtml-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+}
+.title_div:hover .title_mark {
+  width: 50px !important;
+  z-index: -1;
+}

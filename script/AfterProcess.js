@@ -55,8 +55,16 @@ window.AfterProcess = {
     for (let i = 1, len = eles.length; i < len; i++) {
       let child = eles[i].firstChild;
       let eleStyle = picker(eles[i]);
+
+      let div = document.createElement("div");
+      div.classList.add("title_div");
+
+      div.style.width = "100%";
+      div.style.display = "flex";
+
       //创建标识
       let customDiv = document.createElement("div");
+      customDiv.classList.add("title_mark");
       customDiv.style.display = "flex";
       customDiv.style.width = "15px";
       customDiv.style.backgroundColor = colors[eles[i].tagName];
@@ -72,7 +80,15 @@ window.AfterProcess = {
       eles[i].style.display = "flex";
       eles[i].style.verticalAlign = "center";
 
-      eles[i].insertBefore(customDiv, child);
+      div.appendChild(customDiv, child);
+
+      let str = eles[i].textContent;
+      eles[i].textContent = "";
+
+      var text = document.createTextNode(str);
+      div.appendChild(text);
+
+      eles[i].appendChild(div);
     }
   },
   InitVideo: () => {
