@@ -8151,7 +8151,7 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
 .m_search {
   margin-right: 10px;
 }
-.md ul>li::before {
+.md ul>li:not(.tab)::before {
   content: " ";
   height: 14px !important;
   width: 14px !important;
@@ -8170,11 +8170,11 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
   -o-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
 }
-.md ul>li:hover::before {
+.md ul>li:not(.tab):hover::before {
   box-shadow: inset 0 0 0 8px var(--color-inlinecode);
   -webkit-box-shadow: inset 0 0 0 8px var(--color-inlinecode);
 }
-.md ul>li::after {
+.md ul>li:not(.tab)::after {
   content: '';
   position: absolute;
   top: 0;
@@ -8192,19 +8192,19 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
   -o-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease; /* 过渡动画 */
 }
-:root:not([color-scheme]) .md ul>li::after {
+:root:not([color-scheme]) .md ul>li:not(.tab)::after {
   background: linear-gradient(to right, #141414 0%, transparent 100%); /* 背景颜色 */
 }
 .md ul>li:hover::after {
   width: 100%;
 }
-.md ul>li {
+.md ul>li:not(.tab) {
   list-style: none;
   position: relative;
   padding-left: 25px;
   margin-top: 3px;
 }
-.md ul {
+.md ul:not(.tab) {
   padding-left: 0;
   margin-left: 5px;
 }
@@ -8269,6 +8269,18 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
 }
 .md ol>li:hover::after {
   width: 100%;
+}
+div.tabs {
+  border-radius: 20px !important;
+  -webkit-border-radius: 20px !important;
+}
+div.tabs ul.nav-tabs {
+  border-radius: 20px 20px 0px 0px !important;
+  -webkit-border-radius: 20px 20px 0px 0px !important;
+}
+div.tabs ul.nav-tabs li.tab.active a {
+  border-radius: 10px 10px 0px 0px !important;
+  -webkit-border-radius: 10px 10px 0px 0px !important;
 }
 #l_main > article.cus-indent p {
   text-indent: 2em;

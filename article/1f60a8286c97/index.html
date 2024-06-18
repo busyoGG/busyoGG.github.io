@@ -1845,7 +1845,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1718735393695),
+    lastupdate: new Date(1718737842619),
     sidebar: {
       for_page: ["blogger","music","repos","lastupdate","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2592,7 +2592,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
 <div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
   <a itemprop="url" class='author' href="/" rel="nofollow">
-    <img itemprop="image" src="/images/img_icon.png" class="lazyload" data-srcset="/images/img_icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <img itemprop="image" src="/images/img_icon.png" class="lazyload placeholder" data-srcset="/images/img_icon.png" srcset="/images/loading.gif">
     <p itemprop="name">busyo</p>
   </a>
 </div>
@@ -2676,14 +2676,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>AABB 检测，即轴对齐包围盒（Axis-Aligned Bounding Boxes）检测，是一种检测两个物体有没有相交的算法。物体根据坐标轴形成包围盒，通过检测顶点关系来判断是否相交。</p>
-<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><h3 id="一维"><a href="#一维" class="headerlink" title="一维"></a>一维</h3><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20230925-224500-150.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20230925-224500-150.png" class="lazyload" data-srcset="https://img.busyo.buzz/imgUpload/20230925-224500-150.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><h3 id="一维"><a href="#一维" class="headerlink" title="一维"></a>一维</h3><div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20230925-224500-150.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20230925-224500-150.png" class="lazyload placeholder" data-srcset="https://img.busyo.buzz/imgUpload/20230925-224500-150.png" srcset="/images/loading.gif"></a><span></span></div></div>
 
 <p>如上图所示，在一维坐标轴中，存在一个物体 AB，一个物体 CD 以及一个物体 EF。</p>
 <p>当我们要检测物体 AB 和 CD 是否相交的时候，我们不难看出，只要物体 CD 的最大坐标和最小坐标都不在物体 AB 的坐标之间，那我们就认为这两个物体没有相交。</p>
 <p>当我们检测物体 AB 和物体 EF 是否相交的时候，我们观察到物体 AB 和物体 EF 的坐标相交了，因此这两个物体相交。</p>
 <p>由此我们可以得出，当一个物体的最大坐标和最小坐标都不在另一个物体的最大坐标和最小坐标之间，则两个物体没有相交。</p>
 <h3 id="二维"><a href="#二维" class="headerlink" title="二维"></a>二维</h3><p>这个原理拓展到二维坐标中，即 2D 平面中也成立。</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20230925-225446-996.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20230925-225446-996.png" class="lazyload" data-srcset="https://img.busyo.buzz/imgUpload/20230925-225446-996.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20230925-225446-996.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20230925-225446-996.png" class="lazyload placeholder" data-srcset="https://img.busyo.buzz/imgUpload/20230925-225446-996.png" srcset="/images/loading.gif"></a><span></span></div></div>
 
 <p>同样的，我们在平面中也存在 A、B、C、D 四个物体。</p>
 <p>对于物体 A 和物体 D，在 X 轴中，我们需要判断 D 的 X 最大值和 D 的 X 最小值都不在 A 的 X 最大值和 X 最小值中，我们就能判断连个物体不相交。</p>
@@ -2694,9 +2694,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//包围盒数据结构</span></span><br><span class="line"><span class="keyword">using</span> System.Collections;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">CollisionData</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> Vector3 max = Vector3.zero;</span><br><span class="line">    <span class="keyword">public</span> Vector3 min = Vector3.zero;</span><br><span class="line">&#125;</span><br><span class="line">---------------------------------------------</span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> AABB检测</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;data1&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;data2&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span>//AABB检测</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="built_in">bool</span> <span class="title">CollisionAABB</span>(<span class="params">CollisionData data1,CollisionData data2</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//包围盒1的最小值比包围盒2的最大值还大 或 包围盒1的最大值比包围盒2的最小值还小 则不碰撞</span></span><br><span class="line">    <span class="keyword">if</span> (data1.max.x &lt; data2.min.x || data1.max.y &lt; data2.min.y || data1.max.z &lt; data2.min.z ||</span><br><span class="line">        data1.min.x &gt; data2.max.x || data1.min.y &gt; data2.max.y || data1.min.z &gt; data2.max.z)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>AABB 检测在物体有旋转的情况下会造成包围盒过大，因此检测的精度不是很高。具体情况如下图所示。</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20230925-233451-905.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20230925-233451-905.png" class="lazyload" data-srcset="https://img.busyo.buzz/imgUpload/20230925-233451-905.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20230925-233451-905.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20230925-233451-905.png" class="lazyload placeholder" data-srcset="https://img.busyo.buzz/imgUpload/20230925-233451-905.png" srcset="/images/loading.gif"></a><span></span></div></div>
 
-<h2 id="碰撞检测示例工程"><a href="#碰撞检测示例工程" class="headerlink" title="碰撞检测示例工程"></a>碰撞检测示例工程</h2><center><a class="ghcard" rel="external nofollow noopener noreferrer noopener" target="_blank" href="https://github.com/busyoGG/CollisionDetection"><img src="https://github-readme-stats.vercel.app/api/pin/?username=busyoGG&repo=CollisionDetection&theme=onedark&show_owner=true" class="lazyload" data-srcset="https://github-readme-stats.vercel.app/api/pin/?username=busyoGG&repo=CollisionDetection&theme=onedark&show_owner=true" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/></a></center>
+<h2 id="碰撞检测示例工程"><a href="#碰撞检测示例工程" class="headerlink" title="碰撞检测示例工程"></a>碰撞检测示例工程</h2><center><a class="ghcard" rel="external nofollow noopener noreferrer noopener" target="_blank" href="https://github.com/busyoGG/CollisionDetection"><img src="https://github-readme-stats.vercel.app/api/pin/?username=busyoGG&repo=CollisionDetection&theme=onedark&show_owner=true" class="lazyload placeholder" data-srcset="https://github-readme-stats.vercel.app/api/pin/?username=busyoGG&repo=CollisionDetection&theme=onedark&show_owner=true" srcset="/images/loading.gif"/></a></center>
 
   </div>
   
@@ -2751,7 +2751,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
           >
           
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload placeholder" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="/images/loading.gif">
           
         </a>
       
@@ -2763,7 +2763,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
           >
           
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload placeholder" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="/images/loading.gif">
           
         </a>
       
@@ -2775,7 +2775,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
           >
           
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload placeholder" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="/images/loading.gif">
           
         </a>
       

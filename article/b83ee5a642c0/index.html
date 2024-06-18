@@ -1842,7 +1842,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1718735393695),
+    lastupdate: new Date(1718737842619),
     sidebar: {
       for_page: ["blogger","music","repos","lastupdate","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2589,7 +2589,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
 <div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
   <a itemprop="url" class='author' href="/" rel="nofollow">
-    <img itemprop="image" src="/images/img_icon.png" class="lazyload" data-srcset="/images/img_icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <img itemprop="image" src="/images/img_icon.png" class="lazyload placeholder" data-srcset="/images/img_icon.png" srcset="/images/loading.gif">
     <p itemprop="name">busyo</p>
   </a>
 </div>
@@ -2678,17 +2678,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>这样就可以得到碰撞后应该在的位置。我称之为排斥。</p>
 <h3 id="多个碰撞体的情况"><a href="#多个碰撞体的情况" class="headerlink" title="多个碰撞体的情况"></a>多个碰撞体的情况</h3><p>设置一个向量 offset 用来记录排斥的值，每个碰撞物体的排斥值都要加到 offset 中。最后我们会得到一个总的排斥值，加到当前位置中即可。</p>
 <p>当两个碰撞物体排成一排时，会出现无法越过交界处的情况。</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20240122-170645-24.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20240122-170645-24.png" class="lazyload" data-srcset="https://img.busyo.buzz/imgUpload/20240122-170645-24.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20240122-170645-24.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20240122-170645-24.png" class="lazyload placeholder" data-srcset="https://img.busyo.buzz/imgUpload/20240122-170645-24.png" srcset="/images/loading.gif"></a><span></span></div></div>
 
 <p>因此我选择每次排斥都更新一下自体碰撞盒。这样就能保证碰撞法线的方向相同。不过每次刷新包围盒的时候都会重新计算包围盒信息，增加了计算量。</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20240122-170755-256.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20240122-170755-256.png" class="lazyload" data-srcset="https://img.busyo.buzz/imgUpload/20240122-170755-256.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20240122-170755-256.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20240122-170755-256.png" class="lazyload placeholder" data-srcset="https://img.busyo.buzz/imgUpload/20240122-170755-256.png" srcset="/images/loading.gif"></a><span></span></div></div>
 
 <p>不过这样会存在一个问题，就是如果碰撞的顺序不同的话，得到的结果也不同，因此我选择保存接触到的碰撞对象，每次碰撞检测的时候检测上次的碰撞物体是否存在于列表中，存在则不动，不存在则新增到列表后面，没碰撞的物体移除列表。这样就能保证每次碰撞的顺序是按照接触到的物体顺序，而不是遍历的顺序。</p>
 <h2 id="下落"><a href="#下落" class="headerlink" title="下落"></a>下落</h2><p>我选择的是根据下落的公式 $v_g&#x3D;-gt$ 得到下落速度，乘以每帧时间 $v_{g_{dt}}&#x3D;v_g*dt$ 得到每帧的下落速度，再加到当前坐标的 y 值上即可。</p>
 <h2 id="跳跃"><a href="#跳跃" class="headerlink" title="跳跃"></a>跳跃</h2><p>跳跃是在下落的基础上，增加一个初始速度，通过公式 $v&#x3D;v_0-v_g$ 得到下落速度，然后跟上面下落一样处理得到新的 y 值。</p>
 <h2 id="爬坡"><a href="#爬坡" class="headerlink" title="爬坡"></a>爬坡</h2><p>在爬坡的时候，我根据坡面的法线方向和自体的上方向，得到一个旋转的四元数，然后用该四元数乘以前进方向，使前进方向旋转到坡面，这样在坡面的移动就相当于把原来的坐标系转移到坡面的坐标系中，再在坡面坐标系实现位移。</p>
 <p>用一个平面图来表示的话就像下图所示：</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20240122-183525-721.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20240122-183525-721.png" class="lazyload" data-srcset="https://img.busyo.buzz/imgUpload/20240122-183525-721.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20240122-183525-721.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20240122-183525-721.png" class="lazyload placeholder" data-srcset="https://img.busyo.buzz/imgUpload/20240122-183525-721.png" srcset="/images/loading.gif"></a><span></span></div></div>
 
 <p>推广到三维空间也是一样。</p>
 <h2 id="判断是否在平台上"><a href="#判断是否在平台上" class="headerlink" title="判断是否在平台上"></a>判断是否在平台上</h2><p>跳跃和坡面都需要判断是否在平台上，在平台上的话就停止下落并重置状态。</p>
@@ -2701,13 +2701,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>头顶有障碍物的时候取消攀爬。（攀爬面法线 y 值小于一定值为头顶有障碍物）</p>
 <h3 id="攀爬计算"><a href="#攀爬计算" class="headerlink" title="攀爬计算"></a>攀爬计算</h3><p>攀爬和爬坡一样需要把坐标系转移到攀爬平面上。</p>
 <ol>
-<li>令原始输入方向（即输入值 ADWS）面向攀爬平面法线的反方向，得到面向输入方向。<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20240122-190738-743.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20240122-190738-743.png" class="lazyload" data-srcset="https://img.busyo.buzz/imgUpload/20240122-190738-743.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div></li>
+<li>令原始输入方向（即输入值 ADWS）面向攀爬平面法线的反方向，得到面向输入方向。<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20240122-190738-743.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20240122-190738-743.png" class="lazyload placeholder" data-srcset="https://img.busyo.buzz/imgUpload/20240122-190738-743.png" srcset="/images/loading.gif"></a><span></span></div></div></li>
 <li>计算自体上方向和攀爬平面法线的旋转四元数。</li>
 <li>旋转四元数乘以面向输入方向得到最终攀爬方向。（和爬坡一样的操作）</li>
 </ol>
 <p>攀爬与爬坡不同的是，爬坡用的是自体的移动方向做原始输入，攀爬用的是键盘输入的移动方向做原始输入。</p>
 <p>攀爬的时候需要单独计算排斥，使其刚好处于碰撞物体表面。并且，碰撞物体的最近中心坐标在不碰撞的时候不清除，这样就可以拐弯。</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20240122-191525-448.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20240122-191525-448.png" class="lazyload" data-srcset="https://img.busyo.buzz/imgUpload/20240122-191525-448.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div><br><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20240122-191654-935.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20240122-191654-935.png" class="lazyload" data-srcset="https://img.busyo.buzz/imgUpload/20240122-191654-935.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div><br><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20240122-191813-665.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20240122-191813-665.png" class="lazyload" data-srcset="https://img.busyo.buzz/imgUpload/20240122-191813-665.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div><br><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20240122-191935-129.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20240122-191935-129.png" class="lazyload" data-srcset="https://img.busyo.buzz/imgUpload/20240122-191935-129.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery stretch" col='1' data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20240122-191525-448.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20240122-191525-448.png" class="lazyload placeholder" data-srcset="https://img.busyo.buzz/imgUpload/20240122-191525-448.png" srcset="/images/loading.gif"></a><span></span></div><br><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20240122-191654-935.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20240122-191654-935.png" class="lazyload placeholder" data-srcset="https://img.busyo.buzz/imgUpload/20240122-191654-935.png" srcset="/images/loading.gif"></a><span></span></div><br><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20240122-191813-665.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20240122-191813-665.png" class="lazyload placeholder" data-srcset="https://img.busyo.buzz/imgUpload/20240122-191813-665.png" srcset="/images/loading.gif"></a><span></span></div><br><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://img.busyo.buzz/imgUpload/20240122-191935-129.png' data-fancybox='default' data-caption='undefined'><img fancybox itemprop="contentUrl" src="https://img.busyo.buzz/imgUpload/20240122-191935-129.png" class="lazyload placeholder" data-srcset="https://img.busyo.buzz/imgUpload/20240122-191935-129.png" srcset="/images/loading.gif"></a><span></span></div></div>
 
 <h3 id="自动攀爬到顶"><a href="#自动攀爬到顶" class="headerlink" title="自动攀爬到顶"></a>自动攀爬到顶</h3><p>判断自体最高点是否大于碰撞物体最高点一定值，是则开始自动攀爬并禁用攀爬移动。</p>
 <h3 id="攀爬跳跃"><a href="#攀爬跳跃" class="headerlink" title="攀爬跳跃"></a>攀爬跳跃</h3><p>默认情况下向上跳跃，有按方向的情况下按照所按方向跳跃。</p>
@@ -2776,7 +2776,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
           >
           
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload placeholder" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="/images/loading.gif">
           
         </a>
       
@@ -2788,7 +2788,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
           >
           
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload placeholder" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="/images/loading.gif">
           
         </a>
       
@@ -2800,7 +2800,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
           >
           
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload placeholder" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="/images/loading.gif">
           
         </a>
       
