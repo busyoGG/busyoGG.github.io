@@ -8013,8 +8013,8 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
   padding: 3px 16px 3px 30px !important;
   box-shadow: 0px 0px 10px #aaa !important;
   -webkit-box-shadow: 0px 0px 10px #aaa !important;
-  border-radius: 20px !important;
-  -webkit-border-radius: 20px !important;
+  border-radius: 16px !important;
+  -webkit-border-radius: 16px !important;
   transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
   -webkit-transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
   -khtml-transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
@@ -8027,12 +8027,12 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
   -webkit-box-shadow: 0px 0px 10px #000 !important;
 }
 .note:hover {
-  background-color: #fff !important;
+  background-color: #282828 !important;
   box-shadow: 0px 0px 20px #aaa !important;
   -webkit-box-shadow: 0px 0px 20px #aaa !important;
 }
 :root:not([color-scheme]) .note:hover {
-  background-color: #282828 !important;
+  background-color: #fff !important;
   box-shadow: 0px 0px 20px #000 !important;
   -webkit-box-shadow: 0px 0px 20px #000 !important;
 }
@@ -8184,7 +8184,7 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
   border-radius: 15px 0px 0px 15px;
   -webkit-border-radius: 15px 0px 0px 15px;
   z-index: -1;
-  background: linear-gradient(to right, #fff 0%, transparent 100%); /* 背景颜色 */
+  background: linear-gradient(to right, #141414 0%, transparent 100%); /* 背景颜色 */
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   -khtml-transition: all 0.5s ease;
@@ -8193,7 +8193,7 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
   -ms-transition: all 0.5s ease; /* 过渡动画 */
 }
 :root:not([color-scheme]) .md ul>li:not(.tab)::after {
-  background: linear-gradient(to right, #141414 0%, transparent 100%); /* 背景颜色 */
+  background: linear-gradient(to right, #fff 0%, transparent 100%); /* 背景颜色 */
 }
 .md ul>li:hover::after {
   width: 100%;
@@ -8256,7 +8256,7 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
   border-radius: 15px 0px 0px 15px;
   -webkit-border-radius: 15px 0px 0px 15px;
   z-index: -1;
-  background: linear-gradient(to right, #fff 0%, transparent 100%); /* 背景颜色 */
+  background: linear-gradient(to right, #141414 0%, transparent 100%); /* 背景颜色 */
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   -khtml-transition: all 0.5s ease;
@@ -8265,7 +8265,7 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
   -ms-transition: all 0.5s ease; /* 过渡动画 */
 }
 :root:not([color-scheme]) .md ol>li::after {
-  background: linear-gradient(to right, #141414 0%, transparent 100%); /* 背景颜色 */
+  background: linear-gradient(to right, #fff 0%, transparent 100%); /* 背景颜色 */
 }
 .md ol>li:hover::after {
   width: 100%;
