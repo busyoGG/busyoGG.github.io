@@ -143,11 +143,21 @@ window.AfterProcess = {
       }
     }
   },
+  InitList: () => {
+    const olElements = document.querySelectorAll("ol");
+    olElements.forEach((ol) => {
+      const start = ol.getAttribute("start");
+      if (start) {
+        ol.style.counterReset = `custom-counter ${start - 1}`;
+      }
+    });
+  },
   Init: () => {
     console.log("初始化界面");
     AfterProcess.ResetCodeStyle();
     AfterProcess.ResetTitle();
     AfterProcess.InitVideo();
+    AfterProcess.InitList();
     mermaid.init(undefined, ".mermaid");
   },
 };

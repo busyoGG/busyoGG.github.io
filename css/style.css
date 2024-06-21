@@ -7913,8 +7913,8 @@ video {
   outline: 3px solid #fff;
   border-radius: 16px !important;
   -webkit-border-radius: 16px !important;
-  box-shadow: 0px 0px 20px #888 !important;
-  -webkit-box-shadow: 0px 0px 20px #888 !important;
+  box-shadow: 0px 0px 20px var(--box-shadow) !important;
+  -webkit-box-shadow: 0px 0px 20px var(--box-shadow) !important;
   --bpx-box-shadow: var(--bg3) !important;
   transition: box-shadow 0.3s ease-out;
   -webkit-transition: box-shadow 0.3s ease-out;
@@ -7923,17 +7923,9 @@ video {
   -o-transition: box-shadow 0.3s ease-out;
   -ms-transition: box-shadow 0.3s ease-out;
 }
-:root:not([color-scheme]) .plyr {
-  box-shadow: 0px 0px 20px #000 !important;
-  -webkit-box-shadow: 0px 0px 20px #000 !important;
-}
 .plyr:hover {
-  box-shadow: 0px 0px 30px #888 !important;
-  -webkit-box-shadow: 0px 0px 30px #888 !important;
-}
-:root:not([color-scheme]) .plyr:hover {
-  box-shadow: 0px 0px 30px #000 !important;
-  -webkit-box-shadow: 0px 0px 30px #000 !important;
+  box-shadow: 0px 0px 30px var(--box-shadow) !important;
+  -webkit-box-shadow: 0px 0px 30px var(--box-shadow) !important;
 }
 .plyr__controls {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
@@ -8011,8 +8003,8 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
 }
 .note {
   padding: 3px 16px 3px 30px !important;
-  box-shadow: 0px 0px 10px #aaa !important;
-  -webkit-box-shadow: 0px 0px 10px #aaa !important;
+  box-shadow: 0px 0px 10px var(--box-shadow) !important;
+  -webkit-box-shadow: 0px 0px 10px var(--box-shadow) !important;
   border-radius: 16px !important;
   -webkit-border-radius: 16px !important;
   transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
@@ -8022,19 +8014,15 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
   -o-transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
   -ms-transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
 }
-:root:not([color-scheme]) .note {
-  box-shadow: 0px 0px 10px #000 !important;
-  -webkit-box-shadow: 0px 0px 10px #000 !important;
-}
 .note:hover {
-  background-color: #282828 !important;
-  box-shadow: 0px 0px 20px #aaa !important;
-  -webkit-box-shadow: 0px 0px 20px #aaa !important;
+  background-color: var(--note-bg) !important;
+  box-shadow: 0px 0px 20px var(--box-shadow) !important;
+  -webkit-box-shadow: 0px 0px 20px var(--box-shadow) !important;
 }
-:root:not([color-scheme]) .note:hover {
-  background-color: #fff !important;
-  box-shadow: 0px 0px 20px #000 !important;
-  -webkit-box-shadow: 0px 0px 20px #000 !important;
+@media (prefers-color-scheme: dark) {
+  :root:not([color-scheme]) .note:hover {
+    background: var(--note-bg) !important;
+  }
 }
 .iziToast {
   border-radius: 16px !important;
@@ -8118,7 +8106,7 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
 .aplayer-info {
   border-bottom: none !important;
 }
-:root:not([color-scheme]) .aplayer-info {
+:root:[color-scheme='dark'] .aplayer-info {
   background: none !important;
 }
 .aplayer-pic {
@@ -8184,16 +8172,13 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
   border-radius: 15px 0px 0px 15px;
   -webkit-border-radius: 15px 0px 0px 15px;
   z-index: -1;
-  background: linear-gradient(to right, #141414 0%, transparent 100%); /* 背景颜色 */
+  background: linear-gradient(to right, var(--list-bg) 0%, transparent 100%); /* 背景颜色 */
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   -khtml-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease; /* 过渡动画 */
-}
-:root:not([color-scheme]) .md ul>li:not(.tab)::after {
-  background: linear-gradient(to right, #fff 0%, transparent 100%); /* 背景颜色 */
 }
 .md ul>li:hover::after {
   width: 100%;
@@ -8256,16 +8241,13 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
   border-radius: 15px 0px 0px 15px;
   -webkit-border-radius: 15px 0px 0px 15px;
   z-index: -1;
-  background: linear-gradient(to right, #141414 0%, transparent 100%); /* 背景颜色 */
+  background: linear-gradient(to right, var(--list-bg) 0%, transparent 100%); /* 背景颜色 */
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   -khtml-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease; /* 过渡动画 */
-}
-:root:not([color-scheme]) .md ol>li::after {
-  background: linear-gradient(to right, #fff 0%, transparent 100%); /* 背景颜色 */
 }
 .md ol>li:hover::after {
   width: 100%;
@@ -8281,6 +8263,23 @@ div.tabs ul.nav-tabs {
 div.tabs ul.nav-tabs li.tab.active a {
   border-radius: 10px 10px 0px 0px !important;
   -webkit-border-radius: 10px 10px 0px 0px !important;
+}
+:root {
+  --list-bg: #fff;
+  --box-shadow: #888;
+  --note-bg: #fff;
+}
+:root[color-scheme='dark'] {
+  --list-bg: #141414;
+  --box-shadow: #000;
+  --note-bg: #282828;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([color-scheme]) {
+    --list-bg: #141414;
+    --box-shadow: #000;
+    --note-bg: #282828;
+  }
 }
 #l_main > article.cus-indent p {
   text-indent: 2em;
