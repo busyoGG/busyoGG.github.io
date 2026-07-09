@@ -152,12 +152,43 @@ window.AfterProcess = {
       }
     });
   },
+  ResizeTable: () => { 
+    console.log("调整表格宽度");
+    document.querySelectorAll("table").forEach(table => {
+      const rows = [...table.rows];
+      if (!rows.length) return;
+
+      const cols = rows[0].cells.length;
+      const weights = new Array(cols).fill(0);
+
+      // 统计每列最长文本长度
+      rows.forEach(row => {
+        [...row.cells].forEach((cell, i) => {
+          weights[i] = Math.max(weights[i], cell.innerText.trim().length);
+        });
+      });
+
+      // 平滑权重，避免简介、简评占太宽
+      weights.forEach((w, i) => {
+        weights[i] = Math.max(4, Math.sqrt(w));
+      });
+
+      const total = weights.reduce((a, b) => a + b, 0);
+
+      // 只设置第一行
+      [...rows[0].cells].forEach((cell, i) => {
+        cell.style.width = `${weights[i] / total * 100}%`;
+        // console.log("设置列宽", i, cell.style.width);
+      });
+    });
+  },
   Init: () => {
     console.log("初始化界面");
     AfterProcess.ResetCodeStyle();
     AfterProcess.ResetTitle();
     AfterProcess.InitVideo();
     AfterProcess.InitList();
+    AfterProcess.ResizeTable();
     mermaid.init(undefined, ".mermaid");
   },
 };
