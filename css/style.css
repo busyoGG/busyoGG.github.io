@@ -7562,20 +7562,19 @@ div.tabs ul.nav-tabs li.tab.active a {
 }
 table:not([class]) {
   width: 100%;
-  margin: 1.5rem 0;
+  margin: 0;
+  padding: 0;
   border-collapse: separate;
   border-spacing: 0;
   border: none;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
   overflow: hidden;
   background: var(--card);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-  -webkit-box-shadow: 0 8px 30px rgba(0,0,0,0.12);
   table-layout: fixed;
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: table !important;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
 }
 th:not([class]) {
   background: var(--card);
@@ -7604,6 +7603,22 @@ table:not([class]) th:first-child {
 }
 table:not([class]) th:last-child {
   border-top-right-radius: 12px;
+}
+.table-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  box-shadow: 0 0px 30px rgba(0,0,0,0.12);
+  -webkit-box-shadow: 0 0px 30px rgba(0,0,0,0.12);
+  padding: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.table-wrapper::-webkit-scrollbar {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
 }
 #l_main > article.cus-indent p {
   text-indent: 2em;

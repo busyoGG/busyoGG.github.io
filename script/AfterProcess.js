@@ -175,11 +175,29 @@ window.AfterProcess = {
 
       const total = weights.reduce((a, b) => a + b, 0);
 
+      let table_width = table.getBoundingClientRect().width;
+      console.log("table", table_width, weights, total);
+      if (table_width < 400) {
+        table_width = "900";
+      }
       // 只设置第一行
       [...rows[0].cells].forEach((cell, i) => {
-        cell.style.width = `${weights[i] / total * 100}%`;
+        cell.style.width = `${weights[i] / total * table_width}px`;
         // console.log("设置列宽", i, cell.style.width);
       });
+
+      // 检查是否已经被包裹过，避免重复
+      if (table.parentElement && table.parentElement.classList.contains('table-wrapper')) {
+        return;
+      }
+
+      // 创建外层容器
+      const wrapper = document.createElement('div');
+      wrapper.className = 'table-wrapper';
+
+      // 将表格替换为容器，再把表格放进去
+      table.parentNode.insertBefore(wrapper, table);
+      wrapper.appendChild(table);
     });
   },
   Init: () => {
