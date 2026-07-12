@@ -7396,6 +7396,7 @@ input[data-plyr="volume"]::-webkit-slider-thumb {
 .post {
   border-radius: 16px !important;
   -webkit-border-radius: 16px !important;
+  padding: 14px !important;
 }
 .l_header {
   border-radius: 0px 0px 16px 16px;
@@ -7620,6 +7621,14 @@ table:not([class]) th:last-child {
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: none;
 }
+div.timenode .body {
+  padding: 4px 10px 4px 4px;
+  box-shadow: 0 0px 30px rgba(0,0,0,0.12);
+  -webkit-box-shadow: 0 0px 30px rgba(0,0,0,0.12);
+}
+div.timenode .body:hover {
+  outline: 2px solid var(--color-list-hl);
+}
 #l_main > article.cus-indent p {
   text-indent: 2em;
 }
@@ -7639,7 +7648,7 @@ table:not([class]) th:last-child {
   z-index: 9999;
   width: 100%;
   margin-top: -15px;
-  max-width: 1112px;
+  max-width: 1300px;
   position: fixed;
   height: 100px;
   padding-top: 14px;
