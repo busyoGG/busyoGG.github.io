@@ -7561,7 +7561,7 @@ div.tabs ul.nav-tabs li.tab.active a {
 .body-wrapper {
   max-width: 1200px;
 }
-table:not([class]) {
+table:not([class]):where(:not(figure.highlight *)) {
   width: 100%;
   margin: 0;
   padding: 0;
@@ -7577,20 +7577,20 @@ table:not([class]) {
   border-radius: 20px;
   -webkit-border-radius: 20px;
 }
-th:not([class]) {
+th:not([class]):where(:not(figure.highlight *)) {
   background: var(--card);
   color: var(--text-p1);
   border-bottom: 2px solid var(--theme);
 }
-td:not([class]) {
+td:not([class]):where(:not(figure.highlight *)) {
   padding: 12px 16px !important;
   border: 1px dashed #f1f1f1 !important;
   border-top: 1px solid var(--block-border) !important;
 }
-tbody tr:nth-child(even) {
+tbody tr:nth-child(even):where(:not(figure.highlight *)) {
   background: rgba(127,127,127,0.05);
 }
-table:not([class]) tr:hover {
+table:not([class]) tr:hover:where(:not(figure.highlight *)) {
   background: rgba(255,202,87,0.16);
   transition: background 0.2s ease;
   -webkit-transition: background 0.2s ease;
@@ -7599,10 +7599,10 @@ table:not([class]) tr:hover {
   -o-transition: background 0.2s ease;
   -ms-transition: background 0.2s ease;
 }
-table:not([class]) th:first-child {
+table:not([class]) th:first-child:where(:not(figure.highlight *)) {
   border-top-left-radius: 12px;
 }
-table:not([class]) th:last-child {
+table:not([class]) th:last-child:where(:not(figure.highlight *)) {
   border-top-right-radius: 12px;
 }
 .table-wrapper {

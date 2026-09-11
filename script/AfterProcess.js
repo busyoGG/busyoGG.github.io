@@ -155,6 +155,10 @@ window.AfterProcess = {
   ResizeTable: () => { 
     console.log("调整表格宽度");
     document.querySelectorAll("table").forEach(table => {
+      // 代码块表格（figure.highlight 里的 td.gutter / td.code）交给主题样式处理，
+      // 既不要设置列宽，也不要包 table-wrapper，否则主题的 .highlight > table 选择器会失效
+      if (table.closest("figure.highlight")) return;
+
       const rows = [...table.rows];
       if (!rows.length) return;
 
